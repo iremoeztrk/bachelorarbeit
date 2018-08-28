@@ -7,7 +7,22 @@ Interpolate audio signals for different velocities.
 There are methods: lpc and major frequency.
 
 \subsection{Linear Predictive Coding}
-The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples.It has applications in filter design and speech coding. 
+The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
+
+We consider an IIR filter $H(z)$ of length n in the form $H(z)=[-h_1z^{-2}-h_2z^{-1}...-h_nz^{-n}]$.
+Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following. The resulting prediction vector from our filter is $\vec{\hat{a}}(k)$. The residual signal {$\vec{e}(k)$} is the difference between these two signals.The transfer function $P$(z) is the result of the following equation:
+
+\begin{equation}
+\frac{\vec{e}(k)}{\vec{a}(k)}=1-H(z)=P(z)   
+\end{equation}
+
+It is possible to compute the residual at each step using the vector of filter coefficients $\vec{h}=[h_1 h_2 h_3 ... h_n]^T$:
+
+\begin{equation}
+\vec{e}(k)=a(k)-\hat{a}(k)=a(k)-\vec{h}^T\vec{a}(k-1)   
+\end{equation}
+
+
 
 
 
@@ -19,11 +34,9 @@ The basic idea of Linear Predictive Coding (LPC) is to develop a transfer functi
     \label{fig:ToUseWithReference}
   \end{center}
 \end{figure}
+
 \begin{equation}
-fRS = \frac{\overline{\textbf{f}}_{R,D}}{\overline{\textbf{f}}_{N}} 
-\end{equation}
-\begin{equation}
-mRG = \beta \cdot \sum_{k=1}^K \sum_{l=1}^L \hat{\textbf{X}}(k,l)
+mRG = {\beta \cdot \sum_{k=1}^K \sum_{l=1}^L \hat{\textbf{X}}(k,l)}
 \end{equation}
 
 Durch die \texttt{\bslash label} kann auf die Bilder mit
