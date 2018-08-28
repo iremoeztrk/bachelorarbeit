@@ -1,15 +1,15 @@
-\chapter{Ein Kapitel des Hauptteils}
+\chapter{Microscopic Roughness}
 \thispagestyle{empty}% no page number in chapter title page
-\section{Inhalte}
-Im Hauptteil werden aufbauend auf einer State-of-the-art-Diskussion
-(Literaturrecherche) die Ergebnisse der Arbeit im Detail vorgestellt.
-Dabei sollen auch die Schritte des durchgeführten Arbeitsprozesses
-darstellt werden.  Dazu kann der Hauptteil in mehrere Kapitel
-unterteilt werden.
+girizgah
+\section{Methods for Interpolating Audio Signals}
+Interpolate audio signals for different velocities.
 
-Einleitung und Hauptteil sollen eine in sich geschlossene Abhandlung
-darstellen. Der Leser der Arbeit soll ohne zusätzliche Literatur in
-der Lage sein, die Arbeit im Zusammenhang zu verstehen.
+There are methods: lpc and major frequency.
+
+\subsection{Linear Predictive Coding}
+The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples.It has applications in filter design and speech coding. 
+
+
 
 \section{Beispiel für eine Abbildung}
 \begin{figure}[h!]
@@ -19,6 +19,12 @@ der Lage sein, die Arbeit im Zusammenhang zu verstehen.
     \label{fig:ToUseWithReference}
   \end{center}
 \end{figure}
+\begin{equation}
+fRS = \frac{\overline{\textbf{f}}_{R,D}}{\overline{\textbf{f}}_{N}} 
+\end{equation}
+\begin{equation}
+mRG = \beta \cdot \sum_{k=1}^K \sum_{l=1}^L \hat{\textbf{X}}(k,l)
+\end{equation}
 
 Durch die \texttt{\bslash label} kann auf die Bilder mit
 \texttt{\bslash ref} verwiesen werden

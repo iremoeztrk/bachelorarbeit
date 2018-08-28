@@ -1,19 +1,20 @@
 \babel@toc {ngerman}{}
-\babel@toc {ngerman}{}
-\babel@toc {ngerman}{}
-\babel@toc {ngerman}{}
 \babel@toc {american}{}
 \babel@toc {ngerman}{}
-\contentsline {chapter}{Inhaltsverzeichnis}{iii}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\contentsline {chapter}{Contents}{iii}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}
-\contentsline {chapter}{\numberline {2}Ein Kapitel des Hauptteils}{2}
-\contentsline {section}{\numberline {2.1}Inhalte}{2}
+\contentsline {chapter}{\numberline {2}Microscopic Roughness}{2}
+\contentsline {section}{\numberline {2.1}Methods for Interpolating Audio Signals}{2}
+\contentsline {subsection}{\numberline {2.1.1}Linear Predictive Coding}{2}
 \contentsline {section}{\numberline {2.2}Beispiel f\"ur eine Abbildung}{2}
 \contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{3}
 \contentsline {section}{\numberline {2.4}Schrifttypen}{3}
 \contentsline {section}{\numberline {2.5}Archivierung}{4}
 \contentsline {chapter}{\numberline {3}Zusammenfassung}{5}
 \contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{6}
-\contentsline {chapter}{Abbildungsverzeichnis}{7}
-\contentsline {chapter}{Tabellenverzeichnis}{8}
-\contentsline {chapter}{Literaturverzeichnis}{9}
+\contentsline {chapter}{List of Figures}{7}
+\contentsline {chapter}{List of Tables}{8}
+\contentsline {chapter}{Bibliography}{9}
