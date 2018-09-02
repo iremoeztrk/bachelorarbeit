@@ -5,6 +5,12 @@ B.~St. Arnaud.
 \newblock {Gigabit Internet to every Canadian Home by 2005}.
 \newblock \url{http://www.canet2.net/archeng/home.html}, 1999.
 
+\bibitem[Dur60]{durbin}
+J.~Durbin.
+\newblock The fitting of time-series models.
+\newblock {\em Revue de l'Institut International de Statistique / Review of the
+  International Statistical Institute}, 28(3):233--244, 1960.
+
 \bibitem[EV97]{eberspaecher97}
 J.~Ebersp"acher and H.-J. V"ogel.
 \newblock {\em {GSM - Global System for Mobile Communication. Vermittlung,

@@ -10,11 +10,11 @@
 \contentsline {section}{\numberline {2.1}Methods for Interpolating Audio Signals}{2}
 \contentsline {subsection}{\numberline {2.1.1}Linear Predictive Coding}{2}
 \contentsline {section}{\numberline {2.2}Beispiel f\"ur eine Abbildung}{3}
-\contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{3}
-\contentsline {section}{\numberline {2.4}Schrifttypen}{3}
-\contentsline {section}{\numberline {2.5}Archivierung}{4}
-\contentsline {chapter}{\numberline {3}Zusammenfassung}{5}
-\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{6}
-\contentsline {chapter}{List of Figures}{7}
-\contentsline {chapter}{List of Tables}{8}
-\contentsline {chapter}{Bibliography}{9}
+\contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{4}
+\contentsline {section}{\numberline {2.4}Schrifttypen}{4}
+\contentsline {section}{\numberline {2.5}Archivierung}{5}
+\contentsline {chapter}{\numberline {3}Zusammenfassung}{6}
+\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{7}
+\contentsline {chapter}{List of Figures}{8}
+\contentsline {chapter}{List of Tables}{9}
+\contentsline {chapter}{Bibliography}{10}

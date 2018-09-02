@@ -12,7 +12,7 @@
 
 @Article{durbin,
   Title                    = {The fitting of time-series models.},
-  Author                   = {J. Durbin},
+  Author                   = {Durbin},
   Journal                  = {Revue de l'Institut International de Statistique / Review of the International Statistical Institute},
   Year                     = {1960},
   Number                   = {3},
