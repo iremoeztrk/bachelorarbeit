@@ -5,11 +5,11 @@
 \select@language {american}
 \select@language {american}
 \contentsline {chapter}{Contents}{iii}
-\contentsline {chapter}{\numberline {1}Einleitung}{1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Microscopic Roughness}{2}
 \contentsline {section}{\numberline {2.1}Methods for Interpolating Audio Signals}{2}
 \contentsline {subsection}{\numberline {2.1.1}Linear Predictive Coding}{2}
-\contentsline {section}{\numberline {2.2}Beispiel f\"ur eine Abbildung}{3}
+\contentsline {section}{\numberline {2.2}Beispiel f\"ur eine Abbildung}{4}
 \contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{4}
 \contentsline {section}{\numberline {2.4}Schrifttypen}{4}
 \contentsline {section}{\numberline {2.5}Archivierung}{5}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{GLL90}
+\begin{thebibliography}{JMRK10}
 
 \bibitem[Arn99]{arnaud99}
 B.~St. Arnaud.
@@ -21,5 +21,12 @@ J.~Ebersp"acher and H.-J. V"ogel.
 J.~S. Griswold, T.~L. Lightle, and J.~G. Lovelady.
 \newblock {Hurricane Hugo: Effect On State Government Communications.}
 \newblock {\em IEEE Communications Magazine}, 28(6):12--17, 1990.
+
+\bibitem[JMRK10]{romano10}
+Takashi~Yoshioka Joseph M.~Romano and Katherine~J. Kuchenbecker.
+\newblock Automatic filter design for synthesis of haptic textures from
+  recorded acceleration data.
+\newblock {\em In Proceedings, IEEE International Conference on Robotics and
+  Automation}, pages 1815--1821, May 2010.
 
 \end{thebibliography}
