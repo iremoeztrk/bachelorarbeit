@@ -60,7 +60,15 @@ The other method for signal generation is using rich and valuable information of
 
 At first we determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done in a similar way to order selection of a prediction filter in the previous section. For our case we choose 10 for the optimum frequency value.
 
-In order to find the major frequencies, we calculate the discrete Fourier transform of the two recorded data and find ten highest frequencies of the transformed signals. It is important here to ensure that selected frequencies should not be close to each other because the superposition of two pure tones with slightly different frequencies can lead to beats. Therefore we remove frequencies among selected ones with a difference less than 5 and choose new others under this condition.
+In order to find the major frequencies, we calculate the discrete Fourier transform of the two recorded data and find ten highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should not be close to each other because the superposition of two pure tones with slightly different frequencies can lead to beats. Therefore we remove frequencies among selected ones with a difference less than 5 and choose new others under this condition.
+
+We synthesize from the highest ten amplitudes and their phases a new signal according to the following equation:
+
+\begin{equation} \label{synthesize}
+z=z+maxA(k)*(cos(2*\pi*t*maxF(k)+maxP(k))+i*sin(2*\pi*t*maxF(k)+maxP(k)))
+\end{equation}
+
+where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the place order of them, $maxP(k)$ represents the phase of selected frequencies and z is zero at the beginning and  
 
 
 

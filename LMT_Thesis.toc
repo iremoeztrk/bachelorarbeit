@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.1.1}Linear Predictive Coding}{2}
 \contentsline {subsection}{\numberline {2.1.2}Signal Generation from Major Frequencies}{4}
 \contentsline {section}{\numberline {2.2}Beispiel f\"ur eine Abbildung}{4}
-\contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{4}
+\contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{5}
 \contentsline {section}{\numberline {2.4}Schrifttypen}{5}
 \contentsline {section}{\numberline {2.5}Archivierung}{6}
 \contentsline {chapter}{\numberline {3}Zusammenfassung}{7}
