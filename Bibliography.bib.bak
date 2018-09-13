@@ -23,7 +23,7 @@
 @Book{eberspaecher97,
   Title                    = {{GSM - Global System for Mobile Communication. 
  Vermittlung, Dienste und Protokolle in digitalen Mobilfunknetzen.}},
-  Author                   = {Ebersp"acher, J. and V"ogel, H.-J.},
+  Author                   = {Eberspacher, J. and Vogel, H.-J.},
   Publisher                = {Teubner, Stuttgart},
   Year                     = {1997}
 }
@@ -36,5 +36,16 @@
   Number                   = {6},
   Pages                    = {12-17},
   Volume                   = {28}
+}
+
+@Article{romano10,
+  Title                    = {Automatic filter design for synthesis of haptic textures from recorded acceleration data.},
+  Author                   = {Joseph M. Romano, Takashi Yoshioka, and Katherine J. Kuchenbecker.},
+  Journal                  = {In Proceedings, IEEE International Conference on Robotics and Automation},
+  Year                     = {May 2010},
+  Pages                    = {1815-1821},
+
+  Owner                    = {ga45kux},
+  Timestamp                = {2018.09.03}
 }
 
