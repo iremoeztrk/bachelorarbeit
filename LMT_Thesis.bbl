@@ -5,13 +5,18 @@ B.~St. Arnaud.
 \newblock {Gigabit Internet to every Canadian Home by 2005}.
 \newblock \url{http://www.canet2.net/archeng/home.html}, 1999.
 
+\bibitem[CK15]{Culbertson15-WHC-Vibrations}
+Heather Culbertson and Katherine~J. Kuchenbecker.
+\newblock Should haptic texture vibrations respond to user force and speed?
+\newblock In {\em IEEE World Haptics Conference}, pages 106 -- 112, Evanston,
+  Illinois, USA, June 2015.
+\newblock Oral presentation given by Culbertson.
+
 \bibitem[Dur60]{durbin}
 J.~Durbin.
 \newblock The fitting of time-series models.
 \newblock {\em Revue de l'Institut International de Statistique / Review of the
   International Statistical Institute}, 28(3):233--244, 1960.
-
-
 
 \bibitem[GLL90]{griswold90}
 J.~S. Griswold, T.~L. Lightle, and J.~G. Lovelady.
@@ -24,5 +29,11 @@ Takashi~Yoshioka Joseph M.~Romano and Katherine~J. Kuchenbecker.
   recorded acceleration data.
 \newblock {\em In Proceedings, IEEE International Conference on Robotics and
   Automation}, pages 1815--1821, May 2010.
+
+\bibitem[Loo92]{Loomis92}
+J.~M. Loomis.
+\newblock Distal attribution and presence.
+\newblock {\em Presence: Teleoperators and Virtual Environments},
+  1(1):113--119, 1992.
 
 \end{thebibliography}

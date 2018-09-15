@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: LMT_Thesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: LMT_Thesis.aux
 A level-1 auxiliary file: StatementsEN.aux
 A level-1 auxiliary file: Kurzfassung.aux
 A level-1 auxiliary file: Abstract.aux
@@ -10,51 +8,3 @@ A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendix.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
-Name 1 in "Joseph M. Romano, Takashi Yoshioka, and Katherine J. Kuchenbecker." has a comma at the end for entry romano10
-while executing---line 1185 of file alpha.bst
-Name 1 in "Joseph M. Romano, Takashi Yoshioka, and Katherine J. Kuchenbecker." has a comma at the end for entry romano10
-while executing---line 1185 of file alpha.bst
-Name 1 in "Joseph M. Romano, Takashi Yoshioka, and Katherine J. Kuchenbecker." has a comma at the end for entry romano10
-while executing---line 1250 of file alpha.bst
-You've used 5 entries,
-            2543 wiz_defined-function locations,
-            595 strings with 5424 characters,
-and the built_in function-call counts, 1926 in all, are:
-= -- 190
-> -- 79
-< -- 3
-+ -- 26
-- -- 25
-* -- 125
-:= -- 315
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 28
-chr.to.int$ -- 5
-cite$ -- 5
-duplicate$ -- 80
-empty$ -- 147
-format.name$ -- 32
-if$ -- 404
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 5
-newline$ -- 28
-num.names$ -- 15
-pop$ -- 30
-preamble$ -- 1
-purify$ -- 34
-quote$ -- 0
-skip$ -- 75
-stack$ -- 0
-substring$ -- 108
-swap$ -- 16
-text.length$ -- 3
-text.prefix$ -- 2
-top$ -- 0
-type$ -- 36
-warning$ -- 0
-while$ -- 17
-width$ -- 6
-write$ -- 65
-(There were 3 error messages)
