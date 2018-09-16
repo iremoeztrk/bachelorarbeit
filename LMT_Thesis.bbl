@@ -5,6 +5,12 @@ B.~St. Arnaud.
 \newblock {Gigabit Internet to every Canadian Home by 2005}.
 \newblock \url{http://www.canet2.net/archeng/home.html}, 1999.
 
+\bibitem[Cha15]{rahul15}
+Rahul~Gopal Chaudhari.
+\newblock {\em Data Compression and Quality Evaluation for Haptic
+  Communications}.
+\newblock PhD thesis, Technische Universitat Munchen, 2015.
+
 \bibitem[CK15]{Culbertson15-WHC-Vibrations}
 Heather Culbertson and Katherine~J. Kuchenbecker.
 \newblock Should haptic texture vibrations respond to user force and speed?
@@ -30,10 +36,22 @@ Takashi~Yoshioka Joseph M.~Romano and Katherine~J. Kuchenbecker.
 \newblock {\em In Proceedings, IEEE International Conference on Robotics and
   Automation}, pages 1815--1821, May 2010.
 
+\bibitem[LK09]{leder09}
+S.~J. Lederman and R.~L. Klatzky.
+\newblock Haptic perception: A tutorial.
+\newblock {\em Attention, Perception, \& Psychophysics}, 71(7):1439--1459,
+  2009.
+
 \bibitem[Loo92]{Loomis92}
 J.~M. Loomis.
 \newblock Distal attribution and presence.
 \newblock {\em Presence: Teleoperators and Virtual Environments},
   1(1):113--119, 1992.
+
+\bibitem[SHNS18]{mouse18}
+Matti Strese, Rania Hassen, Andreas Noll, and Eckehard Steinbach.
+\newblock A tactile computer mouse for the display of surface material
+  properties.
+\newblock PP(99):1--1, 08 2018.
 
 \end{thebibliography}

@@ -1,8 +1,24 @@
-\chapter{Microscopic Roughness}
+\chapter{Haptic texture rendering}
 \thispagestyle{empty}% no page number in chapter title page
-girizgah
 
-To provide a more efficient and robust method of building haptic texture models from tool-surface interaction data...
+The human haptic perception system relies on kinesthetic and cutaneous sensory information provided by several receptors during probe-surface interactions \cite{leder09}.
+ 
+The kinesthetic sense focuses on the perception of forces and torques acting on the human
+body. Kinesthetic stimulation is sensed by mechanoreceptors located in the muscles. The kinesthetic mechanoreceptors include muscle spindles in parallel with muscle fibers and Golgi tendon organs in series with them at the connection with the skeleton \cite{rahul15}. In some mainly kinesthetic tasks, the tactile sense only indicates a contact.
+
+Tactile perception is stimulated by cutaneous receptors. There are four kinds of mechanoreceptors in the glabrous skin: The Merkel cells (Braille dots and sharp edges), Meissner corpuscles (low-frequency vibrations), Pacinian corpuscles(high frequency stimuli), Ruffini endings (still unknown).
+
+Friction, hardness, macroscopic roughness, microscopic roughness and thermal conductivity are the main dimensions to build haptic texture models.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=15cm]{texture}
+		\caption{Mechanism of texture production. A hand-held tool is used to stroke a textured surface. An acceleration sensor signal mounted on the tool measures the response of the hand-tool system as it hits surface features..Figure reproduced from \cite{rahul15} }
+		\label{fig:texture}
+	\end{center}
+\end{figure}
+
+
 \section{Methods for Interpolating Audio Signals}
 Interpolate audio signals for different velocities.
 
@@ -72,7 +88,7 @@ where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ t
 
 
 ---
-Human-user studies form an integral part of the evaluation of haptic virtual systems. However, the drawback of  these approaches is that they are tedious, time consuming and highly expensive. 
+ 
 
 We explain how to apply the mathematical principles of Linear
 Predictive Coding (LPC) to develop a discrete transfer function that represents the acceleration response
@@ -99,13 +115,19 @@ that virtual textures aiming to simulate real surfaces should
 vary the rendered vibrations with user speed but may not need
 to vary them with user force.
 that represents the acceleration response under specific probe-
-surface interaction conditions. We then use this predictive
+surface interaction conditions. 
 
 statistically significant decrease in realism
 this study elucidated the conditions necessary
 to create realistic haptic textures.
  a process of synthesizing probe-surface
 interactions from data recorded from real interactions.
+via automated analysis of real recorded
+data.
+While haptic feedback is known to increase the immersion into
+a virtual environment (VE), most haptic feedback devices lack
+the ability to display multidimensional tactile impressions.
+To provide a more efficient and robust method of building haptic texture models from tool-surface interaction data...
 \section{Beispiel für eine Abbildung}
 \begin{figure}[h!]
   \begin{center}
@@ -114,6 +136,7 @@ interactions from data recorded from real interactions.
     \label{fig:ToUseWithReference}
   \end{center}
 \end{figure}
+ 
 
 \begin{equation} \label{eq:isim}
 mRG = {\beta \cdot \sum_{k=1}^K \sum_{l=1}^L \hat{\textbf{X}}(k,l)}

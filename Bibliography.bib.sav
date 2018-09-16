@@ -88,7 +88,7 @@
   booktitle = {IEEE Transactions on Haptics},
 }
 
-@Article{leder09,
+@Article{l,
   author  = {S. J. Lederman and R. L. Klatzky},
   title   = {Haptic perception: A tutorial.},
   journal = {Attention, Perception, \& Psychophysics},
