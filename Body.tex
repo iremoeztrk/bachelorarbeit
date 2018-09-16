@@ -29,17 +29,16 @@ In the mechanism of fine roughness perception, FAI and FAII units contribute and
 	\end{center}
 \end{figure}
 
-The recorded acceleration signals depend on the scan speed and force, nonetheless we ignore the force dependencies as mentioned in the introduction part. Thereby, our approach in this thesis is generating vibrotactile signals based on the recorded acceleration data for different absolute scan speed. They are then displayed via a voice coil actuator.
+The recorded acceleration signals depend on the scan speed and force, nonetheless we ignore the force dependencies as mentioned in the introduction part. Thereby, our approach in this thesis is generating vibrotactile signals based on the recorded acceleration data for different absolute scan speed. They are then displayed via a voice coil actuator. 
 
 
 \chapter{Interpolation of vibrotactile signals}
 
-Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is to display recorded texture acceleration signals.   
+Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response. Therefore, user speed should be incorporated into the feedback signal.
+
+One way of relating /link
 
 \cite{refined12}
-Interpolate audio signals for different velocities.
-
-There are methods: lpc and major frequency.
 
 \section{Linear predictive coding}
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
