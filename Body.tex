@@ -4,27 +4,44 @@
 The human haptic perception system relies on kinesthetic and cutaneous sensory information provided by several receptors during probe-surface interactions \cite{leder09}.
  
 The kinesthetic sense focuses on the perception of forces and torques acting on the human
-body. Kinesthetic stimulation is sensed by mechanoreceptors located in the muscles. The kinesthetic mechanoreceptors include muscle spindles in parallel with muscle fibers and Golgi tendon organs in series with them at the connection with the skeleton \cite{rahul15}. In some mainly kinesthetic tasks, the tactile sense only indicates a contact.
+body. Kinesthetic stimulation is sensed by mechanoreceptors located in the muscles. Kinesthetic mechanoreceptors include muscle spindles in parallel with muscle fibers and Golgi tendon organs in series with them at the connection with the skeleton \cite{rahul15}. In some mainly kinesthetic tasks, the tactile sense only indicates a contact.
 
-Tactile perception is stimulated by cutaneous receptors. There are four kinds of mechanoreceptors in the glabrous skin: The Merkel cells (Braille dots and sharp edges), Meissner corpuscles (low-frequency vibrations), Pacinian corpuscles(high frequency stimuli), Ruffini endings (still unknown).
+Tactile perception is stimulated by cutaneous receptors. There are four kinds of mechanoreceptors in the glabrous skin: The Merkel cells (Braille dots and sharp edges), Meissner corpuscles (low-frequency vibrations), Pacinian corpuscles (high frequency stimuli), Ruffini endings (still unknown).
 
-Friction, hardness, macroscopic roughness, microscopic roughness and thermal conductivity are the main dimensions to build haptic texture models.
+Friction, hardness, macroscopic roughness, microscopic roughness and thermal conductivity are the main dimensions to build haptic texture models. All of these aspects should be well considered in order to increase immersion into a virtual environment. In the following of this thesis, microscopic roughness is our main focus as a vibrotactile feature.
 
+\section{Roughness}
+
+As an abstract feature roughness plays an important role in haptic signal perception.The roughness dimension may be divided into two dimensions: macro and fine (micro) roughness as in \cite{okamoto13}.
+
+\subsection{Macroscopic Roughness}
+
+Due to the duplex nature of roughness,  macroscopic roughness should strictly be considered in order to understand fine roughness. Coarse roughness is mainly represented by the ``uneven'', ``relief'', or ``voluminous'' labels and mediated by different mechanisms from micro roughness. For coarse surface roughness, the spatial  distribution of SAI units is related to roughness perception \cite{okamoto13}.
+
+\subsection{Fine Roughness}
+
+In the mechanism of fine roughness perception, FAI and FAII units contribute and is mainly represented by the ``rough" label. During surface-tool or surface-finger sliding motions, high frequency vibrations can be extracted using an accelerometer mounted on a human finger. Microscopic roughness impressions can be characterized by these vibrations. The macro and fine roughness dimensions can be separated according to the mentioned aspects but can intersect each other during the process of perception.  Figure \ref{fig:texture} illustrates the process of texture production with an accelerometer.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=15cm]{texture}
-		\caption{Mechanism of texture production. A hand-held tool is used to stroke a textured surface. An acceleration sensor signal mounted on the tool measures the response of the hand-tool system as it hits surface features..Figure reproduced from \cite{rahul15} }
+		\includegraphics[width=14cm]{texture}
+		\caption{Mechanism of texture production. A hand-held tool is used to stroke a textured surface. An acceleration sensor signal mounted on the tool measures the response of the hand-tool system as it hits surface features. Figure reproduced from \cite{rahul15} }
 		\label{fig:texture}
 	\end{center}
 \end{figure}
 
+The recorded acceleration signals depend on the scan speed and force, nonetheless we ignore the force dependencies as mentioned in the introduction part. Thereby, our approach in this thesis is generating vibrotactile signals based on the recorded acceleration data for different absolute scan speed. They are then displayed via a voice coil actuator.
 
-\section{Methods for Interpolating Audio Signals}
+
+\chapter{Interpolation of vibrotactile signals}
+
+Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is to display recorded texture acceleration signals.   
+
+\cite{refined12}
 Interpolate audio signals for different velocities.
 
 There are methods: lpc and major frequency.
 
-\subsection{Linear Predictive Coding}
+\section{Linear predictive coding}
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
 
 We consider an IIR filter $H(z)$ of length n in the form $H(z)=[-h_1z^{-2}-h_2z^{-1}...-h_nz^{-n}]$.
@@ -68,9 +85,9 @@ C\{\vec{a_g}(l)\}=\frac{RMS(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})}{
 
 Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. In our case we choose $length(\vec{a}(l))-1$ as the order for the best quality of results.
 
-Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter  result in new synthesized signals, so that we create signal data for audio signals at different force and velocities.
+Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter  result in new synthesized signals, so that we create signal data for audio signals at different force and velocities. 
 
-\subsection{Signal Generation from Major Frequencies}
+\section{Signal Generation from Major Frequencies}
 
 The other method for signal generation is using rich and valuable information of signals' high frequencies. The frequency of the vibration must change as the users change their force and so that their velocity. This is one of the realistic methods for interpolation between signals recorded under different velocities.
 
@@ -128,14 +145,14 @@ While haptic feedback is known to increase the immersion into
 a virtual environment (VE), most haptic feedback devices lack
 the ability to display multidimensional tactile impressions.
 To provide a more efficient and robust method of building haptic texture models from tool-surface interaction data...
-\section{Beispiel für eine Abbildung}
-\begin{figure}[h!]
-  \begin{center}
-        \includegraphics[width=4cm]{TUMLogo_oZ_Outline_schwarz_CMYK}
-    \caption{Beispiel für eine Beschriftung.}
-    \label{fig:ToUseWithReference}
-  \end{center}
-\end{figure}
+
+The perception of displayed haptic
+information typically varies across different human subjects [7].
+Experiments with human participants are thus an integral part of
+the research in haptics. In our case, the tactile properties of the
+real and the artificially displayed surface materials for individual
+subjects need to be compared and evaluated.
+
  
 
 \begin{equation} \label{eq:isim}
@@ -143,8 +160,8 @@ mRG = {\beta \cdot \sum_{k=1}^K \sum_{l=1}^L \hat{\textbf{X}}(k,l)}
 \end{equation}
 
 Durch die \texttt{\bslash label} kann auf die Bilder mit
-\texttt{\bslash ref} verwiesen werden
-(z.B.~Abbildung~\ref{fig:ToUseWithReference}).
+\texttt{\bslash ref} verwiesen werden.
+
 
 \section{Beispiele für Referenzen}
 Die Literaturhinweise werden im Text z.B.\ folgendermaßen verwendet:\\

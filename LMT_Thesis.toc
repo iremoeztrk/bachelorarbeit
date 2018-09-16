@@ -1,21 +1,23 @@
-\babel@toc {ngerman}{}
-\babel@toc {american}{}
-\babel@toc {ngerman}{}
-\babel@toc {american}{}
-\babel@toc {american}{}
-\babel@toc {american}{}
+\select@language {ngerman}
+\select@language {american}
+\select@language {ngerman}
+\select@language {american}
+\select@language {american}
+\select@language {american}
 \contentsline {chapter}{Contents}{ii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Haptic texture rendering}{2}
-\contentsline {section}{\numberline {2.1}Methods for Interpolating Audio Signals}{2}
-\contentsline {subsection}{\numberline {2.1.1}Linear Predictive Coding}{2}
-\contentsline {subsection}{\numberline {2.1.2}Signal Generation from Major Frequencies}{4}
-\contentsline {section}{\numberline {2.2}Beispiel f\"ur eine Abbildung}{6}
-\contentsline {section}{\numberline {2.3}Beispiele f\"ur Referenzen}{6}
-\contentsline {section}{\numberline {2.4}Schrifttypen}{6}
-\contentsline {section}{\numberline {2.5}Archivierung}{7}
-\contentsline {chapter}{\numberline {3}Zusammenfassung}{8}
-\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{9}
-\contentsline {chapter}{List of Figures}{10}
-\contentsline {chapter}{List of Tables}{11}
-\contentsline {chapter}{Bibliography}{12}
+\contentsline {section}{\numberline {2.1}Roughness}{2}
+\contentsline {subsection}{\numberline {2.1.1}Macroscopic Roughness}{3}
+\contentsline {subsection}{\numberline {2.1.2}Fine Roughness}{3}
+\contentsline {chapter}{\numberline {3}Interpolation of vibrotactile signals}{4}
+\contentsline {section}{\numberline {3.1}Linear predictive coding}{4}
+\contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{6}
+\contentsline {section}{\numberline {3.3}Beispiele f\"ur Referenzen}{7}
+\contentsline {section}{\numberline {3.4}Schrifttypen}{7}
+\contentsline {section}{\numberline {3.5}Archivierung}{9}
+\contentsline {chapter}{\numberline {4}Zusammenfassung}{10}
+\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{11}
+\contentsline {chapter}{List of Figures}{12}
+\contentsline {chapter}{List of Tables}{13}
+\contentsline {chapter}{Bibliography}{14}

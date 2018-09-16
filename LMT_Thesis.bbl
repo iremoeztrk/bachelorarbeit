@@ -1,4 +1,5 @@
-\begin{thebibliography}{JMRK10}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{CRC{\etalchar{+}}12}
 
 \bibitem[Arn99]{arnaud99}
 B.~St. Arnaud.
@@ -17,6 +18,13 @@ Heather Culbertson and Katherine~J. Kuchenbecker.
 \newblock In {\em IEEE World Haptics Conference}, pages 106 -- 112, Evanston,
   Illinois, USA, June 2015.
 \newblock Oral presentation given by Culbertson.
+
+\bibitem[CRC{\etalchar{+}}12]{refined12}
+H.~Culbertson, J.~M. Romano, P.~Castillo, M.~Mintz, and K.~J. Kuchenbecker.
+\newblock Refined methods for creating realistic haptic virtual textures from
+  tool-mediated contact acceleration data.
+\newblock In {\em 2012 IEEE Haptics Symposium (HAPTICS)}, pages 385--391, March
+  2012.
 
 \bibitem[Dur60]{durbin}
 J.~Durbin.
@@ -53,5 +61,10 @@ Matti Strese, Rania Hassen, Andreas Noll, and Eckehard Steinbach.
 \newblock A tactile computer mouse for the display of surface material
   properties.
 \newblock PP(99):1--1, 08 2018.
+
+\bibitem[SOY13]{okamoto13}
+H.~Nagano S.~Okamoto and Y.~Yamada.
+\newblock Psychophysical dimensions of tactile perception of textures.
+\newblock {\em IEEE Transactions on Haptics}, 6(1):81--93, 2013.
 
 \end{thebibliography}

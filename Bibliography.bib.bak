@@ -1,3 +1,4 @@
+% This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
 
@@ -9,6 +10,27 @@
   Year                     = {1999}
 }
 
+@PhdThesis{rahul15,
+  Title                    = {Data Compression and Quality Evaluation for Haptic Communications},
+  Author                   = {Rahul Gopal Chaudhari},
+  School                   = {Technische Universitat Munchen},
+  Year                     = {2015}
+}
+
+@InProceedings{Culbertson15-WHC-Vibrations,
+  Title                    = {Should Haptic Texture Vibrations Respond to User Force and Speed?},
+  Author                   = {Culbertson, Heather and Kuchenbecker, Katherine J.},
+  Booktitle                = {IEEE World Haptics Conference},
+  Year                     = {2015},
+
+  Address                  = {Evanston, Illinois, USA},
+  Month                    = jun,
+  Note                     = {Oral presentation given by Culbertson},
+  Pages                    = {106 - 112},
+
+  Month_numeric            = {6}
+}
+
 @Article{durbin,
   Title                    = {The fitting of time-series models.},
   Author                   = {J. Durbin},
@@ -17,29 +39,6 @@
   Number                   = {3},
   Pages                    = {233-244},
   Volume                   = {28}
-}
-
-@Article{Loomis92,
-	Title                    = {Distal attribution and presence.},
-	Author                   = {J. M. Loomis},
-	Journal                  = {Presence: Teleoperators
-	and Virtual Environments},
-	Year                     = {1992},
-	Number                   = {1},
-	Pages                    = {113-119},
-	Volume                   = {1}
-}
-
-@inproceedings{Culbertson15-WHC-Vibrations,
-	title = {Should Haptic Texture Vibrations Respond to User Force and Speed?},
-	author = {Culbertson, Heather and Kuchenbecker, Katherine J.},
-	booktitle = {IEEE World Haptics Conference},
-	pages = {106 - 112},
-	address = {Evanston, Illinois, USA},
-	month = jun,
-	year = {2015},
-	note = {Oral presentation given by Culbertson},
-	month_numeric = {6}
 }
 
 @Book{eberspaecher97,
@@ -60,32 +59,66 @@
   Volume                   = {28}
 }
 
+@Article{,
+  Author                   = {Heather Culbertson , Joseph M. Romano, Pablo Castillo, Max Mintz and Katherine J. Kuchenbecker},
+
+  Owner                    = {ga45kux},
+  Timestamp                = {2018.09.16}
+}
+
 @Article{romano10,
   Title                    = {Automatic filter design for synthesis of haptic textures from recorded acceleration data.},
   Author                   = {Joseph M. Romano, Takashi Yoshioka and Katherine J. Kuchenbecker.},
   Journal                  = {In Proceedings, IEEE International Conference on Robotics and Automation},
   Year                     = {May 2010},
-  Pages                    = {1815-1821},
-
- 
+  Pages                    = {1815-1821}
 }
 
-@PhdThesis{rahul15,
-  author = {Rahul Gopal Chaudhari},
-  title  = {Data Compression and Quality Evaluation for Haptic Communications},
-  school = {Technische Universitat Munchen},
-  year   = {2015},
+@Article{leder09,
+  Title                    = {Haptic perception: A tutorial.},
+  Author                   = {S. J. Lederman and R. L. Klatzky},
+  Journal                  = {Attention, Perception, \& Psychophysics},
+  Year                     = {2009},
+  Number                   = {7},
+  Pages                    = {1439-1459},
+  Volume                   = {71}
+}
+
+@Article{Loomis92,
+  Title                    = {Distal attribution and presence.},
+  Author                   = {J. M. Loomis},
+  Journal                  = {Presence: Teleoperators and Virtual Environments},
+  Year                     = {1992},
+  Number                   = {1},
+  Pages                    = {113-119},
+  Volume                   = {1}
+}
+
+@Article{okamoto13,
+  Title                    = {Psychophysical Dimensions of Tactile Perception of Textures.},
+  Author                   = {S. Okamoto, H. Nagano and Y. Yamada},
+  Journal                  = {IEEE Transactions on Haptics},
+  Year                     = {2013},
+  Number                   = {1},
+  Pages                    = {81-93},
+  Volume                   = {6},
+
+  Owner                    = {ga45kux},
+  Timestamp                = {2018.09.16}
 }
 
 @Article{mouse18,
-  author    = {Strese, Matti and Hassen, Rania and Noll, Andreas and Steinbach, Eckehard},
-  title     = {A Tactile Computer Mouse for the Display of Surface Material Properties},
-  year      = {2018},
-  volume    = {PP},
-  number    = {99},
-  pages     = {1-1},
-  month     = {08},
-  booktitle = {IEEE Transactions on Haptics},
+  Title                    = {A Tactile Computer Mouse for the Display of Surface Material Properties},
+  Author                   = {Strese, Matti and Hassen, Rania and Noll, Andreas and Steinbach, Eckehard},
+  Year                     = {2018},
+
+  Month                    = {08},
+  Number                   = {99},
+  Pages                    = {1-1},
+  Volume                   = {PP},
+
+  Booktitle                = {IEEE Transactions on Haptics}
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@comment{jabref-meta: databaseType:bibtex;}
+
