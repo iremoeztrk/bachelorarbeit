@@ -36,9 +36,8 @@ The recorded acceleration signals depend on the scan speed and force, nonetheles
 
 Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response. Therefore, user speed should be incorporated into the feedback signal.
 
-One way of relating /link
-
-\cite{refined12}
+As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is 
+that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects bring us to creating data-driven texture models.
 
 \section{Linear predictive coding}
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
@@ -55,6 +54,14 @@ It is possible to compute the residual at each step using the vector of filter c
 \begin{equation} \label{eq:residual}
 \vec{e}(k)=a(k)-\hat{a}(k)=a(k)-\vec{h}^T\vec{a}(k-1)   
 \end{equation}
+
+
+\begin{figure} 
+	\subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{lpcsynthesis}} 
+	\subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{lpc}} 
+	\caption{Titel unterm gesamten Bild} 
+\end{figure} 
+
 
 At this step, we aim to find the minimum value of the residual function $e(k)$. We are able to reduce the problem to Wiener-Hopf equation by a cost function based on mean-square error. The Wiener-Hopf equation can be solved by Levinson-Durbin \cite{durbin} algorithm, so that we can obtain our optimal filter vector $\vec{h_0}$. 
 
