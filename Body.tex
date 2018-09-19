@@ -36,8 +36,11 @@ The recorded acceleration signals depend on the scan speed and force, nonetheles
 
 Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response. Therefore, user speed should be incorporated into the feedback signal.
 
-As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is 
-that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects bring us to creating data-driven texture models.
+As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects create the idea of data-driven texture models.
+
+In the following, we analyze two methods for synthesizing vibrotactile signals without creating noticeable artifacts. The first method is synthesizing two recorded acceleration signals under different speed conditions through LPC method and interpolating between them by linear interpolation of filter variables. The second one is reproducing these two signals from their major frequencies and interpolating between them according to the major frequencies.
+
+In the following, we go deep into both of the principles and how to apply them to produce interpolated signals.
 
 \section{Linear predictive coding}
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
@@ -83,15 +86,15 @@ The definition of power is as in the following equation:
 P\{\vec{a}(l)\}=\frac{1}{N}\sum_{n=0}^{N-1}|a(n)|^2
 \end{equation}
 
-This is equivalent to signal variance $\sigma²$ ,because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error as follows \cite{romano10}:
+This is equivalent to signal variance $\sigma²$ ,because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error as follows:
 
 \begin{equation} \label{costfunction}
 C\{\vec{a_g}(l)\}=\frac{RMS(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})}{RMS(DFT_s\{\vec{a}(l)\}}
 \end{equation}
 
-Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. In our case we choose $length(\vec{a}(l))-1$ as the order for the best quality of results.
+Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. In our case we choose 400 as the order for the best quality of results as in \cite{romano10}.
 
-Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter  result in new synthesized signals, so that we create signal data for audio signals at different force and velocities. 
+Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that we create signal data for audio signals at different force and velocities. 
 
 \section{Signal Generation from Major Frequencies}
 
@@ -99,9 +102,13 @@ The other method for signal generation is using rich and valuable information of
 
 At first we determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done in a similar way to order selection of a prediction filter in the previous section. For our case we choose 10 for the optimum frequency value.
 
-In order to find the major frequencies, we calculate the discrete Fourier transform of the two recorded data and find ten highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should not be close to each other because the superposition of two pure tones with slightly different frequencies can lead to beats. Therefore we remove frequencies among selected ones with a difference less than 5 and choose new others under this condition.
+In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select twenty highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. To avoid this phenomenon, we remove frequencies among selected ones with a difference less than ?.
 
-We synthesize from the highest ten amplitudes and their phases a new signal according to the following equation:
+The remaining frequencies of the recorded signals are utilized as skeleton of new signals to be generated. We define the frequency, the angle and the amplitude of each selected sample.
+
+--frekanlarin plotunu koy.
+
+We synthesize from the interpolated amplitudes and their phases new signals according to the following equation:
 
 \begin{equation} \label{synthesize}
 z=z+maxA(k)*(cos(2*\pi*t*maxF(k)+maxP(k))+i*sin(2*\pi*t*maxF(k)+maxP(k)))
@@ -109,7 +116,7 @@ z=z+maxA(k)*(cos(2*\pi*t*maxF(k)+maxP(k))+i*sin(2*\pi*t*maxF(k)+maxP(k)))
 
 where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the place order of them, $maxP(k)$ represents the phase of selected frequencies and z is zero at the beginning and  
 
-
+Bahsedilen modellerden lpcnin interpolasyonu kanitlandi.majora bakicaz deneyde.
 ---
  
 
@@ -121,9 +128,7 @@ probe-surface interaction conditions, we develop a method for interpolating the 
 texture synthesis process. Finally, we compare the results of this process with real recorded acceleration
 signals, and we show that the two correlate strongly in the frequency domain.
 
-Dragging a tool across a textured surface produces
-vibrations that convey important perceptual information about
-the interaction and the underlying qualities of the surface.
+
 These vibrations depend on the motions of the tool and respond
 to both normal force and tangential speed. This paper explores
 various methods of simulating haptic texture interactions by
