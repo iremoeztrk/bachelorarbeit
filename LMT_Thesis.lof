@@ -1,15 +1,18 @@
-\select@language {ngerman}
-\select@language {american}
-\select@language {ngerman}
-\select@language {american}
-\select@language {american}
-\select@language {american}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Mechanism of texture production. A hand-held tool is used to stroke a textured surface. An acceleration sensor signal mounted on the tool measures the response of the hand-tool system as it hits surface features. Figure reproduced from \cite {rahul15} }}{3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Titel unterm gesamten Bild}}{5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Bezeichnung der linken Grafik}}}{5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezeichnung der rechten Grafik}}}{5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Signal generation through LPC principle. Figures reproduced from \cite {romano10}.}}{6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Block diagram for prediction of the next contact acceleration $a(k)$ given the recorded series $a(k)$ with residual $e(k)$.}}}{6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block diagram for the synthesis of an acceleration signal $a_g(l)$ from the appropriately scaled white noise input $e_g(l)$.}}}{6}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

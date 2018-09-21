@@ -1,4 +1,5 @@
 \chapter{Haptic texture rendering}
+\label{haptic}
 \thispagestyle{empty}% no page number in chapter title page
 
 The human haptic perception system relies on kinesthetic and cutaneous sensory information provided by several receptors during probe-surface interactions \cite{leder09}.
@@ -33,6 +34,7 @@ The recorded acceleration signals depend on the scan speed and force, nonetheles
 
 
 \chapter{Interpolation of vibrotactile signals}
+\label{interpolation}
 
 Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response. Therefore, user speed should be incorporated into the feedback signal.
 
@@ -46,7 +48,7 @@ In the following, we go deep into both of the principles and how to apply them t
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
 
 We consider an IIR filter $H(z)$ of length n in the form $H(z)=[-h_1z^{-2}-h_2z^{-1}...-h_nz^{-n}]$.
-Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following. The resulting prediction vector from our filter is $\vec{\hat{a}}(k)$. The residual signal {$\vec{e}(k)$} is the difference between these two signals.The transfer function $P$(z) is the result of the following equation:
+Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following. The resulting prediction vector from our filter is $\vec{\hat{a}}(k)$. The residual signal {$\vec{e}(k)$} is the difference between these two signals.The transfer function $P(z)$ is the result of the following equation:
 
 \begin{equation} \label{eq:transferfunction}
 \frac{\vec{e}(k)}{\vec{a}(k)}=1-H(z)=P(z)   
@@ -57,14 +59,6 @@ It is possible to compute the residual at each step using the vector of filter c
 \begin{equation} \label{eq:residual}
 \vec{e}(k)=a(k)-\hat{a}(k)=a(k)-\vec{h}^T\vec{a}(k-1)   
 \end{equation}
-
-
-\begin{figure} 
-	\subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{lpcsynthesis}} 
-	\subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{lpc}} 
-	\caption{Titel unterm gesamten Bild} 
-\end{figure} 
-
 
 At this step, we aim to find the minimum value of the residual function $e(k)$. We are able to reduce the problem to Wiener-Hopf equation by a cost function based on mean-square error. The Wiener-Hopf equation can be solved by Levinson-Durbin \cite{durbin} algorithm, so that we can obtain our optimal filter vector $\vec{h_0}$. 
 
@@ -78,7 +72,17 @@ To synthesize new signals, we use a white noise signal {$\vec{e_g}(l)$} as input
 a_g(l)=e_g(l)+\vec{h}^T\vec{a_g}(l-1) 
 \end{equation}
 
-The value {$\vec{e_g}(l)$} is a randomly generated Gaussian white noise but its average signal power must be equal to that of the average signal power remaining in the residual, $P\{\vec{e}(k)\}$ after filter optimization.
+Figure \ref{fig:lpc-blockdiagram} illustrates each of analyzing and synthesizing processes via block diagram. The value {$\vec{e_g}(l)$} is a randomly generated Gaussian white noise but its average signal power must be equal to that of the average signal power remaining in the residual, $P\{\vec{e}(k)\}$ after filter optimization.
+
+\begin{figure} 
+	
+	\subfigure[Block diagram for prediction of the next contact acceleration $a(k)$
+	given the recorded series $a(k)$ with residual $e(k)$.]{\includegraphics[width=0.49\textwidth]{lpcsynthesis}} 
+	\subfigure[Block diagram for the synthesis of an acceleration signal $a_g(l)$
+	from the appropriately scaled white noise input $e_g(l)$.]{\includegraphics[width=0.49\textwidth]{lpc}} 
+	\caption{Signal generation through LPC principle. Figures reproduced from \cite{romano10}.} 
+	\label{fig:lpc-blockdiagram}
+\end{figure} 
 
 The definition of power is as in the following equation:
 
@@ -100,22 +104,88 @@ Now that we have generated our prediction filter with two unique variables $\vec
 
 The other method for signal generation is using rich and valuable information of signals' high frequencies. The frequency of the vibration must change as the users change their force and so that their velocity. This is one of the realistic methods for interpolation between signals recorded under different velocities.
 
-At first we determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done in a similar way to order selection of a prediction filter in the previous section. For our case we choose 10 for the optimum frequency value.
+At first we determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done in a similar way to order selection of a prediction filter in the previous section. For our case we set 20 for the optimum frequency number, which is going to be reduced as described in the following of this section.
 
-In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select twenty highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. To avoid this phenomenon, we remove frequencies among selected ones with a difference less than ?.
+In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select twenty highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. To avoid this phenomenon, we remove frequencies among selected ones with a difference less than ? (see Figure ?).
 
-The remaining frequencies of the recorded signals are utilized as skeleton of new signals to be generated. We define the frequency, the angle and the amplitude of each selected sample.
+The remaining frequencies of the recorded signals are utilized as skeleton of new signals to be generated. We define the frequency, the angle and the amplitude of each selected sample. 
 
---frekanlarin plotunu koy.
-
-We synthesize from the interpolated amplitudes and their phases new signals according to the following equation:
+We synthesize new signals by linear interpolation of amplitudes according to the following equation:
 
 \begin{equation} \label{synthesize}
 z=z+maxA(k)*(cos(2*\pi*t*maxF(k)+maxP(k))+i*sin(2*\pi*t*maxF(k)+maxP(k)))
 \end{equation}
 
-where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the place order of them, $maxP(k)$ represents the phase of selected frequencies and z is zero at the beginning and  
+where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the frequency, $maxP(k)$ represents the phase of selected frequencies. Signal z is zero initialized at the beginning and updated as long as a new value of frequency exists. 
 
+Finally in both methods, we write audio data by $audiowrite$  function in Matlab using the estimated signals.
+
+\chapter{ Dependence of Speed on Friction Coefficients}
+\label{friction}
+
+Surface stickiness compels the users to apply a lateral force during surface interactions. The friction coefficient is usually calculated as the ratio
+of the required dragging force of a sensor to the pressure, or
+normal force \cite{mouse18}. 
+
+In the following, we use a Phantom Omni device to feel a surface with different friction conditions, to be able to create a speed scala for some friction coefficients. Our aim is demonstrating how user speed varies depending on friction coefficients. We then use these results to evaluate speed intervals to be created in the following of this thesis, in which different audio data is displayed. The results are shown in Figures ??.  
+
+-plots
+--evaluation.
+
+\chapter{Data-Driven Methods for Tactile Signal Evaluation}
+\label{data}
+
+The perception of displayed haptic
+information typically varies across different human subjects \cite{leder09}. Therefore,experiments with human participants and their feedbacks constitute a fundamental component of the development in haptics.
+
+As mentioned in chapter \ref{interpolation}, we analyze two methods of synthesizing vibrotactile signals for rendering fine roughness feedback: LPC and utilizing major frequencies of records. This chapter describes a human-subject experiment to evaluate how perceptually close our synthesized vibrotactile signals to the recorded acceleration signals in a haptic environment.  
+\section{Experiment I}
+
+\subsection{Subjects and Setup}
+
+To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 male, participated in the experiment at seperate times. Their
+ages ranged from 19 to 29, with an average of 23 years. The subjects were all right-handed with limited experience with haptic devices. None
+of them reported having any ailments that would affect the experiment.
+
+We used the voice coil actuator ? in the experiment to display vibrotactile signals. 5 objects were relevant for this experiment as shown in the tabular below.
+
+\begin{center}
+	
+	\begin{tabular}{||c c||} 
+		\hline
+		Material & Friction \\ [1ex] 	
+		\hline\hline
+		Coarse foam & 6   \\ 
+		\hline
+		2 & 7  \\
+		\hline
+		3 & 545  \\
+		\hline
+		4 & 545  \\
+		\hline
+		5 & 88 \\  
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Procedure}
+
+The subject sat at a table in front of the voice coil actuator. At first, the recorded signals of each 5 different materials are displayed before the syntesized ones.
+
+ the tactile properties of the
+real and the artificially displayed surface materials for individual
+subjects need to be compared and evaluated.
+
+
+
+
+\chapter{Tactile Signal Speed Dependency Evaluation}
+
+
+
+
+
+---
 Bahsedilen modellerden lpcnin interpolasyonu kanitlandi.majora bakicaz deneyde.
 ---
  
@@ -157,12 +227,7 @@ a virtual environment (VE), most haptic feedback devices lack
 the ability to display multidimensional tactile impressions.
 To provide a more efficient and robust method of building haptic texture models from tool-surface interaction data...
 
-The perception of displayed haptic
-information typically varies across different human subjects [7].
-Experiments with human participants are thus an integral part of
-the research in haptics. In our case, the tactile properties of the
-real and the artificially displayed surface materials for individual
-subjects need to be compared and evaluated.
+
 
  
 

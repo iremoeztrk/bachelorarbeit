@@ -1,9 +1,9 @@
-\select@language {ngerman}
-\select@language {american}
-\select@language {ngerman}
-\select@language {american}
-\select@language {american}
-\select@language {american}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
 \contentsline {chapter}{Contents}{ii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Haptic texture rendering}{2}
@@ -13,11 +13,17 @@
 \contentsline {chapter}{\numberline {3}Interpolation of vibrotactile signals}{4}
 \contentsline {section}{\numberline {3.1}Linear predictive coding}{4}
 \contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{6}
-\contentsline {section}{\numberline {3.3}Beispiele f\"ur Referenzen}{8}
-\contentsline {section}{\numberline {3.4}Schrifttypen}{8}
-\contentsline {section}{\numberline {3.5}Archivierung}{9}
-\contentsline {chapter}{\numberline {4}Zusammenfassung}{10}
-\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{11}
-\contentsline {chapter}{List of Figures}{12}
-\contentsline {chapter}{List of Tables}{13}
-\contentsline {chapter}{Bibliography}{14}
+\contentsline {chapter}{\numberline {4} Dependence of Speed on Friction Coefficients}{8}
+\contentsline {chapter}{\numberline {5}Data-Driven Methods for Tactile Signal Evaluation}{9}
+\contentsline {section}{\numberline {5.1}Experiment I}{9}
+\contentsline {subsection}{\numberline {5.1.1}Subjects and Setup}{9}
+\contentsline {subsection}{\numberline {5.1.2}Procedure}{10}
+\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{11}
+\contentsline {section}{\numberline {6.1}Beispiele f\"ur Referenzen}{12}
+\contentsline {section}{\numberline {6.2}Schrifttypen}{12}
+\contentsline {section}{\numberline {6.3}Archivierung}{13}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{14}
+\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{15}
+\contentsline {chapter}{List of Figures}{16}
+\contentsline {chapter}{List of Tables}{17}
+\contentsline {chapter}{Bibliography}{18}
