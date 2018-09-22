@@ -120,7 +120,7 @@ where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ t
 
 Finally in both methods, we write audio data by $audiowrite$  function in Matlab using the estimated signals.
 
-\chapter{ Dependence of Speed on Friction Coefficients}
+\chapter{Friction Dependence of Speed}
 \label{friction}
 
 Surface stickiness compels the users to apply a lateral force during surface interactions. The friction coefficient is usually calculated as the ratio
@@ -147,37 +147,45 @@ To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 
 ages ranged from 19 to 29, with an average of 23 years. The subjects were all right-handed with limited experience with haptic devices. None
 of them reported having any ailments that would affect the experiment.
 
-We used the voice coil actuator ? in the experiment to display vibrotactile signals. 5 objects were relevant for this experiment as shown in the tabular below.
-
-\begin{center}
+We used the voice coil actuator ? in the experiment to display vibrotactile signals. 5 objects were relevant for this experiment as shown in the tabular \ref{tab:materials}.
+\begin{table}[htbp]
+		\caption{Materials in the experiment given with their approximated friction coefficients.}
+\begin{center}	
 	
 	\begin{tabular}{||c c||} 
 		\hline
 		Material & Friction \\ [1ex] 	
 		\hline\hline
-		Coarse foam & 6   \\ 
+		Coarse foam & 0.6   \\ 
 		\hline
-		2 & 7  \\
+		Fine foam & 0.6  \\
 		\hline
-		3 & 545  \\
+		Coak & 0.2  \\
 		\hline
-		4 & 545  \\
+		Granite Tile & 0.2  \\
 		\hline
-		5 & 88 \\  
+		Steel wool & 0.5 \\  
 		\hline
 	\end{tabular}
+	\label{tab:materials}
 \end{center}
+\end{table}
+
+
 
 \subsection{Procedure}
 
-The subject sat at a table in front of the voice coil actuator. At first, the recorded signals of each 5 different materials are displayed before the syntesized ones.
+The subject sat at a table in front of the voice coil actuator. In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response with the right index finger. The displayed reference signal was for each material a recorded acceleration data and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
 
- the tactile properties of the
-real and the artificially displayed surface materials for individual
-subjects need to be compared and evaluated.
+In addition to these synthesized signals, the signal obtained by converting the initial signal from time domain to frequency domain via DFT and then converting back from the frequency domain to the time domain via IFFT was also displayed to be compared with the reference by the participants.  The intent here is to remove possible peculiarities that may have occurred at the beginning and end of the recording and so that providing a stable signal from the recording. 
 
+The subject was supposed to compare each pair of signals respectively and evaluate whether they cause the same or different perception. Before each synthesized signal, the recorded signal is displayed for 20 seconds. Afterwards the artificial produced audio is displayed again for 20 seconds and the participant was asked to evaluate directly. Hereby, all methods were judged regarding to the reference.
 
+This setting was repeated for each 5 materials and an experiment run was terminated after the subject judged the signal pairs to feel the ``same'' or ``different'' for each material.
 
+\subsection{Results}
+
+--kim ne dedi burda ver ama sonuclari conclusionda degerlendir?
 
 \chapter{Tactile Signal Speed Dependency Evaluation}
 
