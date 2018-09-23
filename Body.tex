@@ -138,7 +138,15 @@ In the following, we use a Phantom Omni device to feel a surface with different 
 The perception of displayed haptic
 information typically varies across different human subjects \cite{leder09}. Therefore,experiments with human participants and their feedbacks constitute a fundamental component of the development in haptics.
 
-As mentioned in chapter \ref{interpolation}, we analyze two methods of synthesizing vibrotactile signals for rendering fine roughness feedback: LPC and utilizing major frequencies of records. This chapter describes a human-subject experiment to evaluate how perceptually close our synthesized vibrotactile signals to the recorded acceleration signals in a haptic environment.  
+As mentioned in chapter \ref{interpolation}, we analyze two methodologies of synthesizing vibrotactile signals for rendering fine roughness feedback: LPC and utilizing major frequencies of records. This chapter describes a human-subject experiment to evaluate how perceptually close our synthesized vibrotactile signals to the recorded acceleration signals in a haptic environment.  
+
+Before the experiment, spectral analysis of a recorded and its synthesized version via both methodology is given as a sample in Figure ?.
+
+-figure
+
+The general feel of haptic textures is governed by their spectral signature \cite{haptography}. As in the figure ?, the recorded and synthesized data differ on time-domain, but their spectrum are quite similar. So it is expected that they will feel the same to a user. Whether these correlations are strong enough to fool the human sense
+of touch were planned to investigate in \cite{romano10}, which Experiment I is going to deal with in the next section.
+
 \section{Experiment I}
 
 \subsection{Subjects and Setup}
@@ -177,7 +185,7 @@ We used the voice coil actuator ? in the experiment to display vibrotactile sign
 
 The subject sat at a table in front of the voice coil actuator. In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response with the right index finger. The displayed reference signal was for each material a recorded acceleration data and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
 
-In addition to these synthesized signals, the signal obtained by converting the initial signal from time domain to frequency domain via DFT and then converting back from the frequency domain to the time domain via IFFT was also displayed to be compared with the reference by the participants.  The intent here is to remove possible peculiarities that may have occurred at the beginning and end of the recording and so that providing a stable signal from the recording. 
+In addition to these synthesized signals, the signal obtained by converting the initial signal from time domain to frequency domain via DFT and then converting back from the frequency domain to the time domain via IFFT was also displayed to be compared with the reference by the participants. The intent here is to remove possible peculiarities that may have occurred at the beginning and end of the recording and so that providing a stable signal from the recording. 
 
 The subject was supposed to compare each pair of signals respectively and evaluate whether they cause the same or different perception. Before each synthesized signal, the recorded signal is displayed for 20 seconds. Afterwards the artificial produced audio is displayed again for 20 seconds and the participant was asked to evaluate directly. Hereby, all methods were judged regarding to the reference.
 
@@ -187,12 +195,34 @@ This setting was repeated for each 5 materials and an experiment run was termina
 
 --kim ne dedi burda ver ama sonuclari conclusionda degerlendir?
 
+\subsection{Conclusion}
+
 \chapter{Tactile Signal Speed Dependency Evaluation}
 
 
+lpc uses the autocorrelation method of autoregressive (AR) modeling to find the filter coefficients.
+
+\section{Experiment II}
+The
+four virtual surfaces were created by altering the texture
+vibrations? responsiveness to user force and speed. The
 
 
 
+\subsection{Subjects and Setup}
+from dragging a Phantom Omni across a textured surface [9].
+They recorded the spectrum for two tangential speeds and in-
+
+
+\subsection{Procedure}
+Subjects were also given time to practice
+using the Omni by exploring a simple haptic environment
+consisting of a sphere and cube inside of a box.
+
+
+\subsection{Results}
+
+\subsection{Conclusion}
 ---
 Bahsedilen modellerden lpcnin interpolasyonu kanitlandi.majora bakicaz deneyde.
 ---

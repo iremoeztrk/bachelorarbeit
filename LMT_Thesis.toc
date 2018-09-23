@@ -17,14 +17,20 @@
 \contentsline {chapter}{\numberline {5}Data-Driven Methods for Tactile Signal Evaluation}{9}
 \contentsline {section}{\numberline {5.1}Experiment I}{9}
 \contentsline {subsection}{\numberline {5.1.1}Subjects and Setup}{9}
-\contentsline {subsection}{\numberline {5.1.2}Procedure}{9}
+\contentsline {subsection}{\numberline {5.1.2}Procedure}{10}
 \contentsline {subsection}{\numberline {5.1.3}Results}{10}
-\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{11}
-\contentsline {section}{\numberline {6.1}Beispiele f\"ur Referenzen}{12}
-\contentsline {section}{\numberline {6.2}Schrifttypen}{12}
-\contentsline {section}{\numberline {6.3}Archivierung}{13}
-\contentsline {chapter}{\numberline {7}Zusammenfassung}{14}
-\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{15}
-\contentsline {chapter}{List of Figures}{16}
-\contentsline {chapter}{List of Tables}{17}
-\contentsline {chapter}{Bibliography}{18}
+\contentsline {subsection}{\numberline {5.1.4}Conclusion}{11}
+\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{12}
+\contentsline {section}{\numberline {6.1}Experiment II}{12}
+\contentsline {subsection}{\numberline {6.1.1}Subjects and Setup}{12}
+\contentsline {subsection}{\numberline {6.1.2}Procedure}{12}
+\contentsline {subsection}{\numberline {6.1.3}Results}{13}
+\contentsline {subsection}{\numberline {6.1.4}Conclusion}{13}
+\contentsline {section}{\numberline {6.2}Beispiele f\"ur Referenzen}{14}
+\contentsline {section}{\numberline {6.3}Schrifttypen}{14}
+\contentsline {section}{\numberline {6.4}Archivierung}{15}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{16}
+\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{17}
+\contentsline {chapter}{List of Figures}{18}
+\contentsline {chapter}{List of Tables}{19}
+\contentsline {chapter}{Bibliography}{20}

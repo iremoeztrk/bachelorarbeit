@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.3)  22 SEP 2018 19:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.3)  23 SEP 2018 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -379,14 +379,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 
-] (./LMT_Thesis.toc)
+] (./LMT_Thesis.toc [2
+
+
+])
 \tf@toc=\write3
 \openout3 = `LMT_Thesis.toc'.
 
- [2
-
-
-]
+ [3]
 \openout2 = `Introduction.aux'.
 
 
@@ -404,7 +404,7 @@ Chapter 2.
 
 
 
-] <figures/texture.png, id=29, 798.73407pt x 407.27156pt>
+] <figures/texture.png, id=34, 798.73407pt x 407.27156pt>
 File: figures/texture.png Graphic file (type png)
 
 <use figures/texture.png>
@@ -414,7 +414,7 @@ Package pdftex.def Info: figures/texture.png used on input line 27.
 Chapter 3.
 [4
 
-] <figures/lpcsynthesis.png, id=39, 823.075pt x 399.4925pt>
+] <figures/lpcsynthesis.png, id=42, 823.075pt x 399.4925pt>
 File: figures/lpcsynthesis.png Graphic file (type png)
 
 <use figures/lpcsynthesis.png>
@@ -423,7 +423,7 @@ Package pdftex.def Info: figures/lpcsynthesis.png used on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 80.
 
-<figures/lpc.png, id=41, 552.0625pt x 274.02374pt>
+<figures/lpc.png, id=44, 552.0625pt x 274.02374pt>
 File: figures/lpc.png Graphic file (type png)
  <use figures/lpc.png>
 Package pdftex.def Info: figures/lpc.png used on input line 82.
@@ -437,24 +437,24 @@ Chapter 4.
 Chapter 5.
 [9
 
-] [10]
+] [10] [11]
 Chapter 6.
-[11
+[12
 
-]
-Underfull \hbox (badness 1331) in paragraph at lines 259--262
+] [13]
+Underfull \hbox (badness 1331) in paragraph at lines 287--290
 \OT1/cmr/m/n/12 Funktions- und Op-er-a-torze-ichen, deren Be-deu-tung frei gew^
 ^?ahlt wer-den kann
  []
 
-[12]) [13
+[14]) [15
 
 ]
 \openout2 = `Conclusions.aux'.
 
  (./Conclusions.tex
 Chapter 7.
-) [14
+) [16
 
 
 
@@ -463,7 +463,7 @@ Chapter 7.
 
  (./Appendix.tex
 Appendix A.
-) [15
+) [17
 
 
 
@@ -471,26 +471,26 @@ Appendix A.
 \tf@lof=\write4
 \openout4 = `LMT_Thesis.lof'.
 
- [16
+ [18
 
 
 ] (./LMT_Thesis.lot)
 \tf@lot=\write5
 \openout5 = `LMT_Thesis.lot'.
 
- (./LMT_Thesis.bbl [17
+ (./LMT_Thesis.bbl [19
 
 ]
-[18
+[20
 
-]) [19] (./LMT_Thesis.aux (./StatementsEN.aux) (./Kurzfassung.aux)
+]) [21] (./LMT_Thesis.aux (./StatementsEN.aux) (./Kurzfassung.aux)
 (./Abstract.aux) (./Introduction.aux) (./Body.aux) (./Conclusions.aux)
 (./Appendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 3576 strings out of 494860
- 53124 string characters out of 6177603
- 142601 words of memory out of 5000000
- 6741 multiletter control sequences out of 15000+600000
+ 3578 strings out of 494860
+ 53145 string characters out of 6177603
+ 142610 words of memory out of 5000000
+ 6743 multiletter control sequences out of 15000+600000
  11671 words of font info for 41 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  47i,8n,44p,1162b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -512,10 +512,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on LMT_Thesis.pdf (23 pages, 475319 bytes).
+Output written on LMT_Thesis.pdf (26 pages, 477651 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 173 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

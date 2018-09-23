@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{CRC{\etalchar{+}}12}
+\begin{thebibliography}{KJKM11}
 
 \bibitem[Arn99]{arnaud99}
 B.~St. Arnaud.
@@ -43,6 +43,13 @@ Takashi~Yoshioka Joseph M.~Romano and Katherine~J. Kuchenbecker.
   recorded acceleration data.
 \newblock {\em In Proceedings, IEEE International Conference on Robotics and
   Automation}, pages 1815--1821, May 2010.
+
+\bibitem[KJKM11]{haptography}
+J.~M.~Romano K.~J.~Kuchenbecker and W.~McMahan.
+\newblock Haptography: Capturing and recreating the rich feel of real surfaces.
+\newblock In C{\'e}dric Pradalier, Roland Siegwart, and Gerhard Hirzinger,
+  editors, {\em Robotics Research}, pages 245--260, Berlin, Heidelberg, 2011.
+  Springer Berlin Heidelberg.
 
 \bibitem[LK09]{leder09}
 S.~J. Lederman and R.~L. Klatzky.

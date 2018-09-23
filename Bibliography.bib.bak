@@ -31,6 +31,18 @@
   Month_numeric            = {6}
 }
 
+@InProceedings{refined12,
+  Title                    = {Refined methods for creating realistic haptic virtual textures from tool-mediated contact acceleration data.},
+  Author                   = {H. Culbertson and J. M. Romano and P. Castillo and M. Mintz and K. J. Kuchenbecker},
+  Booktitle                = {2012 IEEE Haptics Symposium (HAPTICS)},
+  Year                     = {2012},
+  Month                    = {March},
+  Pages                    = {385-391},
+
+  Owner                    = {ga45kux},
+  Timestamp                = {2018.09.16}
+}
+
 @Article{durbin,
   Title                    = {The fitting of time-series models.},
   Author                   = {J. Durbin},
@@ -59,19 +71,22 @@
   Volume                   = {28}
 }
 
-@Article{,
-  Author                   = {Heather Culbertson , Joseph M. Romano, Pablo Castillo, Max Mintz and Katherine J. Kuchenbecker},
-
-  Owner                    = {ga45kux},
-  Timestamp                = {2018.09.16}
-}
-
 @Article{romano10,
   Title                    = {Automatic filter design for synthesis of haptic textures from recorded acceleration data.},
   Author                   = {Joseph M. Romano, Takashi Yoshioka and Katherine J. Kuchenbecker.},
   Journal                  = {In Proceedings, IEEE International Conference on Robotics and Automation},
   Year                     = {May 2010},
   Pages                    = {1815-1821}
+}
+
+@InProceedings{haptography,
+  Title                    = {Haptography: Capturing and Recreating the Rich Feel of Real Surfaces},
+  Author                   = {K. J. Kuchenbecker, J. M. Romano, and W. McMahan.},
+  Booktitle                = {Robotics Research},
+  Year                     = {2011},
+
+  Owner                    = {ga45kux},
+  Timestamp                = {2018.09.23}
 }
 
 @Article{leder09,
