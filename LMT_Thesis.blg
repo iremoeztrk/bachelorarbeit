@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: LMT_Thesis.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: LMT_Thesis.aux
 A level-1 auxiliary file: StatementsEN.aux
 A level-1 auxiliary file: Kurzfassung.aux
 A level-1 auxiliary file: Abstract.aux
@@ -8,6 +10,10 @@ A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendix.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
+Name 1 in "S. Lim, K. Kyung, and D. Kwon" has a comma at the end for entry beats
+while executing---line 1185 of file alpha.bst
+Name 1 in "S. Lim, K. Kyung, and D. Kwon" has a comma at the end for entry beats
+while executing---line 1185 of file alpha.bst
 Name 1 in "K. J. Kuchenbecker, J. M. Romano, and W. McMahan." has a comma at the end for entry haptography
 while executing---line 1185 of file alpha.bst
 Name 1 in "K. J. Kuchenbecker, J. M. Romano, and W. McMahan." has a comma at the end for entry haptography
@@ -15,4 +21,47 @@ while executing---line 1185 of file alpha.bst
 Name 1 in "K. J. Kuchenbecker, J. M. Romano, and W. McMahan." has a comma at the end for entry haptography
 while executing---line 1250 of file alpha.bst
 Warning--empty journal in mouse18
-(There were 3 error messages)
+Name 1 in "S. Lim, K. Kyung, and D. Kwon" has a comma at the end for entry beats
+while executing---line 1250 of file alpha.bst
+You've used 15 entries,
+            2543 wiz_defined-function locations,
+            663 strings with 7115 characters,
+and the built_in function-call counts, 6333 in all, are:
+= -- 641
+> -- 264
+< -- 10
++ -- 87
+- -- 85
+* -- 453
+:= -- 1016
+add.period$ -- 47
+call.type$ -- 15
+change.case$ -- 89
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 259
+empty$ -- 474
+format.name$ -- 103
+if$ -- 1337
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 13
+newline$ -- 80
+num.names$ -- 47
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 105
+quote$ -- 0
+skip$ -- 231
+stack$ -- 0
+substring$ -- 404
+swap$ -- 55
+text.length$ -- 10
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 120
+warning$ -- 1
+while$ -- 58
+width$ -- 18
+write$ -- 201
+(There were 6 error messages)
