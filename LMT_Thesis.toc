@@ -1,9 +1,9 @@
-\select@language {ngerman}
-\select@language {american}
-\select@language {ngerman}
-\select@language {american}
-\select@language {american}
-\select@language {american}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
 \contentsline {chapter}{Contents}{ii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Haptic texture rendering}{2}
@@ -13,24 +13,26 @@
 \contentsline {chapter}{\numberline {3}Interpolation of vibrotactile signals}{4}
 \contentsline {section}{\numberline {3.1}Linear predictive coding}{4}
 \contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{6}
-\contentsline {chapter}{\numberline {4}Friction Dependence of Speed}{8}
-\contentsline {chapter}{\numberline {5}Data-Driven Methods for Tactile Signal Evaluation}{9}
-\contentsline {section}{\numberline {5.1}Experiment I}{9}
-\contentsline {subsection}{\numberline {5.1.1}Subjects and Setup}{9}
-\contentsline {subsection}{\numberline {5.1.2}Procedure}{10}
-\contentsline {subsection}{\numberline {5.1.3}Results}{10}
-\contentsline {subsection}{\numberline {5.1.4}Conclusion}{11}
-\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{12}
-\contentsline {section}{\numberline {6.1}Experiment II}{12}
-\contentsline {subsection}{\numberline {6.1.1}Subjects and Setup}{12}
-\contentsline {subsection}{\numberline {6.1.2}Procedure}{12}
-\contentsline {subsection}{\numberline {6.1.3}Results}{13}
-\contentsline {subsection}{\numberline {6.1.4}Conclusion}{13}
-\contentsline {section}{\numberline {6.2}Beispiele f\"ur Referenzen}{14}
-\contentsline {section}{\numberline {6.3}Schrifttypen}{14}
-\contentsline {section}{\numberline {6.4}Archivierung}{15}
-\contentsline {chapter}{\numberline {7}Zusammenfassung}{16}
-\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{17}
-\contentsline {chapter}{List of Figures}{18}
-\contentsline {chapter}{List of Tables}{19}
-\contentsline {chapter}{Bibliography}{20}
+\contentsline {chapter}{\numberline {4}Friction Dependence of Speed}{11}
+\contentsline {section}{\numberline {4.1}Speed Test}{11}
+\contentsline {section}{\numberline {4.2}Evaluation}{11}
+\contentsline {chapter}{\numberline {5}Data-Driven Methods for Tactile Signal Evaluation}{14}
+\contentsline {section}{\numberline {5.1}Experiment I}{15}
+\contentsline {subsection}{\numberline {5.1.1}Subjects and Setup}{15}
+\contentsline {subsection}{\numberline {5.1.2}Procedure}{15}
+\contentsline {subsection}{\numberline {5.1.3}Results}{16}
+\contentsline {subsection}{\numberline {5.1.4}Conclusion}{16}
+\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{17}
+\contentsline {section}{\numberline {6.1}Experiment II}{17}
+\contentsline {subsection}{\numberline {6.1.1}Subjects and Setup}{17}
+\contentsline {subsection}{\numberline {6.1.2}Procedure}{17}
+\contentsline {subsection}{\numberline {6.1.3}Results}{18}
+\contentsline {subsection}{\numberline {6.1.4}Conclusion}{18}
+\contentsline {section}{\numberline {6.2}Beispiele f\"ur Referenzen}{19}
+\contentsline {section}{\numberline {6.3}Schrifttypen}{19}
+\contentsline {section}{\numberline {6.4}Archivierung}{20}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{21}
+\contentsline {chapter}{\numberline {A}Ein Beispiel f\"ur einen Anhang}{22}
+\contentsline {chapter}{List of Figures}{23}
+\contentsline {chapter}{List of Tables}{24}
+\contentsline {chapter}{Bibliography}{25}

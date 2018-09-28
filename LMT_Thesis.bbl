@@ -37,6 +37,17 @@ J.~S. Griswold, T.~L. Lightle, and J.~G. Lovelady.
 \newblock {Hurricane Hugo: Effect On State Government Communications.}
 \newblock {\em IEEE Communications Magazine}, 28(6):12--17, 1990.
 
+\bibitem[HC14]{modeling14}
+Katherine J.~Kuchenbecker Heather~Culbertson, Juliette~Unwin.
+\newblock Modeling and rendering realistic textures from unconstrained
+  tool-surface interactions.
+\newblock {\em IEEE Transactions on Haptics}, 7(3):381--393, 2014.
+
+\bibitem[JMR12]{romano12}
+K.~J.~Kuchenbecker J.~M.~Romano.
+\newblock Creating realistic virtual textures from contact acceleration data.
+\newblock {\em IEEE Transactions on Haptics}, 5(2):109--119, 2012.
+
 \bibitem[JMRK10]{romano10}
 Takashi~Yoshioka Joseph M.~Romano and Katherine~J. Kuchenbecker.
 \newblock Automatic filter design for synthesis of haptic textures from

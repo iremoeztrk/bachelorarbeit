@@ -75,13 +75,14 @@ a_g(l)=e_g(l)+\vec{h}^T\vec{a_g}(l-1)
 Figure \ref{fig:lpc-blockdiagram} illustrates each of analyzing and synthesizing processes via block diagram. The value {$\vec{e_g}(l)$} is a randomly generated Gaussian white noise but its average signal power must be equal to that of the average signal power remaining in the residual, $P\{\vec{e}(k)\}$ after filter optimization.
 
 \begin{figure} 
-	
+	\begin{center}
 	\subfigure[Block diagram for prediction of the next contact acceleration $a(k)$
 	given the recorded series $a(k)$ with residual $e(k)$.]{\includegraphics[width=0.49\textwidth]{lpcsynthesis}} 
 	\subfigure[Block diagram for the synthesis of an acceleration signal $a_g(l)$
 	from the appropriately scaled white noise input $e_g(l)$.]{\includegraphics[width=0.49\textwidth]{lpc}} 
 	\caption{Signal generation through LPC principle. Figures reproduced from \cite{romano10}.} 
 	\label{fig:lpc-blockdiagram}
+	\end{center}
 \end{figure} 
 
 The definition of power is as in the following equation:
@@ -90,7 +91,7 @@ The definition of power is as in the following equation:
 P\{\vec{a}(l)\}=\frac{1}{N}\sum_{n=0}^{N-1}|a(n)|^2
 \end{equation}
 
-This is equivalent to signal variance $\sigma²$ ,because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error as follows:
+This is equivalent to signal variance $\sigma²$, because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error as follows:
 
 \begin{equation} \label{costfunction}
 C\{\vec{a_g}(l)\}=\frac{RMS(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})}{RMS(DFT_s\{\vec{a}(l)\}}
@@ -98,23 +99,67 @@ C\{\vec{a_g}(l)\}=\frac{RMS(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})}{
 
 Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. In our case we choose 400 as the order for the best quality of results as in \cite{romano10}.
 
-Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that we create signal data for audio signals at different force and velocities. 
+Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that we create signal data for audio signals at different force and velocities. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}.
 
 \section{Signal Generation from Major Frequencies}
 
-The other method for signal generation is using rich and valuable information of signals' high frequencies. The frequency of the vibration must change as the users change their force and so that their velocity. This is one of the realistic methods for interpolation between signals recorded under different velocities.
+The other method for signal generation is using rich and valuable information of signals' dominant frequencies, which has the highest amplitudes. The frequency of the vibration must change as the users change their force and so that their velocity. This is one of the realistic methods for interpolation between signals recorded under different velocities.
 
-At first we determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done in a similar way to order selection of a prediction filter in the previous section. For our case we set 20 for the optimum frequency number, which is going to be reduced as described in the following of this section.
+At first we should determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done as the part of our first experiment accourding to the participants' feedback. For our case we set 30 as the maximum number of selected frequencies and 2 as the minimum. The optimum will be evaluated with the aid of the first experiment.
 
-In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select twenty highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. To avoid this phenomenon, we remove frequencies among selected ones with a difference less than ? (see Figure ?).
+In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. To avoid this phenomenon, we remove frequencies among selected ones with a small difference.
+
+The threshold difference that the frequencies should have among each other is called ``just noticeable difference (JND)''. As described in \cite{rahul15},
+
+
+In Figures \ref{fig:co1_1} and \ref{fig:co1_2}, an example of coak material is shown to illustrate how the artificial signal is generated from the recorded data. The signal is recorded at a very slow scanning speed (50mm/s) on coak and the obtained three-axis time-domain signals are reduced to one-axis using DFT321 \cite{romano12}. The generated signal from selected frequencies is in Figure \ref{fig:co1_3} both in time and spectral domain. 
+
+\begin{figure} [htbp]
+	\begin{center}
+	\includegraphics[width=0.70\textwidth]{co1_1} 
+	 
+	\caption{The depicted signal is recorded during an interaction with coak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.} 
+	\label{fig:co1_1}
+		\end{center}
+\end{figure} 
+
+\begin{figure} [htbp]
+	\begin{center}
+		
+	\includegraphics[width=0.70\textwidth]{co1_2} 
+
+\caption{As an example, here is the number of selected frequencies 20 and the threshold difference is 5. The red points show the remaining 15 frequencies and the black ones are with 0.5 and above amplitudes, so that the upper side of the spectral domain is given with selected frequencies for a better overwiev.} 
+\label{fig:co1_2}
+\end{center}
+\end{figure} 
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.70\textwidth]{co1_3}
+		\caption{First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref{fig:co1_2}.}
+		\label{fig:co1_3}
+	\end{center}
+\end{figure}
 
 The remaining frequencies of the recorded signals are utilized as skeleton of new signals to be generated. We define the frequency, the angle and the amplitude of each selected sample. 
 
-We synthesize new signals by linear interpolation of amplitudes according to the following equation:
+We synthesize new signals by applying linear interpolation to the selected frequencies' amplitudes (see Figure \ref{fig:major}) and new signals are generated according to the following equation:
 
 \begin{equation} \label{synthesize}
 z=z+maxA(k)*(cos(2*\pi*t*maxF(k)+maxP(k))+i*sin(2*\pi*t*maxF(k)+maxP(k)))
 \end{equation}
+
+\begin{figure} [htbp]
+	\begin{center}
+		\subfigure[First generated signal from recorded data at speed 50mm/s reproduced from given frequencies below.]{\includegraphics[width=0.49\textwidth]{major1}} 
+		\subfigure[In this example, between two recorded data at different speed two signals are interpolated. Here, the first result of interpolation is shown.]{\includegraphics[width=0.49\textwidth]{major2}} 
+			\subfigure[Second result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.49\textwidth]{major3}} 
+			\subfigure[The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.]{\includegraphics[width=0.49\textwidth]{major4}} 
+		\caption{Signal interpolation through frequencies with highest amplitudes.} 
+		\label{fig:major}
+	\end{center}
+\end{figure} 
+
 
 where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the frequency, $maxP(k)$ represents the phase of selected frequencies. Signal z is zero initialized at the beginning and updated as long as a new value of frequency exists. 
 
@@ -127,10 +172,42 @@ Surface stickiness compels the users to apply a lateral force during surface int
 of the required dragging force of a sensor to the pressure, or
 normal force \cite{mouse18}. 
 
-In the following, we use a Phantom Omni device to feel a surface with different friction conditions, to be able to create a speed scala for some friction coefficients. Our aim is demonstrating how user speed varies depending on friction coefficients. We then use these results to evaluate speed intervals to be created in the following of this thesis, in which different audio data is displayed. The results are shown in Figures ??.  
+\section{Speed Test}
+In the following, we use a Phantom Omni device to feel a surface with different friction conditions, to be able to create a speed scala for some friction coefficients. Our aim is demonstrating how user speed varies depending on friction coefficients. We then use these results to evaluate speed intervals to be created in the following of this thesis, in which different audio data is displayed.
 
--plots
---evaluation.
+The test is carried out with an object in a haptic virtual environment, which has no friction at the beginning. The scanning speed is detected and saved in every 0.2 seconds, while the user explores the surface. Approximately after one minute, system automatically changes the friction and brings it to one level higher. The friction coefficients and the results are shown in Figures \ref{fig:boxplot} and \ref{fig:friction}.
+
+\begin{figure} [htbp]
+	\begin{center}
+		\includegraphics[width=0.70\textwidth]{boxplot} 
+		
+		\caption{Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.} 
+		\label{fig:boxplot}
+	\end{center}
+\end{figure} 
+
+\begin{figure} [htbp]
+	\begin{center}
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist1}} 
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist2}} 
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist3}} 
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist4}} 
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist5}} 
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist6}} 
+		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist7}} 
+		\caption{Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}  
+		\label{fig:friction}
+	\end{center}
+\end{figure} 
+
+
+\section{Evaluation}
+
+Figure \ref{fig:boxplot} presents the mean speed value and the common speed interval for each coefficient order. As expected, both the speed interval and the mean value get smaller with increasing friction coefficient. Figure \ref{fig:friction} gives us hints to be able to analyze how many intervals there are to display different audio data to simulate real surfaces.
+
+In plot (a), nine bins are shown, where the last two can be ignored due to the small number. So in that case, we would choose seven intervals for changing audio as the user speed varies, on the other hand in real life, textures always have a friction above zero, so this example depicts an unnatural scenario. When we look at the most common coefficients like 0.2 and 0.4, which are also relevant for the experiments in following chapters, we recognize that, it is possible to work with less than seven intervals for vibrotactile response. In the case of 0.2, five bins are remarkable as peaks and the rest can be part of the last interval. For the friction 0.4, we can assign four intervals and for 0.6 three audio data are quite sufficient. The fine roughness of objects with 0.8 and 1.0 friction coefficient can be displayed with two signals and for the last and extreme case one audio is enough already accourding to the presented results, so that there is no need to interpolate the recorded data.
+
+
 
 \chapter{Data-Driven Methods for Tactile Signal Evaluation}
 \label{data}
@@ -142,7 +219,7 @@ As mentioned in chapter \ref{interpolation}, we analyze two methodologies of syn
 
 Before the experiment, spectral analysis of a recorded and its synthesized version via both methodology is given as a sample in Figure ?.
 
--figure
+--figure
 
 The general feel of haptic textures is governed by their spectral signature \cite{haptography}. As in the figure ?, the recorded and synthesized data differ on time-domain, but their spectrum are quite similar. So it is expected that they will feel the same to a user. Whether these correlations are strong enough to fool the human sense
 of touch were planned to investigate in \cite{romano10}, which Experiment I is going to deal with in the next section.
@@ -155,7 +232,7 @@ To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 
 ages ranged from 19 to 29, with an average of 23 years. The subjects were all right-handed with limited experience with haptic devices. None
 of them reported having any ailments that would affect the experiment.
 
-We used the voice coil actuator ? in the experiment to display vibrotactile signals. 5 objects were relevant for this experiment as shown in the tabular \ref{tab:materials}.
+We used the voice coil actuator model NCC01-04-001-1X by H2W Technologies in the experiment to display vibrotactile signals. 5 objects were relevant for this experiment as shown in the tabular \ref{tab:materials}.
 \begin{table}[htbp]
 		\caption{Materials in the experiment given with their approximated friction coefficients.}
 \begin{center}	
@@ -172,7 +249,7 @@ We used the voice coil actuator ? in the experiment to display vibrotactile sign
 		\hline
 		Granite Tile & 0.2  \\
 		\hline
-		Steel wool & 0.5 \\  
+		Steel wool & 0.4 \\  
 		\hline
 	\end{tabular}
 	\label{tab:materials}
@@ -224,9 +301,9 @@ consisting of a sphere and cube inside of a box.
 
 \subsection{Conclusion}
 ---
-Bahsedilen modellerden lpcnin interpolasyonu kanitlandi.majora bakicaz deneyde.
+
 ---
- 
+ Von Quellen:
 
 We explain how to apply the mathematical principles of Linear
 Predictive Coding (LPC) to develop a discrete transfer function that represents the acceleration response
