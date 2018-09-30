@@ -1,9 +1,9 @@
-\babel@toc {ngerman}{}
-\babel@toc {american}{}
-\babel@toc {ngerman}{}
-\babel@toc {american}{}
-\babel@toc {american}{}
-\babel@toc {american}{}
+\select@language {ngerman}
+\select@language {american}
+\select@language {ngerman}
+\select@language {american}
+\select@language {american}
+\select@language {american}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Mechanism of texture production. A hand-held tool is used to stroke a textured surface. An acceleration sensor signal mounted on the tool measures the response of the hand-tool system as it hits surface features. Figure reproduced from \cite {rahul15} }}{3}
@@ -12,7 +12,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Block diagram for prediction of the next contact acceleration $a(k)$ given the recorded series $a(k)$ with residual $e(k)$.}}}{6}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block diagram for the synthesis of an acceleration signal $a_g(l)$ from the appropriately scaled white noise input $e_g(l)$.}}}{6}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces The RMS Error of synthesized signals via LPC calculated with different coefficient orders. The original signals are recorded acceleration data at 5cm/s of materials coak, steel wool and fine foam. The chosen threshold is 400 as a result of this plot, where additional coefficients have minimal benefit.}}{6}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The plot left is the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown on the right side. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}}{7}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The plot left shows the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown on the right side. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}}{7}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively. The beats wave is clearly noticeable in the first two signals, whereas it starts to differ from the beats in (c) and (d).}}{8}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {30-31 Hz}}}{8}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {30-32 Hz}}}{8}

@@ -40,7 +40,7 @@ Priori model designs have recently been evolved into data-driven haptic textures
 
 As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects create the idea of data-driven texture models.
 
-In the following, we analyze two methods for synthesizing vibrotactile signals without creating noticeable artifacts. The first method is synthesizing two recorded acceleration signals under different speed conditions through LPC method and interpolating between them by linear interpolation of filter variables. The second one is reproducing these two signals from their major frequencies and interpolating between them according to the major frequencies.
+In the following, we analyze two methods for synthesizing vibrotactile signals without creating noticeable artifacts. The first method is synthesizing two recorded acceleration signals under different speed conditions through LPC method and interpolating between them by linear interpolation of filter variables. The second one is reproducing these two signals from their major frequencies and interpolating between them to generate new signals.
 
 In the following, we go deep into both of the principles and how to apply them to produce interpolated signals.
 
@@ -111,13 +111,13 @@ C\{\vec{a_g}(l)\}=\frac{RMS(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})}{
 Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula, whereas a major change in error value can not be detected among the orders higher than 400. That is why in this thesis 400 is chosen as the optimal order for the best quality of results.
 
 
-Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that we create signal data for audio signals at different force and velocities. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}. Figure \ref{fig:lpc-original} shows an example signal and its LPC synthesized version both in time and spectral domain. 
+Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that signal data for audio signals at different force and velocities are created. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}. Figure \ref{fig:lpc-original} shows an example signal and its LPC synthesized version both in time and spectral domain. 
 
 \begin{figure} [htbp]
 	\begin{center}
 		\subfigure{\includegraphics[width=0.49\textwidth]{gr_doppelt}} 
 		\subfigure{\includegraphics[width=0.49\textwidth]{gr_lpc}} 
-		\caption{The plot left is the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown on the right side. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}
+		\caption{The plot left shows the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown on the right side. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}
 		\label{fig:lpc-original}
 	\end{center}
 \end{figure} 
@@ -128,7 +128,7 @@ The general feel of haptic textures is governed by their spectral signature \cit
 \label{majorfrequency}
 The other method for signal generation is using rich and valuable information of signals' dominant frequencies, which has the highest amplitudes. The frequency of the vibration must change as the users change their force and so that their velocity. This is one of the realistic methods for interpolation between signals recorded under different velocities.
 
-At first we should determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done as the part of our first experiment according to the participants' feedback. For our case we set 30 as the maximum number of selected frequencies and 2 as the minimum. The optimum will be evaluated with the aid of the first experiment.
+At first we should determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done as a part of Experiment I in chapter \ref{data} according to the participants' feedback. For our case we set 30 as the maximum number of selected frequencies and 2 as the minimum. The optimum will be evaluated with the aid of the first experiment.
 
 \begin{figure} [htbp]
 	\begin{center}
@@ -222,7 +222,7 @@ X_S(maxF(k))=maxA(k)*exp(maxP(k)*i)
 \end{figure} 
 
 
-where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the frequency, $maxP(k)$ represents the phase of selected frequencies. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain via IFFT to get the estimated signal as in Figure \ref{fig:co1_3}.  
+where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the frequency, $maxP(k)$ represents the phase of selected frequencies with k as the selected frequency order. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain via IFFT to get the estimated signal as in Figure \ref{fig:co1_3}.  
 
 Finally in both methods, we generate audio signals by $audiowrite$ function in Matlab, which are displayed during interactions with virtual surfaces.
 
@@ -282,7 +282,7 @@ As mentioned in chapter \ref{interpolation}, we analyze two methodologies of syn
 
 \subsection{Subjects and Setup}
 
-To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 male, participated in the experiment at seperate times. Their
+To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 male, participated in the experiment at separate times. Their
 ages ranged from 19 to 29, with an average of 23 years. The subjects were all right-handed with limited experience with haptic devices. None
 of them reported having any ailments that would affect the experiment.
 
