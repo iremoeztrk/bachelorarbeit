@@ -1,16 +1,17 @@
-\select@language {ngerman}
-\select@language {american}
-\select@language {ngerman}
-\select@language {american}
-\select@language {american}
-\select@language {american}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces The frequencies are selected from given intervals and have the threshold difference among each other.}}{9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Materials in the experiment given with their approximated friction coefficients.}}{15}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Materials in the experiment given with their approximated friction coefficients.}}{17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Beispiel f\"ur eine Beschriftung. Tabellenbeschriftungen sind \"ublicherweise \"uber der Tabelle platziert.}}{22}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Beispiel f\"ur eine Beschriftung. Tabellenbeschriftungen sind \"ublicherweise \"uber der Tabelle platziert.}}{24}

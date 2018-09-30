@@ -1,9 +1,9 @@
-\select@language {ngerman}
-\select@language {american}
-\select@language {ngerman}
-\select@language {american}
-\select@language {american}
-\select@language {american}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Mechanism of texture production. A hand-held tool is used to stroke a textured surface. An acceleration sensor signal mounted on the tool measures the response of the hand-tool system as it hits surface features. Figure reproduced from \cite {rahul15} }}{3}
@@ -11,24 +11,31 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Signal generation through LPC principle. Figures reproduced from \cite {romano10}.}}{6}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Block diagram for prediction of the next contact acceleration $a(k)$ given the recorded series $a(k)$ with residual $e(k)$.}}}{6}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block diagram for the synthesis of an acceleration signal $a_g(l)$ from the appropriately scaled white noise input $e_g(l)$.}}}{6}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The depicted signal is recorded during an interaction with coak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{8}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces As an example, here is the number of selected frequencies 20 and the threshold difference is 5. The red points show the remaining 15 frequencies and the black ones are with 0.5 and above amplitudes, so that the upper side of the spectral domain is given with selected frequencies for a better overwiev.}}{8}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref {fig:co1_2}.}}{9}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Signal interpolation through frequencies with highest amplitudes.}}{10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {First generated signal from recorded data at speed 50mm/s reproduced from given frequencies below.}}}{10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {In this example, between two recorded data at different speed two signals are interpolated. Here, the first result of interpolation is shown.}}}{10}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Second result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.}}}{10}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.}}}{10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The RMS Error of synthesized signals via LPC calculated with different coefficient orders. The original signals are recorded acceleration data at 5cm/s of materials coak, steel wool and fine foam. The chosen threshold is 400 as a result of this plot, where additional coefficients have minimal benefit.}}{6}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The plot left is the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown on the right side. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}}{7}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively. The beats wave is clearly noticeable in the first two signals, whereas it starts to differ from the beats in (c) and (d).}}{8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {30-31 Hz}}}{8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {30-32 Hz}}}{8}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {30-33 Hz}}}{8}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {30-34 Hz}}}{8}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The depicted signal is recorded during an interaction with coak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{10}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{10}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref {fig:co1_2}.}}{11}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Signal interpolation through frequencies with highest amplitudes.}}{12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {First generated signal from recorded data during interaction with coak at speed 40mm/s reproduced from given frequencies below.}}}{12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.}}}{12}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.}}}{12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.}}{12}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}}{13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{13}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{13}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{13}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{13}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{13}
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{13}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.}}{14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}}{15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{15}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{15}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{15}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{15}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{15}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
