@@ -315,7 +315,7 @@ We used the voice coil actuator model NCC01-04-001-1X by H2W Technologies in the
 
 \subsection{Procedure}
 
-The subject sat at a table in front of the voice coil actuator. In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response with the right index finger. The displayed reference signal was for each material a recorded acceleration data at the most probable speed according to the results in Figure \ref{fig:friction} in chapter \ref{friction} and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
+The subject sat at a table in front of the voice coil actuator. In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response with the right index finger. The displayed reference signal was for each material a recorded acceleration data at the mean speed according to the results in Figure \ref{fig:friction} in chapter \ref{friction} and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
 
 In addition to LPC and major frequency methodologies, the signal obtained by converting the initial signal from time domain to frequency domain via DFT and then converting back from the frequency domain to the time domain via IFFT was also displayed to be compared with the reference by the participants. The intent here is to remove possible peculiarities that may have occurred at the beginning and end of the recording and so that providing a stable signal from the recording. 
 
@@ -326,8 +326,35 @@ Another important aspect of this experiment is to find the optimum number of fre
 This setting was repeated for each 5 materials and an experiment run was terminated after the subject judged the signal pairs to feel the ``same'' or ``different'' for each material and for major frequency method after determining the optimal number of frequencies to be selected.
 
 \subsection{Results}
+\label{results1}
+
+Our first comparison pair was original signal with IFFT transformed version from its spectrum. As a result, 96 \% similarity is detected among 50 comparisons. Two subjects could distinguish between the original and synthesized signals of granite tile. All other objects had 100 \% similarity between their signals. Second comparison was between original and LPC synthesized signals. A similarity rate of 96 \% is also achieved in this comparison, whereas granite tile and  steel wool had 90 \% rate of similarity caused by different subjects. Again all other  materials had 100 \% similarity rate. Figure \ref{fig:deney1} shows the results of both comparison pairs.
+
+\begin{figure} [htbp]
+	\begin{center}
+		\includegraphics[width=0.70\textwidth]{deney2}
+		\caption{The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with ifft transformed signals, where yellow bars are for lpc-synthesized signals.} 
+		\label{fig:deney1}
+	\end{center}
+\end{figure} 
+
+In the other part of the experiment, we tried to find the optimum number of frequencies to be selected, from which the signal is reproduced. The result is shown for every material in Figure \ref{fig:boxfreq}.   
+
+In Figure \ref{fig:boxfreq} can be seen that 30 frequencies are not necessary to reproduce a signal, which can be reduced to 10 for example for materials coarse foam and granite tile. Our experiment shows that fine foam needs 6, coak 7 and steel wool 8 frequencies at least according to the mean value of the user answers. Also it was noted that, in the case of granite tile 7 participants found that the signals with less than 20 frequencies were better, in that case  ``similar'' to the reference signals, than signals with more than 20 frequencies. These optimum numbers of frequencies were used in the Experiment II by displaying the signals generated via the chosen amount of frequencies by that subject.
+\begin{figure} [htbp]
+	\begin{center}
+		\includegraphics[width=0.70\textwidth]{boxfreq}
+		\caption{The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam and granite tile 10 was the mean optimum number, where 10 was also chosen by over the half of the subjects in coarse foam experiment. For steel wool, coak and fine foam the optimums by 8, 7 and  6 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 8.2 on average, which can be accepted as 9 in this study.} 
+		\label{fig:boxfreq}
+	\end{center}
+\end{figure} 
 
 
+\subsection{Discussion}
+
+By evaluating how humans perceive both real and virtual vibrotactile signals, the study provided many important insights into the strengths and weaknesses of our modeling and rendering techniques. The first comparison results with 96 \% similarity show that the IFFT transformed version of the signals can be used as the reference signal as well. The 4 \% negative judgement can be explained by the pecularities in the recorded signal at the beginning and end of the record, which can be remarkable at the binding points emerged by the constitution of the 10-second audio data. The LPC synthesized signal may also have the same issue with the 96 \% of similarity, which is able to create more stable and consistent version of the original signal. Consequently, it can be deduced that humans find the signals generated via both methodologies hard to ``distinguish'' in general and therefore both can be used in place of the recorded signal.   
+
+Second part of the experiment reveals the optimum frequency number for major frequency method. From the presented results can be concluded that 9-10 frequencies would be the optimum for such a method in general. The challange in this methodology was to find the thresold difference between the selected frequencies in order to avoid the beats and determine the right intervals for these thresholds. This can be challanging and may cause problems or loss in valuable data when not reasonable values are selected. These thresholds can vary among different signals and thus can not be easily determined. In this experiment, we tried to find a generalized solution but for example in the case of granite tile, the results were not as we expected. Our prediction was to achieve better results with ascending number of selected frequencies. However, some subjects found signals between 20-30 frequencies not as similar as signals in 10-20-frequency interval to the reference signal. This may have been caused by several factors. Firstly, it can be due to the pecularities occurred in the record as mentioned in the section \ref{results1}. As a solution, the IFFT transformed signal can be used as a reference signal. Secondly, the selected frequency combination might not be the dominant ones, and can not be perceived within the original signal but when selected, they have a huge impact in the perception. The other material results show that generally with 8-9 selected frequencies a perceptually similar signal can be produced. The variation in different materials depends on the different number of the dominant freqeuncies, which mainly constitute the remarkable vibration during interaction. 
 
 \chapter{Tactile Signal Speed Dependency Evaluation}
 
@@ -336,7 +363,15 @@ Interactions with a surface in a virtual environment cause tactile vibrations. T
 \section{Experiment II}
 
 \subsection{Subjects and Setup}
-The subjects who took part in Experiment I were also the participants of Experiment II (see Subsection \ref{subjects}). This experiment was performed by dragging Novint Falcon haptic device across textured surfaces in a virtual room using natural exploratory motions, varying scanning speed. There were 5 materials of equal size placed next to each other (Figure ? ). Friction coefficients of the surfaces are shown in tabular \ref{tab:materials} in Experiment I.  Our target here is displaying vibrotactile signals to represent microscopic roughness of the texture, that is why the surfaces had no coarse texture to be able to achieve not manipulated results in the experiment. 
+The subjects who took part in Experiment I were also the participants of Experiment II (see Subsection \ref{subjects}). This experiment was performed by dragging Novint Falcon haptic device across textured surfaces in a virtual room using natural exploratory motions, varying scanning speed. There were 5 materials of equal size placed next to each other (Figure  \ref{fig:showroom}). Friction coefficients of the surfaces are shown in tabular \ref{tab:materials} in Experiment I.  Our target here is displaying vibrotactile signals to represent microscopic roughness of the texture, that is why the surfaces had no coarse texture to be able to achieve not manipulated results in the experiment. 
+
+\begin{figure} [htbp]
+	\begin{center}
+		\includegraphics[width=0.70\textwidth]{showroom}
+		\caption{The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: Granite tile, Steel wool, Coarse foam, Coak, Fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user velocity is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.} 
+		\label{fig:showroom}
+	\end{center}
+\end{figure} 
 
 For each material are the results shown in Figures \ref{fig:boxplot} and \ref{fig:friction} used in order to determine speed intervals, in which the audio signals should vary as the user speed changes. According to the results, intervals are defined as in the following:
 
@@ -371,34 +406,32 @@ For each interval the audio signals from recorded data and generated from major 
 The subject sat at a table in front of a PC and given time to practice
 using the Falcon device by exploring a simple haptic environment consisting of the 5 virtual objects. In the testing time, the user was instructed to explore a texture by varying the scanning speed , where the reference signals were displayed according to the matching intervals. After being familiar with the signals, which was generally after a minute, testing mode was activated in order to display vibrotactile signals produced via major frequencies. The participant was asked to compare the vibrations in respect to the reference. Due to the fact that Experiment II was the next step of Experiment I, the result of the optimum number for frequencies to be selected in Experiment I were regarded for this part and for each participant the corresponding signals were selected to display.
 
- 
-After the exploration time in both methods, the participant was asked to evaluate the signals in two modes by being  ``same'' or ``different''. This setting was repeated for each 5 materials and for all participants.
+ After the exploration time in both methods, the participant was asked to evaluate the signals in two modes by being  ``same'' or ``different''. This setting was repeated for each 5 materials and for all participants.
 
 \subsection{Results}
- pairs of textures. 
-textures and the strengths and weaknesses of our modeling
-approach. 
 
-By evaluating how humans perceive both real and virtual
-textures, the study provided many important insights into
-the strengths and weaknesses of our modeling and render-
-ing techniques. Since it was shown that the speeds and
+Not to alter the realism of haptic textures, we try to maintain the speed responsiveness in our models. In this experiment, subjects rated the realism of signals according to the reference signals. The  results can be found in Figure \ref{fig:experiment2}. 
+
+\begin{figure} [htbp]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{experiment2}
+		\caption{Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.} 
+		\label{fig:experiment2}
+	\end{center}
+\end{figure}
+
+As depicted in Figure \ref{fig:experiment2}, best result was achieved in the interaction with coak material with 100 \% similarity rate. Granite tile and steel wool have the same rate namely 90 \%, where fine foam has 80 \% and coarse foam 50 \% similarity rate. Eventually, overall percentage of similarity is 82 \% in 5 comparison pairs, which 
+
+\subsection{Discussion}
+We ran a study that evaluated the realism of the signals produced from major frequencies in respect to speed responsiveness.
+ 
+
+
+ Since it was shown that the speeds and
 -- to compare the standard and comparison vibration in the aspect of tactile sensation on the finger pad.
 
 
-
----
-
----
- Von Quellen:
-
-We explain how to apply the mathematical principles of Linear
-Predictive Coding (LPC) to develop a discrete transfer function that represents the acceleration response
-under specific probe-surface interaction conditions. We then use this predictive transfer function to generate
-unique acceleration signals of arbitrary length. In order to move between transfer functions from different
-probe-surface interaction conditions, we develop a method for interpolating the variables involved in the
-texture synthesis process. Finally, we compare the results of this process with real recorded acceleration
-signals, and we show that the two correlate strongly in the frequency domain.
+  
 
 
 These vibrations depend on the motions of the tool and respond

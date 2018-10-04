@@ -1,9 +1,9 @@
-\select@language {ngerman}
-\select@language {american}
-\select@language {ngerman}
-\select@language {american}
-\select@language {american}
-\select@language {american}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {ngerman}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -12,5 +12,5 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Materials in the experiment given with their approximated friction coefficients.}}{17}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Materials in the experiment given with the required intervals for audio signal change.}}{20}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Materials in the experiment given with the required intervals for audio signal change.}}{22}
 \addvspace {10\p@ }
