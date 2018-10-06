@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  5 OCT 2018 00:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  6 OCT 2018 17:21
 entering extended mode
 **./LMT_Thesis.tex
 (LMT_Thesis.tex
@@ -596,7 +596,7 @@ Chapter 6.
 <figures/showroom.png, id=129, 748.29562pt x 363.60844pt>
 File: figures/showroom.png Graphic file (type png)
 <use figures/showroom.png>
-Package pdftex.def Info: figures/showroom.png  used on input line 370.
+Package pdftex.def Info: figures/showroom.png  used on input line 371.
 (pdftex.def)             Requested size: 322.50345pt x 156.70921pt.
 [21
 
@@ -604,21 +604,21 @@ Package pdftex.def Info: figures/showroom.png  used on input line 370.
 <figures/experiment2.png, id=136, 421.575pt x 316.18124pt>
 File: figures/experiment2.png Graphic file (type png)
 <use figures/experiment2.png>
-Package pdftex.def Info: figures/experiment2.png  used on input line 417.
+Package pdftex.def Info: figures/experiment2.png  used on input line 418.
 (pdftex.def)             Requested size: 345.54092pt x 259.15933pt.
  [23 <./figures/experiment2.png (PNG copy)>]) [24]
 \openout2 = `Conclusions.aux'.
 
  (Conclusions.tex
 Chapter 7.
-) [25
+[25
 
 
 
-]
+]) [26]
 \openout2 = `Appendix.aux'.
 
- (Appendix.tex) (LMT_Thesis.lof [26
+ (Appendix.tex) (LMT_Thesis.lof [27
 
 
 
@@ -627,23 +627,23 @@ Chapter 7.
 \tf@lof=\write4
 \openout4 = `LMT_Thesis.lof'.
 
- [27] (LMT_Thesis.lot)
+ [28] (LMT_Thesis.lot)
 \tf@lot=\write5
 \openout5 = `LMT_Thesis.lot'.
 
 
-(LMT_Thesis.bbl [28
+(LMT_Thesis.bbl [29
 
-] [29
+] [30
 
-]) [30] (LMT_Thesis.aux (StatementsEN.aux)
+]) [31] (LMT_Thesis.aux (StatementsEN.aux)
 (Kurzfassung.aux) (Abstract.aux) (Introduction.aux) (Body.aux) (Conclusions.aux
 ) (Appendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 3802 strings out of 492973
- 58797 string characters out of 3135942
- 162211 words of memory out of 3000000
- 7496 multiletter control sequences out of 15000+200000
+ 3803 strings out of 492973
+ 58806 string characters out of 3135942
+ 162220 words of memory out of 3000000
+ 7497 multiletter control sequences out of 15000+200000
  11202 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,8n,46p,1737b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -663,9 +663,9 @@ iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmtt12.pfb>
-Output written on LMT_Thesis.pdf (35 pages, 1417376 bytes).
+Output written on LMT_Thesis.pdf (36 pages, 1420661 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
