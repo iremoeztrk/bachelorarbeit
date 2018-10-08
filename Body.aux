@@ -30,7 +30,7 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Block diagram for prediction of the next contact acceleration $a(k)$ given the recorded series $a(k)$ with residual $e(k)$.}}}{6}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Block diagram for the synthesis of an acceleration signal $a_g(l)$ from the appropriately scaled white noise input $e_g(l)$.}}}{6}}
 \newlabel{fig:lpc-blockdiagram}{{3.1}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The RMS Error of synthesized signals via LPC calculated with different coefficient orders. The original signals are recorded acceleration data at 5cm/s of materials coak, steel wool and fine foam. The chosen threshold is 400 as a result of this plot, where additional coefficients have minimal benefit.}}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The RMS Error of synthesized signals via LPC calculated with different coefficient orders. The original signals are recorded acceleration data at 5cm/s of materials oak, steel wool and fine foam. The chosen threshold is 400 as a result of this plot, where additional coefficients have minimal benefit.}}{6}}
 \newlabel{fig:error2}{{3.2}{6}}
 \newlabel{costfunction}{{3.6}{6}}
 \citation{modeling14}
@@ -40,85 +40,113 @@
 \citation{beats}
 \citation{rahul15}
 \citation{beats}
+\citation{romano12}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{8}}
 \newlabel{majorfrequency}{{3.2}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively. The beats wave is clearly noticeable in the first two signals, whereas it starts to differ from the beats in (c) and (d).}}{8}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {30-31 Hz}}}{8}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {30-32 Hz}}}{8}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {30-33 Hz}}}{8}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {30-34 Hz}}}{8}}
-\newlabel{fig:schwebung}{{3.4}{8}}
-\citation{romano12}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces The frequencies are selected from given intervals and have the threshold difference among each other.}}{9}}
-\newlabel{tab:threshold}{{3.1}{9}}
-\newlabel{synthesize}{{3.7}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The depicted signal is recorded during an interaction with coak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{10}}
-\newlabel{fig:co1_1}{{3.5}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{10}}
-\newlabel{fig:co1_2}{{3.6}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref  {fig:co1_2}.}}{11}}
-\newlabel{fig:co1_3}{{3.7}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Signal interpolation through frequencies with highest amplitudes.}}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {First generated signal from recorded data during interaction with coak at speed 40mm/s reproduced from given frequencies below.}}}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.}}}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.}}}{12}}
-\newlabel{fig:major}{{3.8}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces The frequencies are selected from given intervals and have the threshold difference among each other.}}{8}}
+\newlabel{tab:threshold}{{3.1}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively.}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {30-31 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {80-81 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {120-122 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {30-32 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {80-82 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {120-124 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {30-33 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {80-83 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {120-126 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {30-34 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {80-84 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {120-128 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {30-35 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {80-85 Hz}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {120-130 Hz}}}{9}}
+\newlabel{fig:schwebung}{{3.4}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively.}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {170-172 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {300-304 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {500-530 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {170-174 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {300-308 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {500-560 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {170-176 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {300-312 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {500-590 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {170-178 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {300-316 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {500-620 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {170-180 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {300-320 Hz}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {500-650 Hz}}}{10}}
+\newlabel{fig:schwebung2}{{3.5}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The depicted signal is recorded during an interaction with oak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{11}}
+\newlabel{fig:co1_1}{{3.6}{11}}
+\newlabel{synthesize}{{3.7}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{12}}
+\newlabel{fig:co1_2}{{3.7}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref  {fig:co1_2}.}}{12}}
+\newlabel{fig:co1_3}{{3.8}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Signal interpolation through frequencies with highest amplitudes.}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.}}}{13}}
+\newlabel{fig:major}{{3.9}{13}}
 \citation{mouse18}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Friction Dependence of Speed}{13}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Friction Dependence of Speed}{14}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{friction}{{4}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Speed Test}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Evaluation}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.}}{14}}
-\newlabel{fig:boxplot}{{4.1}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {}}}{15}}
-\newlabel{fig:friction}{{4.2}{15}}
+\newlabel{friction}{{4}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Speed Test}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Evaluation}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.}}{15}}
+\newlabel{fig:boxplot}{{4.1}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {}}}{16}}
+\newlabel{fig:friction}{{4.2}{16}}
 \citation{leder09}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Data-Driven Methods for Tactile Signal Evaluation}{16}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Data-Driven Methods for Tactile Signal Evaluation}{17}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{data}{{5}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experiment I}{16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Subjects and Setup}{16}}
-\newlabel{subjects}{{5.1.1}{16}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Materials in the experiment given with their approximated friction coefficients.}}{17}}
-\newlabel{tab:materials}{{5.1}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Procedure}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Results}{18}}
-\newlabel{results1}{{5.1.3}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with ifft transformed signals, where yellow bars are for lpc-synthesized signals.}}{18}}
-\newlabel{fig:deney1}{{5.1}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam and granite tile 10 was the mean optimum number, where 10 was also chosen by over the half of the subjects in coarse foam experiment. For steel wool, coak and fine foam the optimums by 8, 7 and 6 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 8.2 on average, which can be accepted as 9 in this study.}}{19}}
-\newlabel{fig:boxfreq}{{5.2}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Discussion}{19}}
+\newlabel{data}{{5}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experiment I}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Subjects and Setup}{17}}
+\newlabel{subjects}{{5.1.1}{17}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Materials in the experiment given with their approximated friction coefficients.}}{18}}
+\newlabel{tab:materials}{{5.1}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Procedure}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Results}{19}}
+\newlabel{results1}{{5.1.3}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with ifft transformed signals, where yellow bars are for lpc-synthesized signals.}}{19}}
+\newlabel{fig:deney1}{{5.1}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam 9.4 and for granite tile 10.2 were the mean optimum value, where 10 was chosen by the half of the subjects in coarse foam experiment. For steel wool, oak and fine foam the mean optimum values by 14, 11.8 and 10.7 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 11.22 on average, which can be accepted as 12 in this study.}}{20}}
+\newlabel{fig:boxfreq}{{5.2}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Discussion}{20}}
 \citation{Culbertson15-WHC-Vibrations}
 \citation{modeling14}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{21}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{22}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{tactile}{{6}{21}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Experiment II}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Subjects and Setup}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: Granite tile, Steel wool, Coarse foam, Coak, Fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user velocity is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.}}{22}}
-\newlabel{fig:showroom}{{6.1}{22}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Materials in the experiment given with the required intervals for audio signal change.}}{22}}
-\newlabel{tab:intervals}{{6.1}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Procedure}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Results}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.}}{23}}
-\newlabel{fig:experiment2}{{6.2}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Discussion}{24}}
+\newlabel{tactile}{{6}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Experiment II}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Subjects and Setup}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: Granite tile, Steel wool, Coarse foam, Oak, Fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user velocity is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.}}{23}}
+\newlabel{fig:showroom}{{6.1}{23}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Materials in the experiment given with the required intervals for audio signal change.}}{23}}
+\newlabel{tab:intervals}{{6.1}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Procedure}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Results}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.}}{24}}
+\newlabel{fig:experiment2}{{6.2}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Discussion}{25}}
 \@setckpt{Body}{
-\setcounter{page}{25}
+\setcounter{page}{26}
 \setcounter{equation}{0}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}

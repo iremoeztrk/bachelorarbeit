@@ -1,11 +1,6 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{KJKM11}
 
-\bibitem[Arn99]{arnaud99}
-B.~St. Arnaud.
-\newblock {Gigabit Internet to every Canadian Home by 2005}.
-\newblock \url{http://www.canet2.net/archeng/home.html}, 1999.
-
 \bibitem[Cha15]{rahul15}
 Rahul~Gopal Chaudhari.
 \newblock {\em Data Compression and Quality Evaluation for Haptic
@@ -31,11 +26,6 @@ J.~Durbin.
 \newblock The fitting of time-series models.
 \newblock {\em Revue de l'Institut International de Statistique / Review of the
   International Statistical Institute}, 28(3):233--244, 1960.
-
-\bibitem[GLL90]{griswold90}
-J.~S. Griswold, T.~L. Lightle, and J.~G. Lovelady.
-\newblock {Hurricane Hugo: Effect On State Government Communications.}
-\newblock {\em IEEE Communications Magazine}, 28(6):12--17, 1990.
 
 \bibitem[HC14]{modeling14}
 Katherine J.~Kuchenbecker Heather~Culbertson, Juliette~Unwin.

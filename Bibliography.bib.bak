@@ -52,6 +52,15 @@
   Volume                   = {28}
 }
 
+@Article{beats,
+	Title                    = {Effect of frequency difference on sensitivity of beats perception.},
+	Author                   = {S. Lim, K. Kyung, and D. Kwon},
+	Journal                  = {Experimental Brain Research},
+	Year                     = {2012},
+	Pages                    = {11-19},
+	Volume                   = {216}
+}
+
 @Book{eberspaecher97,
   Title                    = {{GSM - Global System for Mobile Communication. 
  Vermittlung, Dienste und Protokolle in digitalen Mobilfunknetzen.}},
@@ -149,6 +158,16 @@ and Hirzinger, Gerhard},
   volume  = {5},
   number  = {2},
   pages   = {109-119},
+}
+
+@Article{modeling14,
+  author  = {Heather Culbertson , Juliette Unwin , Katherine J. Kuchenbecker},
+  title   = {Modeling and Rendering Realistic Textures from Unconstrained Tool-Surface Interactions},
+  journal = {IEEE Transactions on Haptics},
+  year    = {2014},
+  volume  = {7},
+  number  = {3},
+  pages   = {381-393},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
