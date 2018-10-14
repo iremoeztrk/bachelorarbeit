@@ -7,9 +7,8 @@
 \contentsline {chapter}{Contents}{ii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Haptic texture rendering}{2}
-\contentsline {section}{\numberline {2.1}Roughness}{2}
-\contentsline {subsection}{\numberline {2.1.1}Macroscopic Roughness}{3}
-\contentsline {subsection}{\numberline {2.1.2}Fine Roughness}{3}
+\contentsline {section}{\numberline {2.1}Macroscopic Roughness}{2}
+\contentsline {section}{\numberline {2.2}Fine Roughness}{3}
 \contentsline {chapter}{\numberline {3}Interpolation of vibrotactile signals}{4}
 \contentsline {section}{\numberline {3.1}Linear predictive coding}{4}
 \contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{8}
