@@ -1,14 +1,5 @@
 % Encoding: UTF-8
 
-
-@Misc{arnaud99,
-  Title                    = {{Gigabit Internet to every Canadian Home by 2005}},
-
-  Author                   = {Arnaud, B.~St.},
-  HowPublished             = {\url{http://www.canet2.net/archeng/home.html}},
-  Year                     = {1999}
-}
-
 @PhdThesis{rahul15,
   Title                    = {Data Compression and Quality Evaluation for Haptic Communications},
   Author                   = {Rahul Gopal Chaudhari},

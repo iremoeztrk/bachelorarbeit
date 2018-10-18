@@ -1,4 +1,6 @@
+
 \chapter{Haptic texture rendering}
+
 \label{haptic}
 \thispagestyle{empty}% no page number in chapter title page
 
@@ -15,11 +17,12 @@ Roughness plays an important role in haptic signal perception.The roughness dime
 
 \section{Macroscopic Roughness}
 
-Due to the duplex nature of roughness,  macroscopic roughness should also be considered in order to understand fine roughness. As described in \cite{rahul15}, both of these surface features play a role in the haptic interaction. Coarse roughness is mainly represented by the ``uneven'', ``relief'', or ``voluminous'' labels and mediated by different mechanisms from micro roughness. For coarse surface roughness, the spatial  distribution of SAI units is related to roughness perception \cite{okamoto13}.
+Due to the duplex nature of roughness,  macroscopic roughness should also be considered in order to understand fine roughness. As described in \cite{rahul15}, both of these surface features play a role in the haptic interaction. Coarse roughness is mainly represented by the ``uneven'', ``relief'', or ``voluminous'' labels, relevant with the visible height profiles of an object surface and mediated by different mechanisms from micro roughness.
+The surface material structural threshold between coarse and fine textures was determined as approximately 200 microns \cite{finetexture}. For coarse surface roughness, the spatial  distribution of SAI units is related to roughness perception \cite{okamoto13}.
 
 \section{Fine Roughness}
 
-In the mechanism of fine roughness perception, FAI and FAII units contribute and is mainly represented by the ``rough" label. During surface-tool or surface-finger sliding motions, high frequency vibrations can be extracted using an accelerometer mounted on a human finger. Microscopic roughness impressions can be characterized by these vibrations. The macro and fine roughness dimensions can be separated according to the mentioned aspects but can intersect each other during the process of perception.  Figure \ref{fig:texture} illustrates the process of texture production with an accelerometer.
+In the mechanism of fine roughness perception, FAI and FAII units contribute and is mainly represented by the ``rough" and ``smooth" labels. During surface-tool or surface-finger sliding motions, high frequency vibrations can be extracted using an accelerometer mounted on a human finger. Microscopic roughness impressions can be characterized by these vibrations. The macro and fine roughness dimensions can be separated according to the mentioned aspects but can intersect each other during the process of perception.  Figure \ref{fig:texture} illustrates the process of texture production with an accelerometer.
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=14cm]{texture}
@@ -28,13 +31,13 @@ In the mechanism of fine roughness perception, FAI and FAII units contribute and
 	\end{center}
 \end{figure}
 
-The recorded acceleration signals depend on the scan speed and force, nonetheless we ignore the force dependencies as mentioned in the introduction part. Thereby, our approach in this thesis is generating vibrotactile signals based on the recorded acceleration data for different absolute scan speed. They are then displayed via a voice coil actuator. 
+The recorded acceleration signals depend on the scan speed and force, nonetheless we ignore the force dependencies as mentioned in the introduction part. Thereby, our approach in this thesis is generating vibrotactile signals based on the recorded acceleration data for different absolute scan speed. They are then displayed e.g. via a voice coil actuator. 
 
 
 \chapter{Interpolation of vibrotactile signals}
 \label{interpolation}
 
-Priori model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response. Therefore, user speed should be incorporated into the feedback signal.
+Prior model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response according to the human-subject studies during the past years (e.g. \cite{Culbertson15-WHC-Vibrations}) . Therefore, user speed should be incorporated into the feedback signal.
 
 As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects create the idea of data-driven texture models.
 
@@ -46,12 +49,29 @@ In the following, we go deep into both of the principles and how to apply them t
 \label{lpcmethode}
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
 
-We consider an IIR filter $H(z)$ of length n in the form $H(z)=[-h_1z^{-2}-h_2z^{-1}...-h_nz^{-n}]$.
-Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following. The resulting prediction vector from our filter is $\vec{\hat{a}}(k)$. The residual signal {$\vec{e}(k)$} is the difference between these two signals.The transfer function $P(z)$ is the result of the following equation:
+\begin{equation} \label{eq:sample}
+\hat{x}[n]=\sum_{i=1}^{N}a_i \cdot x[n-i] 
+\end{equation}
+
+The equation \ref{eq:sample} above shows the prediction of a next value $\hat{x}[n]$ from the previous samples through LPC coefficients $a=[a_i]_{i=1:N}$, where N is the order of the filter.
+
+For the implementation, we consider an IIR filter $H(z)$ of length n in the form $H(z)=[-h_1z^{-2}-h_2z^{-1}...-h_nz^{-n}]$.
+Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following. The resulting prediction vector from our filter is $\vec{\hat{a}}(k)$. The residual signal {$\vec{e}(k)$} is the difference between these two signals as in the following equation:
 
 \begin{equation} \label{eq:transferfunction}
-\frac{\vec{e}(k)}{\vec{a}(k)}=1-H(z)=P(z)   
+\vec{e}(k)=\vec{a}(k)-\vec{a}(k) \cdot H(z)  
 \end{equation}
+
+\begin{equation} \label{eq:transferfunction}
+\vec{e}(k)=\vec{a}(k)\cdot(1-H(z))   
+\end{equation}
+LPC Analysis filter $H(z)$ can be written as:
+
+\begin{equation} \label{eq:transferfunct}
+H(z)=1-P(z)   
+\end{equation}
+
+where $P(z)$ is described as the transfer function of the LPC filter.
 
 It is possible to compute the residual at each step using the vector of filter coefficients $\vec{h}=[h_1 h_2 h_3 ... h_n]^T$:
 
@@ -262,7 +282,7 @@ where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ t
 
 Finally in both methods, we generate audio signals by $audiowrite$ function in Matlab, which are displayed during interactions with virtual surfaces.
 
-\chapter{Friction Dependence of Speed}
+\chapter{Correlation of Friction and Scanning Speed }
 \label{friction}
 
 Surface stickiness compels the users to apply a lateral force during surface interactions. The friction coefficient is usually calculated as the ratio
@@ -306,7 +326,7 @@ In plot (a), nine bins are shown, where the last two can be ignored due to the s
 
 
 
-\chapter{Data-Driven Methods for Tactile Signal Evaluation}
+\chapter{Data-Driven and Frequency Reduction Methods for Tactile Signal Evaluation}
 \label{data}
 
 The perception of displayed haptic
@@ -314,9 +334,9 @@ information typically varies across different human subjects \cite{leder09}. The
 
 As mentioned in chapter \ref{interpolation}, we analyze two methodologies of synthesizing vibrotactile signals for rendering fine roughness feedback: LPC and utilizing major frequencies of records. This chapter describes a human-subject experiment to evaluate how perceptually close our synthesized vibrotactile signals to the recorded acceleration signals in a haptic environment.  
 
-\section{Experiment I}
+\section*{Experiment I}
 
-\subsection{Subjects and Setup}
+\section{Subjects and Setup}
 \label{subjects}
 
 To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 male, participated in the experiment at separate times. Their
@@ -349,7 +369,7 @@ We used the voice coil actuator model NCC01-04-001-1X by H2W Technologies in the
 
 
 
-\subsection{Procedure}
+\section{Procedure}
 
 The subject sat at a table in front of the voice coil actuator. In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response with the right index finger. The displayed reference signal was for each material a recorded acceleration data at the mean speed according to the results in Figure \ref{fig:friction} in chapter \ref{friction} and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
 
@@ -361,7 +381,7 @@ Another important aspect of this experiment is to find the optimum number of fre
 
 This setting was repeated for each 5 materials and an experiment run was terminated after the subject judged the signal pairs to feel the ``same'' or ``different'' for each material and for major frequency method after determining the optimal number of frequencies to be selected.
 
-\subsection{Results}
+\section{Results}
 \label{results1}
 
 Our first comparison pair was original signal with IFFT transformed version from its spectrum. As a result, 96 \% similarity is detected among 50 comparisons. Two subjects could distinguish between the original and synthesized signals of granite tile. All other objects had 100 \% similarity between their signals. Second comparison was between original and LPC synthesized signals. A similarity rate of 96 \% is also achieved in this comparison, whereas granite tile and  steel wool had 90 \% rate of similarity caused by different subjects. Again all other  materials had 100 \% similarity rate. Figure \ref{fig:deney1} shows the results of both comparison pairs.
@@ -386,7 +406,7 @@ In Figure \ref{fig:boxfreq} can be seen that 30 frequencies are not necessary to
 \end{figure} 
 
 
-\subsection{Discussion}
+\section{Discussion}
 
 By evaluating how humans perceive both real and virtual vibrotactile signals, the study provided many important insights into the strengths and weaknesses of our modeling and rendering techniques. The first comparison results with 96 \% similarity show that the IFFT transformed version of the signals can be used as the reference signal as well. The 4 \% negative judgement can be explained by the pecularities in the recorded signal at the beginning and end of the record, which can be remarkable at the binding points emerged by the constitution of the 10-second audio data. The LPC synthesized signal may also have the same issue with the 96 \% of similarity, which is able to create more stable and consistent version of the original signal. Consequently, it can be deduced that humans find the signals generated via both methodologies hard to ``distinguish'' in general and therefore both can be used in place of the recorded signal.   
 
@@ -397,9 +417,9 @@ Second part of the experiment reveals the optimum frequency number for major fre
 
 Interactions with a surface in a virtual environment cause tactile vibrations. These vibrations depend on the surface properties such as coarse and fine texture, friction etc. and eventually user speed. Past human-subject studies [e.g. \cite{Culbertson15-WHC-Vibrations}]proved that speed responsiveness has an integral role in simulating perceptually realistic surfaces. \cite{modeling14} indicates a human subject study that uses segmented signals for different speed levels generated by LPC method to create realistic virtual textures and presents its usability to respond speed changes. Experiment II in the following section aims to investigate whether the signals generated by the major frequencies are able to respond to user speed as good as the original signals obtained from records during real interactions with surfaces. 
 
-\section{Experiment II}
+\section*{Experiment II}
 
-\subsection{Subjects and Setup}
+\section{Subjects and Setup}
 The subjects who took part in Experiment I were also the participants of Experiment II (see Subsection \ref{subjects}). This experiment was performed by dragging Novint Falcon haptic device across textured surfaces in a virtual room using natural exploratory motions, varying scanning speed. There were 5 materials of equal size placed next to each other (Figure  \ref{fig:showroom}). Friction coefficients of the surfaces are shown in tabular \ref{tab:materials} in Experiment I.  Our target here is displaying vibrotactile signals to represent microscopic roughness of the texture, that is why the surfaces had no coarse texture to be able to achieve not manipulated results in the experiment. 
 
 \begin{figure} [htbp]
@@ -438,14 +458,14 @@ For each material are the results shown in Figures \ref{fig:boxplot} and \ref{fi
 
 For each interval the audio signals from recorded data and generated from major frequencies were prepared and saved so that the program could display during interactions with objects.
 
-\subsection{Procedure}
+\section{Procedure}
 
 The subject sat at a table in front of a PC and given time to practice
 using the Falcon device by exploring a simple haptic environment consisting of the 5 virtual objects. In the testing time, the user was instructed to explore a texture by varying the scanning speed , where the reference signals were displayed according to the matching intervals. After being familiar with the signals, which was generally after a minute, testing mode was activated in order to display vibrotactile signals generated via major frequencies. The participant was asked to compare the vibrations in respect to the reference. Due to the fact that Experiment II was the next step of Experiment I, the result of the optimum number for frequencies to be selected in Experiment I were regarded for this part and for each participant the corresponding signals were selected to display.
 
  After the exploration time in both methods, the participant was asked to evaluate the signals in two modes by being  ``same'' or ``different''. This setting was repeated for each 5 materials and for all participants.
 
-\subsection{Results}
+\section{Results}
 
 Not to alter the realism of haptic textures, we try to maintain the speed responsiveness in our models. In this experiment, subjects rated the realism of signals according to the reference signals. The  results can be found in Figure \ref{fig:experiment2}. 
 
@@ -459,7 +479,7 @@ Not to alter the realism of haptic textures, we try to maintain the speed respon
 
 As depicted in Figure \ref{fig:experiment2}, best result was achieved in the interaction with oak material with 100 \% similarity rate. Coarse foam and granite tile have 90 \% and 80 \%, where fine foam has 60 \% and steel wool 50 \% similarity rate. Eventually, overall percentage of similarity is 76 \% in 5 comparison pairs with 10 subjects.    
 
-\subsection{Discussion}
+\section{Discussion}
 
 We ran a study that evaluated the realism of the signals generated from major frequencies in respect to speed responsiveness. The result 76 \% similarity rate to the reference shows promise of this method's usability for vibrotactile response. 50 \% rate of steel wool can be explained by the fact that original signal may have some pecularities occurred in the beginning and end of the recording, which could result in discontinuity in vibrotactile response during interaction. Another reason can be the different amplitudes of the generated and original signals. Furthermore, difference materials could need different conditions for frequency selection for example more than 30 frequencies, so that there may have been loss in valuable data.
 

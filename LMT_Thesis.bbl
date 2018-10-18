@@ -1,6 +1,11 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{KJKM11}
 
+\bibitem[BH05]{finetexture}
+S.~Bensmaïa and M.~Hollins.
+\newblock Pacinian representations of fine surface texture.
+\newblock {\em Perception \& Psychophysics}, 67(5):842--854, 2005.
+
 \bibitem[Cha15]{rahul15}
 Rahul~Gopal Chaudhari.
 \newblock {\em Data Compression and Quality Evaluation for Haptic
