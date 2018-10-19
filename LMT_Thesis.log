@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  18 OCT 2018 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  20 OCT 2018 00:33
 entering extended mode
 **./LMT_Thesis.tex
 (LMT_Thesis.tex
@@ -267,6 +267,9 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 
 LaTeX Warning: Label `eq:transferfunction' multiply defined.
 
+
+LaTeX Warning: Label `eq:transferfunctt' multiply defined.
+
 ) (Conclusions.aux) (Appendix.aux))
 \openout1 = `LMT_Thesis.aux'.
 
@@ -394,14 +397,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 
-] [2
+] (LMT_Thesis.toc [2
 
 
-] (LMT_Thesis.toc [3])
+])
 \tf@toc=\write3
 \openout3 = `LMT_Thesis.toc'.
 
- [4]
+ [3]
 \openout2 = `Introduction.aux'.
 
 
@@ -419,336 +422,339 @@ Chapter 1.
 
 ]
 Chapter 2.
-[3]
-<figures/texture.png, id=39, 798.73407pt x 407.27156pt>
+[3
+
+]
+<figures/texture.png, id=36, 798.73407pt x 407.27156pt>
 File: figures/texture.png Graphic file (type png)
 <use figures/texture.png>
-Package pdftex.def Info: figures/texture.png  used on input line 28.
+Package pdftex.def Info: figures/texture.png  used on input line 29.
 (pdftex.def)             Requested size: 398.33858pt x 203.11325pt.
  [4 <./figures/texture.png>]
 Chapter 3.
 [5
 
 ] [6]
-<figures/lpcsynthesis.png, id=55, 823.075pt x 399.4925pt>
+<figures/lpcsynthesis.png, id=52, 823.075pt x 399.4925pt>
 File: figures/lpcsynthesis.png Graphic file (type png)
 <use figures/lpcsynthesis.png>
-Package pdftex.def Info: figures/lpcsynthesis.png  used on input line 99.
+Package pdftex.def Info: figures/lpcsynthesis.png  used on input line 112.
 (pdftex.def)             Requested size: 225.75594pt x 109.57123pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 99.
-<figures/lpc.png, id=57, 552.0625pt x 274.02374pt>
+(Font)              <5> on input line 112.
+<figures/lpc.png, id=54, 552.0625pt x 274.02374pt>
 File: figures/lpc.png Graphic file (type png)
 <use figures/lpc.png>
-Package pdftex.def Info: figures/lpc.png  used on input line 101.
+Package pdftex.def Info: figures/lpc.png  used on input line 114.
 (pdftex.def)             Requested size: 225.75594pt x 112.05777pt.
-<figures/error2.png, id=58, 421.575pt x 316.18124pt>
+<figures/error2.png, id=55, 421.575pt x 316.18124pt>
 File: figures/error2.png Graphic file (type png)
 <use figures/error2.png>
-Package pdftex.def Info: figures/error2.png  used on input line 115.
+Package pdftex.def Info: figures/error2.png  used on input line 128.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <./figures/lpcsynthesis.png> <./figures/lpc.png (PNG copy)>]
-<figures/gr_doppelt.png, id=67, 421.575pt x 316.18124pt>
+<figures/gr_doppelt.png, id=63, 421.575pt x 316.18124pt>
 File: figures/gr_doppelt.png Graphic file (type png)
 <use figures/gr_doppelt.png>
-Package pdftex.def Info: figures/gr_doppelt.png  used on input line 136.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
-<figures/gr_lpc.png, id=68, 421.575pt x 316.18124pt>
+Package pdftex.def Info: figures/gr_doppelt.png  used on input line 152.
+(pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
+<figures/gr_lpc.png, id=64, 421.575pt x 316.18124pt>
 File: figures/gr_lpc.png Graphic file (type png)
 <use figures/gr_lpc.png>
-Package pdftex.def Info: figures/gr_lpc.png  used on input line 137.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
- [8 <./figures/error2.png (PNG copy)>]
+Package pdftex.def Info: figures/gr_lpc.png  used on input line 153.
+(pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
+ [8 <./figures/error2.png (PNG copy)>] [9 <./figures/gr_doppelt.png (PNG copy)>
+ <./figures/gr_lpc.png (PNG copy)>]
 <figures/schwebung1.png, id=72, 421.575pt x 316.18124pt>
 File: figures/schwebung1.png Graphic file (type png)
 <use figures/schwebung1.png>
-Package pdftex.def Info: figures/schwebung1.png  used on input line 154.
+Package pdftex.def Info: figures/schwebung1.png  used on input line 173.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebungg1.png, id=73, 421.575pt x 316.18124pt>
 File: figures/schwebungg1.png Graphic file (type png)
 <use figures/schwebungg1.png>
-Package pdftex.def Info: figures/schwebungg1.png  used on input line 155.
+Package pdftex.def Info: figures/schwebungg1.png  used on input line 174.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung31.png, id=74, 421.575pt x 316.18124pt>
 File: figures/schwebung31.png Graphic file (type png)
 <use figures/schwebung31.png>
-Package pdftex.def Info: figures/schwebung31.png  used on input line 156.
+Package pdftex.def Info: figures/schwebung31.png  used on input line 175.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung2.png, id=75, 421.575pt x 316.18124pt>
 File: figures/schwebung2.png Graphic file (type png)
 <use figures/schwebung2.png>
-Package pdftex.def Info: figures/schwebung2.png  used on input line 158.
+Package pdftex.def Info: figures/schwebung2.png  used on input line 177.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebungg2.png, id=76, 421.575pt x 316.18124pt>
 File: figures/schwebungg2.png Graphic file (type png)
 <use figures/schwebungg2.png>
-Package pdftex.def Info: figures/schwebungg2.png  used on input line 159.
+Package pdftex.def Info: figures/schwebungg2.png  used on input line 178.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung32.png, id=77, 421.575pt x 316.18124pt>
 File: figures/schwebung32.png Graphic file (type png)
 <use figures/schwebung32.png>
-Package pdftex.def Info: figures/schwebung32.png  used on input line 160.
+Package pdftex.def Info: figures/schwebung32.png  used on input line 179.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung3.png, id=78, 421.575pt x 316.18124pt>
 File: figures/schwebung3.png Graphic file (type png)
 <use figures/schwebung3.png>
-Package pdftex.def Info: figures/schwebung3.png  used on input line 162.
+Package pdftex.def Info: figures/schwebung3.png  used on input line 181.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebungg3.png, id=79, 421.575pt x 316.18124pt>
 File: figures/schwebungg3.png Graphic file (type png)
 <use figures/schwebungg3.png>
-Package pdftex.def Info: figures/schwebungg3.png  used on input line 163.
+Package pdftex.def Info: figures/schwebungg3.png  used on input line 182.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung33.png, id=80, 421.575pt x 316.18124pt>
 File: figures/schwebung33.png Graphic file (type png)
 <use figures/schwebung33.png>
-Package pdftex.def Info: figures/schwebung33.png  used on input line 164.
+Package pdftex.def Info: figures/schwebung33.png  used on input line 183.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung4.png, id=81, 421.575pt x 316.18124pt>
 File: figures/schwebung4.png Graphic file (type png)
 <use figures/schwebung4.png>
-Package pdftex.def Info: figures/schwebung4.png  used on input line 165.
+Package pdftex.def Info: figures/schwebung4.png  used on input line 184.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebungg4.png, id=82, 421.575pt x 316.18124pt>
 File: figures/schwebungg4.png Graphic file (type png)
 <use figures/schwebungg4.png>
-Package pdftex.def Info: figures/schwebungg4.png  used on input line 166.
+Package pdftex.def Info: figures/schwebungg4.png  used on input line 185.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung34.png, id=83, 421.575pt x 316.18124pt>
 File: figures/schwebung34.png Graphic file (type png)
 <use figures/schwebung34.png>
-Package pdftex.def Info: figures/schwebung34.png  used on input line 167.
+Package pdftex.def Info: figures/schwebung34.png  used on input line 186.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung5.png, id=84, 421.575pt x 316.18124pt>
 File: figures/schwebung5.png Graphic file (type png)
 <use figures/schwebung5.png>
-Package pdftex.def Info: figures/schwebung5.png  used on input line 168.
+Package pdftex.def Info: figures/schwebung5.png  used on input line 187.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebungg5.png, id=85, 421.575pt x 316.18124pt>
 File: figures/schwebungg5.png Graphic file (type png)
 <use figures/schwebungg5.png>
-Package pdftex.def Info: figures/schwebungg5.png  used on input line 169.
+Package pdftex.def Info: figures/schwebungg5.png  used on input line 188.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung35.png, id=86, 421.575pt x 316.18124pt>
 File: figures/schwebung35.png Graphic file (type png)
 <use figures/schwebung35.png>
-Package pdftex.def Info: figures/schwebung35.png  used on input line 170.
+Package pdftex.def Info: figures/schwebung35.png  used on input line 189.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 
 
-LaTeX Warning: Float too large for page by 57.49007pt on input line 175.
+LaTeX Warning: Float too large for page by 57.49007pt on input line 194.
 
 <figures/schwebung41.png, id=87, 421.575pt x 316.18124pt>
 File: figures/schwebung41.png Graphic file (type png)
 <use figures/schwebung41.png>
-Package pdftex.def Info: figures/schwebung41.png  used on input line 179.
+Package pdftex.def Info: figures/schwebung41.png  used on input line 198.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung51.png, id=88, 421.575pt x 316.18124pt>
 File: figures/schwebung51.png Graphic file (type png)
 <use figures/schwebung51.png>
-Package pdftex.def Info: figures/schwebung51.png  used on input line 180.
+Package pdftex.def Info: figures/schwebung51.png  used on input line 199.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung61.png, id=89, 421.575pt x 316.18124pt>
 File: figures/schwebung61.png Graphic file (type png)
 <use figures/schwebung61.png>
-Package pdftex.def Info: figures/schwebung61.png  used on input line 181.
+Package pdftex.def Info: figures/schwebung61.png  used on input line 200.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung42.png, id=90, 421.575pt x 316.18124pt>
 File: figures/schwebung42.png Graphic file (type png)
 <use figures/schwebung42.png>
-Package pdftex.def Info: figures/schwebung42.png  used on input line 182.
+Package pdftex.def Info: figures/schwebung42.png  used on input line 201.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung52.png, id=91, 421.575pt x 316.18124pt>
 File: figures/schwebung52.png Graphic file (type png)
 <use figures/schwebung52.png>
-Package pdftex.def Info: figures/schwebung52.png  used on input line 183.
+Package pdftex.def Info: figures/schwebung52.png  used on input line 202.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung62.png, id=92, 421.575pt x 316.18124pt>
 File: figures/schwebung62.png Graphic file (type png)
 <use figures/schwebung62.png>
-Package pdftex.def Info: figures/schwebung62.png  used on input line 184.
+Package pdftex.def Info: figures/schwebung62.png  used on input line 203.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung43.png, id=93, 421.575pt x 316.18124pt>
 File: figures/schwebung43.png Graphic file (type png)
 <use figures/schwebung43.png>
-Package pdftex.def Info: figures/schwebung43.png  used on input line 185.
+Package pdftex.def Info: figures/schwebung43.png  used on input line 204.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung53.png, id=94, 421.575pt x 316.18124pt>
 File: figures/schwebung53.png Graphic file (type png)
 <use figures/schwebung53.png>
-Package pdftex.def Info: figures/schwebung53.png  used on input line 186.
+Package pdftex.def Info: figures/schwebung53.png  used on input line 205.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung63.png, id=95, 421.575pt x 316.18124pt>
 File: figures/schwebung63.png Graphic file (type png)
 <use figures/schwebung63.png>
-Package pdftex.def Info: figures/schwebung63.png  used on input line 187.
+Package pdftex.def Info: figures/schwebung63.png  used on input line 206.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung44.png, id=96, 421.575pt x 316.18124pt>
 File: figures/schwebung44.png Graphic file (type png)
 <use figures/schwebung44.png>
-Package pdftex.def Info: figures/schwebung44.png  used on input line 188.
+Package pdftex.def Info: figures/schwebung44.png  used on input line 207.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung54.png, id=97, 421.575pt x 316.18124pt>
 File: figures/schwebung54.png Graphic file (type png)
 <use figures/schwebung54.png>
-Package pdftex.def Info: figures/schwebung54.png  used on input line 189.
+Package pdftex.def Info: figures/schwebung54.png  used on input line 208.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung64.png, id=98, 421.575pt x 316.18124pt>
 File: figures/schwebung64.png Graphic file (type png)
 <use figures/schwebung64.png>
-Package pdftex.def Info: figures/schwebung64.png  used on input line 190.
+Package pdftex.def Info: figures/schwebung64.png  used on input line 209.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung45.png, id=99, 421.575pt x 316.18124pt>
 File: figures/schwebung45.png Graphic file (type png)
 <use figures/schwebung45.png>
-Package pdftex.def Info: figures/schwebung45.png  used on input line 191.
+Package pdftex.def Info: figures/schwebung45.png  used on input line 210.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung55.png, id=100, 421.575pt x 316.18124pt>
 File: figures/schwebung55.png Graphic file (type png)
 <use figures/schwebung55.png>
-Package pdftex.def Info: figures/schwebung55.png  used on input line 192.
+Package pdftex.def Info: figures/schwebung55.png  used on input line 211.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 <figures/schwebung65.png, id=101, 421.575pt x 316.18124pt>
 File: figures/schwebung65.png Graphic file (type png)
 <use figures/schwebung65.png>
-Package pdftex.def Info: figures/schwebung65.png  used on input line 193.
+Package pdftex.def Info: figures/schwebung65.png  used on input line 212.
 (pdftex.def)             Requested size: 138.21777pt x 103.66469pt.
 
-LaTeX Warning: Float too large for page by 47.49007pt on input line 198.
+LaTeX Warning: Float too large for page by 47.49007pt on input line 217.
 
-[9 <./figures/gr_doppelt.png (PNG copy)> <./figures/gr_lpc.png (PNG copy)>]
-[10 <./figures/schwebung1.png (PNG copy)> <./figures/schwebungg1.png (PNG copy)
-> <./figures/schwebung31.png (PNG copy)> <./figures/schwebung2.png (PNG copy)> 
-<./figures/schwebungg2.png (PNG copy)> <./figures/schwebung32.png (PNG copy)> <
-./figures/schwebung3.png (PNG copy)> <./figures/schwebungg3.png (PNG copy)> <./
-figures/schwebung33.png (PNG copy)> <./figures/schwebung4.png (PNG copy)> <./fi
-gures/schwebungg4.png (PNG copy)> <./figures/schwebung34.png (PNG copy)> <./fig
-ures/schwebung5.png (PNG copy)> <./figures/schwebungg5.png (PNG copy)> <./figur
-es/schwebung35.png (PNG copy)>] [11 <./figures/schwebung41.png (PNG copy)> <./f
-igures/schwebung51.png (PNG copy)> <./figures/schwebung61.png (PNG copy)> <./fi
-gures/schwebung42.png (PNG copy)> <./figures/schwebung52.png (PNG copy)> <./fig
-ures/schwebung62.png (PNG copy)> <./figures/schwebung43.png (PNG copy)> <./figu
-res/schwebung53.png (PNG copy)> <./figures/schwebung63.png (PNG copy)> <./figur
-es/schwebung44.png (PNG copy)> <./figures/schwebung54.png (PNG copy)> <./figure
-s/schwebung64.png (PNG copy)> <./figures/schwebung45.png (PNG copy)> <./figures
-/schwebung55.png (PNG copy)> <./figures/schwebung65.png (PNG copy)>]
+[10] [11 <./figures/schwebung1.png (PNG copy)> <./figures/schwebungg1.png (PNG 
+copy)> <./figures/schwebung31.png (PNG copy)> <./figures/schwebung2.png (PNG co
+py)> <./figures/schwebungg2.png (PNG copy)> <./figures/schwebung32.png (PNG cop
+y)> <./figures/schwebung3.png (PNG copy)> <./figures/schwebungg3.png (PNG copy)
+> <./figures/schwebung33.png (PNG copy)> <./figures/schwebung4.png (PNG copy)> 
+<./figures/schwebungg4.png (PNG copy)> <./figures/schwebung34.png (PNG copy)> <
+./figures/schwebung5.png (PNG copy)> <./figures/schwebungg5.png (PNG copy)> <./
+figures/schwebung35.png (PNG copy)>] [12 <./figures/schwebung41.png (PNG copy)>
+ <./figures/schwebung51.png (PNG copy)> <./figures/schwebung61.png (PNG copy)> 
+<./figures/schwebung42.png (PNG copy)> <./figures/schwebung52.png (PNG copy)> <
+./figures/schwebung62.png (PNG copy)> <./figures/schwebung43.png (PNG copy)> <.
+/figures/schwebung53.png (PNG copy)> <./figures/schwebung63.png (PNG copy)> <./
+figures/schwebung44.png (PNG copy)> <./figures/schwebung54.png (PNG copy)> <./f
+igures/schwebung64.png (PNG copy)> <./figures/schwebung45.png (PNG copy)> <./fi
+gures/schwebung55.png (PNG copy)> <./figures/schwebung65.png (PNG copy)>]
 <figures/co1_1.png, id=111, 421.575pt x 316.18124pt>
 File: figures/co1_1.png Graphic file (type png)
 <use figures/co1_1.png>
-Package pdftex.def Info: figures/co1_1.png  used on input line 235.
+Package pdftex.def Info: figures/co1_1.png  used on input line 254.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
 <figures/co1_2.png, id=112, 420.82219pt x 168.63pt>
 File: figures/co1_2.png Graphic file (type png)
 <use figures/co1_2.png>
-Package pdftex.def Info: figures/co1_2.png  used on input line 245.
+Package pdftex.def Info: figures/co1_2.png  used on input line 264.
 (pdftex.def)             Requested size: 322.50345pt x 129.2331pt.
 <figures/co1_time.png, id=113, 420.82219pt x 162.6075pt>
 File: figures/co1_time.png Graphic file (type png)
 <use figures/co1_time.png>
-Package pdftex.def Info: figures/co1_time.png  used on input line 254.
+Package pdftex.def Info: figures/co1_time.png  used on input line 273.
 (pdftex.def)             Requested size: 322.50345pt x 124.61763pt.
 <figures/co1_spectrum.png, id=114, 420.82219pt x 155.07938pt>
 File: figures/co1_spectrum.png Graphic file (type png)
 <use figures/co1_spectrum.png>
-Package pdftex.def Info: figures/co1_spectrum.png  used on input line 255.
+Package pdftex.def Info: figures/co1_spectrum.png  used on input line 274.
 (pdftex.def)             Requested size: 322.50345pt x 118.84828pt.
-<figures/coak1.png, id=115, 421.575pt x 316.18124pt>
+
+[13 <./figures/co1_1.png (PNG copy)>] [14 <./figures/co1_2.png> <./figures/co1_
+time.png> <./figures/co1_spectrum.png>]
+<figures/coak1.png, id=122, 421.575pt x 316.18124pt>
 File: figures/coak1.png Graphic file (type png)
 <use figures/coak1.png>
-Package pdftex.def Info: figures/coak1.png  used on input line 271.
+Package pdftex.def Info: figures/coak1.png  used on input line 290.
 (pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
-<figures/coak5.png, id=116, 421.575pt x 316.18124pt>
+<figures/coak5.png, id=123, 421.575pt x 316.18124pt>
 File: figures/coak5.png Graphic file (type png)
 <use figures/coak5.png>
-Package pdftex.def Info: figures/coak5.png  used on input line 272.
+Package pdftex.def Info: figures/coak5.png  used on input line 291.
 (pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
-<figures/coak7.png, id=117, 421.575pt x 316.18124pt>
+<figures/coak7.png, id=124, 421.575pt x 316.18124pt>
 File: figures/coak7.png Graphic file (type png)
 <use figures/coak7.png>
-Package pdftex.def Info: figures/coak7.png  used on input line 273.
+Package pdftex.def Info: figures/coak7.png  used on input line 292.
 (pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
-<figures/coak10.png, id=118, 421.575pt x 316.18124pt>
+<figures/coak10.png, id=125, 421.575pt x 316.18124pt>
 File: figures/coak10.png Graphic file (type png)
 <use figures/coak10.png>
-Package pdftex.def Info: figures/coak10.png  used on input line 274.
+Package pdftex.def Info: figures/coak10.png  used on input line 293.
 (pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
- [12 <./figures/co1_1.png (PNG copy)>] [13 <./figures/co1_2.png> <./figures/co1
-_time.png> <./figures/co1_spectrum.png>] [14 <./figures/coak1.png (PNG copy)> <
-./figures/coak5.png (PNG copy)> <./figures/coak7.png (PNG copy)> <./figures/coa
-k10.png (PNG copy)>]
+ [15 <./figures/coak1.png (PNG copy)> <./figures/coak5.png (PNG copy)> <./figur
+es/coak7.png (PNG copy)> <./figures/coak10.png (PNG copy)>]
 Chapter 4.
 <figures/boxplot.png, id=129, 421.575pt x 316.18124pt>
 File: figures/boxplot.png Graphic file (type png)
 <use figures/boxplot.png>
-Package pdftex.def Info: figures/boxplot.png  used on input line 299.
+Package pdftex.def Info: figures/boxplot.png  used on input line 318.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
 <figures/hist1.png, id=130, 421.575pt x 316.18124pt>
 File: figures/hist1.png Graphic file (type png)
 <use figures/hist1.png>
-Package pdftex.def Info: figures/hist1.png  used on input line 308.
+Package pdftex.def Info: figures/hist1.png  used on input line 327.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 <figures/hist2.png, id=131, 421.575pt x 316.18124pt>
 File: figures/hist2.png Graphic file (type png)
 <use figures/hist2.png>
-Package pdftex.def Info: figures/hist2.png  used on input line 309.
+Package pdftex.def Info: figures/hist2.png  used on input line 328.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 <figures/hist3.png, id=132, 421.575pt x 316.18124pt>
 File: figures/hist3.png Graphic file (type png)
 <use figures/hist3.png>
-Package pdftex.def Info: figures/hist3.png  used on input line 310.
+Package pdftex.def Info: figures/hist3.png  used on input line 329.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 <figures/hist4.png, id=133, 421.575pt x 316.18124pt>
 File: figures/hist4.png Graphic file (type png)
 <use figures/hist4.png>
-Package pdftex.def Info: figures/hist4.png  used on input line 311.
+Package pdftex.def Info: figures/hist4.png  used on input line 330.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 <figures/hist5.png, id=134, 421.575pt x 316.18124pt>
 File: figures/hist5.png Graphic file (type png)
 <use figures/hist5.png>
-Package pdftex.def Info: figures/hist5.png  used on input line 312.
+Package pdftex.def Info: figures/hist5.png  used on input line 331.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 <figures/hist6.png, id=135, 421.575pt x 316.18124pt>
 File: figures/hist6.png Graphic file (type png)
 <use figures/hist6.png>
-Package pdftex.def Info: figures/hist6.png  used on input line 313.
+Package pdftex.def Info: figures/hist6.png  used on input line 332.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 <figures/hist7.png, id=136, 421.575pt x 316.18124pt>
 File: figures/hist7.png Graphic file (type png)
 <use figures/hist7.png>
-Package pdftex.def Info: figures/hist7.png  used on input line 314.
+Package pdftex.def Info: figures/hist7.png  used on input line 333.
 (pdftex.def)             Requested size: 184.28568pt x 138.21799pt.
 
-LaTeX Warning: Float too large for page by 73.53857pt on input line 318.
+LaTeX Warning: Float too large for page by 73.53857pt on input line 337.
 
-[15
+[16
 
-] [16 <./figures/boxplot.png (PNG copy)>] [17 <./figures/hist1.png (PNG copy)> 
+] [17 <./figures/boxplot.png (PNG copy)>] [18 <./figures/hist1.png (PNG copy)> 
 <./figures/hist2.png (PNG copy)> <./figures/hist3.png (PNG copy)> <./figures/hi
 st4.png (PNG copy)> <./figures/hist5.png (PNG copy)> <./figures/hist6.png (PNG 
-copy)> <./figures/hist7.png (PNG copy)>] [18
+copy)> <./figures/hist7.png (PNG copy)>]
+Chapter 5.
+[19
 
 ]
-Chapter 5.
-[19]
 Overfull \hbox (173.24074pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/12 20 \OT1/cmr/m/sl/12 CHAPTER 5.  DATA-DRIVEN AND FREQUENCY REDUC
 TION METHODS FOR TACTILE SIGNAL EVALUATION
  []
 
 [20]
-<figures/deney2.png, id=156, 421.575pt x 316.18124pt>
+<figures/deney2.png, id=153, 421.575pt x 316.18124pt>
 File: figures/deney2.png Graphic file (type png)
 <use figures/deney2.png>
-Package pdftex.def Info: figures/deney2.png  used on input line 391.
+Package pdftex.def Info: figures/deney2.png  used on input line 410.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
-<figures/boxfreq.png, id=157, 421.575pt x 316.18124pt>
+<figures/boxfreq.png, id=154, 421.575pt x 316.18124pt>
 File: figures/boxfreq.png Graphic file (type png)
 <use figures/boxfreq.png>
-Package pdftex.def Info: figures/boxfreq.png  used on input line 402.
+Package pdftex.def Info: figures/boxfreq.png  used on input line 421.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
  [21 <./figures/deney2.png (PNG copy)>]
 Overfull \hbox (173.24074pt too wide) has occurred while \output is active
@@ -757,43 +763,37 @@ TION METHODS FOR TACTILE SIGNAL EVALUATION
  []
 
 [22 <./figures/boxfreq.png (PNG copy)>] [23]
-Overfull \hbox (173.24074pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 24 \OT1/cmr/m/sl/12 CHAPTER 5.  DATA-DRIVEN AND FREQUENCY REDUC
-TION METHODS FOR TACTILE SIGNAL EVALUATION
- []
-
+Chapter 6.
+<figures/showroom.png, id=164, 748.29562pt x 363.60844pt>
+File: figures/showroom.png Graphic file (type png)
+<use figures/showroom.png>
+Package pdftex.def Info: figures/showroom.png  used on input line 446.
+(pdftex.def)             Requested size: 322.50345pt x 156.70921pt.
 [24
 
 ]
-Chapter 6.
-<figures/showroom.png, id=170, 748.29562pt x 363.60844pt>
-File: figures/showroom.png Graphic file (type png)
-<use figures/showroom.png>
-Package pdftex.def Info: figures/showroom.png  used on input line 427.
-(pdftex.def)             Requested size: 322.50345pt x 156.70921pt.
-[25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./figures/showroom.png>]
-<figures/experiment2.png, id=178, 421.575pt x 316.18124pt>
+ [25 <./figures/showroom.png>]
+<figures/experiment2.png, id=171, 421.575pt x 316.18124pt>
 File: figures/experiment2.png Graphic file (type png)
 <use figures/experiment2.png>
-Package pdftex.def Info: figures/experiment2.png  used on input line 474.
+Package pdftex.def Info: figures/experiment2.png  used on input line 493.
 (pdftex.def)             Requested size: 345.54092pt x 259.15933pt.
-) [27] [28 <./figures/experiment2.png (PNG copy)>]
+) [26] [27 <./figures/experiment2.png (PNG copy)>]
 \openout2 = `Conclusions.aux'.
 
 
 (Conclusions.tex
 Chapter 7.
-[29
+[28
 
 
 
-]) [30]
+]) [29]
 \openout2 = `Appendix.aux'.
 
- (Appendix.tex) (LMT_Thesis.lof [31
+ (Appendix.tex) (LMT_Thesis.lof [30
 
 
 
@@ -802,16 +802,16 @@ Chapter 7.
 \tf@lof=\write4
 \openout4 = `LMT_Thesis.lof'.
 
- [32] (LMT_Thesis.lot)
+ [31] (LMT_Thesis.lot)
 \tf@lot=\write5
 \openout5 = `LMT_Thesis.lot'.
 
 
-(LMT_Thesis.bbl [33
+(LMT_Thesis.bbl [32
 
-] [34
+] [33
 
-] [35]) [36] (LMT_Thesis.aux (StatementsEN.aux)
+]) [34] (LMT_Thesis.aux (StatementsEN.aux)
 (Kurzfassung.aux) (Abstract.aux) (Introduction.aux) (Body.aux) (Conclusions.aux
 ) (Appendix.aux))
 
@@ -819,10 +819,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3934 strings out of 492973
- 62091 string characters out of 3135942
- 166332 words of memory out of 3000000
- 7601 multiletter control sequences out of 15000+200000
+ 3936 strings out of 492973
+ 62122 string characters out of 3135942
+ 166342 words of memory out of 3000000
+ 7604 multiletter control sequences out of 15000+200000
  10726 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,8n,46p,2052b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -841,9 +841,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmti12.pfb>
-Output written on LMT_Thesis.pdf (42 pages, 1908698 bytes).
+Output written on LMT_Thesis.pdf (39 pages, 1909819 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
+ 254 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  286 words of extra memory for PDF output out of 10000 (max. 10000000)
 

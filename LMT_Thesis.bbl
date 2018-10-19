@@ -69,6 +69,12 @@ J.~M. Loomis.
 \newblock {\em Presence: Teleoperators and Virtual Environments},
   1(1):113--119, 1992.
 
+\bibitem[RS07]{levinsondurbin}
+L.~R. Rabiner and R.~W. Schafer.
+\newblock Introduction to digital speech processing.
+\newblock {\em Foundations and Trends in Signal Processing}, 1(1-2):1--194,
+  2007.
+
 \bibitem[SHNS18]{mouse18}
 Matti Strese, Rania Hassen, Andreas Noll, and Eckehard Steinbach.
 \newblock A tactile computer mouse for the display of surface material

@@ -4,28 +4,28 @@
 \babel@toc {american}{}
 \babel@toc {american}{}
 \babel@toc {american}{}
-\contentsline {chapter}{Contents}{iii}
+\contentsline {chapter}{Contents}{ii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Haptic texture rendering}{3}
 \contentsline {section}{\numberline {2.1}Macroscopic Roughness}{3}
 \contentsline {section}{\numberline {2.2}Fine Roughness}{4}
 \contentsline {chapter}{\numberline {3}Interpolation of vibrotactile signals}{5}
 \contentsline {section}{\numberline {3.1}Linear predictive coding}{5}
-\contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{8}
-\contentsline {chapter}{\numberline {4}Correlation of Friction and Scanning Speed }{15}
-\contentsline {section}{\numberline {4.1}Speed Test}{15}
-\contentsline {section}{\numberline {4.2}Evaluation}{15}
+\contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{10}
+\contentsline {chapter}{\numberline {4}Correlation of Friction and Scanning Speed }{16}
+\contentsline {section}{\numberline {4.1}Speed Test}{16}
+\contentsline {section}{\numberline {4.2}Evaluation}{16}
 \contentsline {chapter}{\numberline {5}Data-Driven and Frequency Reduction Methods for Tactile Signal Evaluation}{19}
 \contentsline {section}{\numberline {5.1}Subjects and Setup}{19}
 \contentsline {section}{\numberline {5.2}Procedure}{20}
 \contentsline {section}{\numberline {5.3}Results}{21}
 \contentsline {section}{\numberline {5.4}Discussion}{22}
-\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{25}
-\contentsline {section}{\numberline {6.1}Subjects and Setup}{25}
-\contentsline {section}{\numberline {6.2}Procedure}{27}
-\contentsline {section}{\numberline {6.3}Results}{27}
-\contentsline {section}{\numberline {6.4}Discussion}{27}
-\contentsline {chapter}{\numberline {7}Conclusion}{29}
-\contentsline {chapter}{List of Figures}{31}
-\contentsline {chapter}{List of Tables}{33}
-\contentsline {chapter}{Bibliography}{35}
+\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{24}
+\contentsline {section}{\numberline {6.1}Subjects and Setup}{24}
+\contentsline {section}{\numberline {6.2}Procedure}{26}
+\contentsline {section}{\numberline {6.3}Results}{26}
+\contentsline {section}{\numberline {6.4}Discussion}{26}
+\contentsline {chapter}{\numberline {7}Conclusion}{28}
+\contentsline {chapter}{List of Figures}{30}
+\contentsline {chapter}{List of Tables}{32}
+\contentsline {chapter}{Bibliography}{33}

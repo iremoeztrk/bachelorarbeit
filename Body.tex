@@ -1,4 +1,5 @@
-
+\thispagestyle{empty}
+\cleardoublepage
 \chapter{Haptic texture rendering}
 
 \label{haptic}
@@ -36,7 +37,7 @@ The recorded acceleration signals depend on the scan speed and force, nonetheles
 
 \chapter{Interpolation of vibrotactile signals}
 \label{interpolation}
-
+\thispagestyle{empty}
 Prior model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response according to the human-subject studies during the past years (e.g. \cite{Culbertson15-WHC-Vibrations}) . Therefore, user speed should be incorporated into the feedback signal.
 
 As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects create the idea of data-driven texture models.
@@ -54,6 +55,13 @@ The basic idea of Linear Predictive Coding (LPC) is to develop a transfer functi
 \end{equation}
 
 The equation \ref{eq:sample} above shows the prediction of a next value $\hat{x}[n]$ from the previous samples through LPC coefficients $a=[a_i]_{i=1:N}$, where N is the order of the filter.
+The mean square prediction error is given as:
+
+\begin{equation} \label{eq:transferfunctt}
+E=\frac{1}{L}\cdot \sum_{k=1}^{L} {e[n]}^2  
+\end{equation}
+
+where L is the number of samples in the input signal and $e[n]=x[n]-\hat{x}[n]$.
 
 For the implementation, we consider an IIR filter $H(z)$ of length n in the form $H(z)=[-h_1z^{-2}-h_2z^{-1}...-h_nz^{-n}]$.
 Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following. The resulting prediction vector from our filter is $\vec{\hat{a}}(k)$. The residual signal {$\vec{e}(k)$} is the difference between these two signals as in the following equation:
@@ -71,15 +79,20 @@ LPC Analysis filter $H(z)$ can be written as:
 H(z)=1-P(z)   
 \end{equation}
 
+\begin{equation} \label{eq:transferfunctt}
+P(z)=\frac{\vec{e}(k)}{\vec{a}(k)}   
+\end{equation}
+
 where $P(z)$ is described as the transfer function of the LPC filter.
 
 It is possible to compute the residual at each step using the vector of filter coefficients $\vec{h}=[h_1 h_2 h_3 ... h_n]^T$:
 
 \begin{equation} \label{eq:residual}
-\vec{e}(k)=a(k)-\hat{a}(k)=a(k)-\vec{h}^T\vec{a}(k-1)   
+\vec{e}(k)=a(k)-\hat{a}(k)=a(k)-\vec{h}^T\vec{a}(k-1)  
 \end{equation}
 
-At this step, we aim to find the minimum value of the residual function $e(k)$. We are able to reduce the problem to Wiener-Hopf equation by a cost function based on mean-square error. The Wiener-Hopf equation can be solved by Levinson-Durbin \cite{durbin} algorithm, so that we can obtain our optimal filter vector $\vec{h_0}$. 
+At this step, we aim to find the minimum value of the residual function $e(k)$. We are able to reduce the problem to Wiener-Hopf equation by a cost function based on mean-square error. The Wiener-Hopf equation can be solved by Levinson-Durbin \cite{durbin} algorithm, so that we can obtain our optimal filter vector $\vec{h_0}$. Levinson-Durbin determines by recursion the optimum ith-order predictor from the optimum (i-1)th-order predictor, and as part of the process, all predictors from beginning order (no prediction) to order p are computed along with
+the corresponding mean-squared prediction errors E(i) (\cite{levinsondurbin}).
 
 To synthesize new signals, we use a white noise signal {$\vec{e_g}(l)$} as input, which is filtered with $1/P(z)$, in order to generate our desired response {$\vec{a_g}(l)$}. For a better overview, we can rewrite the equations (\ref{eq:transferfunction}) and (\ref{eq:residual}) as follows:
 
@@ -119,26 +132,32 @@ P\{\vec{a}(l)\}=\frac{1}{N}\sum_{n=0}^{N-1}|a(n)|^2
 	\end{center}
 \end{figure} 
 
-This is equivalent to signal variance $\sigma²$, because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error as follows:
+This is equivalent to signal variance $\sigma²$, because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error (root mean square error) as follows:
 
 \begin{equation} \label{costfunction}
-C\{\vec{a_g}(l)\}=\frac{RMS(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})}{RMS(DFT_s\{\vec{a}(l)\}}
+C\{\vec{a_g}(l)\}=\frac{(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})_{RMS}}{(DFT_s\{\vec{a}(l)\})_{RMS}}
 \end{equation}
 
 
-Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula, whereas a major change in error value can not be detected among the orders higher than 400. That is why in this thesis 400 is chosen as the optimal order for the best quality of results.
+where RMS is defined as:
 
+\begin{equation} \label{rms}
+x_{RMS}=\sqrt{\frac{1}{n}({x_1}^2+{x_2}^2+...+{x_n}^2)}
+\end{equation}
 
-Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that signal data for audio signals at different force and velocities are created. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}. Figure \ref{fig:lpc-original} shows an example signal and its LPC synthesized version both in time and spectral domain. 
+Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula. However, a major change in error value can not be seen among the orders higher than 400 as in \cite{romano10}, which is confirmed in Figure \ref{fig:error2}. That is why in this thesis 400 is chosen as the optimal order for the best quality of results.
 
 \begin{figure} [htbp]
 	\begin{center}
-		\subfigure{\includegraphics[width=0.49\textwidth]{gr_doppelt}} 
-		\subfigure{\includegraphics[width=0.49\textwidth]{gr_lpc}} 
-		\caption{The plot left shows the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown on the right side. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}
+		\subfigure{\includegraphics[width=0.70\textwidth]{gr_doppelt}} 
+		\subfigure{\includegraphics[width=0.70\textwidth]{gr_lpc}} 
+		\caption{The upper plot shows the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown in the second plot. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}
 		\label{fig:lpc-original}
 	\end{center}
 \end{figure} 
+
+
+Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that signal data for audio signals at different force and velocities are created. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}. Figure \ref{fig:lpc-original} shows an example signal and its LPC synthesized version both in time and spectral domain. 
 
 The general feel of haptic textures is governed by their spectral signature \cite{haptography}. As in the figure \ref{fig:lpc-original}, the recorded and synthesized data differ on time-domain, but their spectrum are quite similar. So it is expected that they will feel the same to a user. Experiment I in chapter \ref{data} is going to deal with whether these correlations are strong enough to fool the human sense of touch.
 
