@@ -57,7 +57,7 @@ The basic idea of Linear Predictive Coding (LPC) is to develop a transfer functi
 The equation \ref{eq:sample} above shows the prediction of a next value $\hat{x}[n]$ from the previous samples through LPC coefficients $a=[a_i]_{i=1:N}$, where N is the order of the filter.
 The mean square prediction error is given as:
 
-\begin{equation} \label{eq:transferfunctt}
+\begin{equation} \label{eq:errorfunctt}
 E=\frac{1}{L}\cdot \sum_{k=1}^{L} {e[n]}^2  
 \end{equation}
 
@@ -70,7 +70,7 @@ Our acceleration data vector from PCA is called {$\vec{a}(k)$} in the following.
 \vec{e}(k)=\vec{a}(k)-\vec{a}(k) \cdot H(z)  
 \end{equation}
 
-\begin{equation} \label{eq:transferfunction}
+\begin{equation} \label{eq:errorfunction}
 \vec{e}(k)=\vec{a}(k)\cdot(1-H(z))   
 \end{equation}
 LPC Analysis filter $H(z)$ can be written as:
@@ -135,17 +135,21 @@ P\{\vec{a}(l)\}=\frac{1}{N}\sum_{n=0}^{N-1}|a(n)|^2
 This is equivalent to signal variance $\sigma²$, because our signals are zero-mean signals. Now, we have to determine the order of our prediction filter, which affect the accuracy of the prediction. The higher we choose the order, the smaller the residual gets. It means we have a better prediction with higher orders, but then the calculation gets  more complicated. It is possible to calculate the success of the synthetic result with a cost function defined as the RMS error (root mean square error) as follows:
 
 \begin{equation} \label{costfunction}
-C\{\vec{a_g}(l)\}=\frac{(DFT_s\{\vec{a}(l)\}-DFT_s\{\vec{\hat{{a_g}}}(l)\})_{RMS}}{(DFT_s\{\vec{a}(l)\})_{RMS}}
+C\{\vec{a_g}(l)\}=\frac{(DFT\{\vec{a}(l)\}-DFT\{\vec{\hat{{a_g}}}(l)\})_{RMS}}{(DFT\{\vec{a}(l)\})_{RMS}}
 \end{equation}
 
 
-where RMS is defined as:
+where RMS and the discrete Fourier transform $DFT\{\vec{a}(l)\}$ of vector $\vec{a}(l)$ are defined as:
 
 \begin{equation} \label{rms}
 x_{RMS}=\sqrt{\frac{1}{n}({x_1}^2+{x_2}^2+...+{x_n}^2)}
 \end{equation}
 
-Using this equation, where $DFT_s\{\vec{a}\}$ represents the discrete Fourier transform of vector $\vec{a}$, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula. However, a major change in error value can not be seen among the orders higher than 400 as in \cite{romano10}, which is confirmed in Figure \ref{fig:error2}. That is why in this thesis 400 is chosen as the optimal order for the best quality of results.
+\begin{equation} \label{dft}
+DFT\{\vec{a}(l)\}=\vec{A_k}(l)=\sum_{l=0}^{L-1}\vec{a}(l)\cdot e^{-2\pi kN}   \quad k=0,1,...N-1.
+\end{equation}
+
+Using this equation, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula. However, a major change in error value can not be seen among the orders higher than 400 as in \cite{romano10}, which is confirmed in Figure \ref{fig:error2}. That is why in this thesis 400 is chosen as the optimal order for the best quality of results.
 
 \begin{figure} [htbp]
 	\begin{center}
@@ -188,7 +192,7 @@ At first we should determine the number of the frequencies we are going to deal 
 		\subfigure[80-85 Hz]{\includegraphics[width=0.30\textwidth]{schwebungg5}}   
 		\subfigure[120-130 Hz]{\includegraphics[width=0.30\textwidth]{schwebung35}}
 		
-		\caption{The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively.}  
+		  \caption{The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively, in order to observe the threshold distance for the beats wave.} 
 		\label{fig:schwebung}
 	\end{center}
 \end{figure} 
@@ -211,15 +215,61 @@ At first we should determine the number of the frequencies we are going to deal 
 		\subfigure[300-320 Hz]{\includegraphics[width=0.30\textwidth]{schwebung55}}
 		\subfigure[500-650 Hz]{\includegraphics[width=0.30\textwidth]{schwebung65}}
 		
-		\caption{The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively.}  
+		\caption{The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively, in order to observe the threshold distance for the beats wave.}  
 		\label{fig:schwebung2}
 	\end{center}
 \end{figure} 
 
 
-In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select highest amplitudes of the transformed signals. It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. The resulted wave is observed as a very low frequency of $\delta f$ and can be felt by the human tactile or auditory sense as if there is another stimulation \cite{beats}. To avoid this phenomenon, we remove frequencies among selected ones with a small difference.
+In order to find the frequencies with highest amplitudes, we calculate the discrete Fourier transform of the two recorded data and then select highest amplitudes of the transformed signals with the following equations:
 
-The threshold difference that the frequencies should have among each other is not the same in low and high frequency range as described in \cite{rahul15}. In this thesis the intervals and their threshold differences are determined according to an artificial signal generated by two frequencies, which are selected closer step by step (see Figures  \ref{fig:schwebung} and \ref{fig:schwebung2}) and the experiment results in \cite{beats}, which allow us to find appropriate frequency intervals and their threshold frequency to perceive the beats sensation. As a result, the major frequencies are selected according to the tabular \ref{tab:threshold}.  
+\begin{equation}
+T=\frac{1}{f_s}
+\end{equation}
+\begin{equation}
+t=k\cdot T			\quad k=0,1...N-1
+\end{equation}
+\begin{equation}
+X(f)=DFT\{x\}
+\end{equation}
+
+where N is the length of our input $x$. $X(f)$ is defined as the discrete Fourier transformed of the signal $x$ and contains therefore complex numbers in the form of ${\displaystyle z=r(\cos \varphi +i\sin \varphi )}$, where r is the amplitude and $\varphi$ describes the phase of the complex number. To be able to find the maximum amplitudes of $X(f)$, we determine all the amplitudes of X(f) with $abs(X(f))$ function and save also the phases for synthesizing new signals afterwards with $phase(X(f))$ function in Matlab. 
+
+It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. The resulted wave is observed as a very low frequency of $\delta f$ and can be felt by the human tactile or auditory sense as if there is another stimulation \cite{beats}. To avoid this phenomenon, we remove frequencies among selected ones with a small difference.
+
+The threshold difference that the frequencies should have among each other is not the same in low and high frequency range as described in \cite{rahul15}. In this thesis the intervals and their threshold differences are determined according to an artificial signal generated by two frequencies, which are selected closer step by step (see Figures  \ref{fig:schwebung} and \ref{fig:schwebung2}) and the experiment results in \cite{beats}, which allow us to find appropriate frequency intervals and their threshold frequency. However, due to the fact that there is not a fix value in literature for how close should these frequencies be selected and it is hard to , an evaluation was carried out with 5 people (3 female and 2 male between 22-28 years old, all right-handed), in order to achieve the optimal threshold for the model described in this thesis. 
+
+\subsubsection*{Evaluation of Threshold Difference}
+
+The subjects were asked to evaluate, whether they feel the beats signal in the audio signals displayed via a voice coil actuator with their right index finger. The signals were generated as in Figures \ref{fig:schwebung} and \ref{fig:schwebung2} from two frequencies, which have the maximum distance 20 in interval of 30-500 Hz and 150 in 500-1400 Hz. The threshold difference for each subject, where they began to percept the beats sensation can be seen in the following tabular \ref{tab:matrix}:
+
+\begin{table}[htbp]
+	\begin{center}
+		\caption{The threshold differences, which are determined by the subjects, according to the perception of the beats sensation are given below. The signals were displayed respectively, beginning with the signals generated from the frequencies with the maximum distance, which gets smaller step by step, until the subject feels the beats signal.}
+		\begin{tabular}{|c||c|c|c|c|c|}
+			\hline 
+			Frequency interval in Hz & Person I & Person II & Person III & Person IV & Person V  \\ 
+			\hline 
+			\hline
+			$0-50$ &4  &6  &6  & 5 & 3  \\ 
+			\hline 
+			$50-100$ &5  &7  & 6 & 4 & 3 \\ 
+			\hline 
+			$100-150$ &6  & 9 & 9 & 7 & 6   \\ 
+			\hline 
+			$150-250$ &7  & 9 & 7 & 7 & 7   \\ 
+			\hline 
+			$250-500$ &15  &12  & 15 &15  & 14  \\ 
+			\hline 
+			$500-1400$ &60  & 30 &80  &30  & 30   \\ 
+			\hline 
+		
+		\end{tabular} 
+		\label{tab:matrix}
+	\end{center}
+\end{table}
+
+This experiment also proves the fact that, the higher frequencies are more sensible for beats perception than lower frequencies. For a stable result, the major frequencies are selected according to the biggest threshold difference percepted by the subjects. The resulting values for each interval are shown in tabular  \ref{tab:threshold}.  
 
 \begin{table}[htbp]
 	\caption{The frequencies are selected from given intervals and have the threshold difference among each other.}
@@ -229,17 +279,17 @@ The threshold difference that the frequencies should have among each other is no
 			\hline
 			Frequency interval in Hz & Difference threshold in Hz \\ [1ex] 	
 			\hline\hline
-			0-50  & 3   \\ 
+			0-50  & 6   \\ 
 			\hline
-			50-100 & 4  \\
+			50-100 & 7  \\
 			\hline
-			100-150 & 7  \\
+			100-150 & 9  \\
 			\hline
-			150-250 & 10  \\
+			150-250 & 9  \\
 			\hline
 			250-500 & 15 \\  
 			\hline
-			500-1400 & 120 \\  
+			500-1400 & 80 \\  
 			\hline
 		\end{tabular}
 		\label{tab:threshold}
@@ -278,26 +328,33 @@ In Figures \ref{fig:co1_1} and \ref{fig:co1_2}, an example of oak material is sh
 \end{figure} 
 
 
-The selected frequencies of the recorded signals are utilized as skeleton of new signals to be generated. We determine the angle and the amplitude of each frequency before the generation process. We synthesize new signals by applying linear interpolation to the selected frequencies' amplitudes (see Figure \ref{fig:major}) and new signals are generated according to the following equation:
+The selected frequencies of the recorded signals are utilized for generating new signals. We determine the angle and the amplitude of each selected frequency before the generation process. We synthesize new signals by applying linear interpolation to the selected frequencies' amplitudes (see Figure \ref{fig:major}) and new signals are generated according to the following equation:
 
 
 \begin{equation} \label{synthesize}
-X_S(maxF(k))=maxA(k)*exp(maxP(k)*i)
+X_S(\hat{f})=\hat{A} \cdot e^{\hat{P}\cdot j}
 \end{equation}
 
 \begin{figure} [htbp]
 	\begin{center}
-		\subfigure[First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.]{\includegraphics[width=0.49\textwidth]{coak1}} 
-		\subfigure[An interpolation result between signals in (a) and (d).]{\includegraphics[width=0.49\textwidth]{coak5}} 
-		\subfigure[Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.49\textwidth]{coak7}} 
-		\subfigure[The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.]{\includegraphics[width=0.49\textwidth]{coak10}} 
-		\caption{Signal interpolation through frequencies with highest amplitudes.} 
+		\subfigure[First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.]{\includegraphics[width=0.80\textwidth]{coak1}} 
+		\subfigure[An interpolation result between signals in (a) and (d).]{\includegraphics[width=0.80\textwidth]{coak5}} 
+		
 		\label{fig:major}
+	\end{center}
+\end{figure} 
+\begin{figure} [htbp]
+	\begin{center}
+		
+		\subfigure[Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.80\textwidth]{coak7}} 
+		\subfigure[The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.]{\includegraphics[width=0.80\textwidth]{coak10}} 
+		\caption{Signal interpolation through frequencies with highest amplitudes.} 
+		\label{fig:major2}
 	\end{center}
 \end{figure} 
 
 
-where $maxA(k)$ represents the amplitude of selected frequencies and $maxF(k)$ the frequency, $maxP(k)$ represents the phase of selected frequencies with k as the selected frequency order. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain via IFFT to get the estimated signal as in Figure \ref{fig:co1_3}.  
+where $\hat{A}$ represents the amplitude of selected frequencies $\hat{f}$ and $\hat{P}$ represents the phase of selected frequencies with k as the selected frequency order. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain (see Figure \ref{fig:co1_3}) via IFFT to get the estimated signal via the following equation: 
 
 Finally in both methods, we generate audio signals by $audiowrite$ function in Matlab, which are displayed during interactions with virtual surfaces.
 

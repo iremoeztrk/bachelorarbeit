@@ -13,7 +13,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block diagram for the synthesis of an acceleration signal $a_g(l)$ from the appropriately scaled white noise input $e_g(l)$.}}}{7}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces The RMS Error of synthesized signals via LPC calculated with different coefficient orders. The original signals are recorded acceleration data at 5cm/s of materials oak, steel wool and fine foam. The chosen threshold is 400 as a result of this plot, where additional coefficients have minimal benefit.}}{8}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The upper plot shows the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown in the second plot. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}}{9}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively.}}{11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively, in order to observe the threshold distance for the beats wave.}}{11}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {30-31 Hz}}}{11}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {80-81 Hz}}}{11}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {120-122 Hz}}}{11}
@@ -29,7 +29,7 @@
 \contentsline {subfigure}{\numberline {(m)}{\ignorespaces {30-35 Hz}}}{11}
 \contentsline {subfigure}{\numberline {(n)}{\ignorespaces {80-85 Hz}}}{11}
 \contentsline {subfigure}{\numberline {(o)}{\ignorespaces {120-130 Hz}}}{11}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively.}}{12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The plotted signals are generated as a summation of two periodic signals, which have the frequencies given below respectively, in order to observe the threshold distance for the beats wave.}}{12}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {170-172 Hz}}}{12}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {300-304 Hz}}}{12}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {500-530 Hz}}}{12}
@@ -45,28 +45,28 @@
 \contentsline {subfigure}{\numberline {(m)}{\ignorespaces {170-180 Hz}}}{12}
 \contentsline {subfigure}{\numberline {(n)}{\ignorespaces {300-320 Hz}}}{12}
 \contentsline {subfigure}{\numberline {(o)}{\ignorespaces {500-650 Hz}}}{12}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces The depicted signal is recorded during an interaction with oak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{13}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{14}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref {fig:co1_2}.}}{14}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Signal interpolation through frequencies with highest amplitudes.}}{15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.}}}{15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{15}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.}}}{15}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.}}}{15}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The depicted signal is recorded during an interaction with oak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{15}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref {fig:co1_2}.}}{15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.}}}{17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{17}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Signal interpolation through frequencies with highest amplitudes.}}{18}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.}}}{18}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.}}}{18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.}}{17}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}}{18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{18}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{18}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{18}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{18}
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.}}{20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}}{21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{21}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{21}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{21}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{21}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{21}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with ifft transformed signals, where yellow bars are for lpc-synthesized signals.}}{21}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam 9.4 and for granite tile 10.2 were the mean optimum value, where 10 was chosen by the half of the subjects in coarse foam experiment. For steel wool, oak and fine foam the mean optimum values by 14, 11.8 and 10.7 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 11.22 on average, which can be accepted as 12 in this study.}}{22}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with ifft transformed signals, where yellow bars are for lpc-synthesized signals.}}{24}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam 9.4 and for granite tile 10.2 were the mean optimum value, where 10 was chosen by the half of the subjects in coarse foam experiment. For steel wool, oak and fine foam the mean optimum values by 14, 11.8 and 10.7 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 11.22 on average, which can be accepted as 12 in this study.}}{25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: Granite tile, Steel wool, Coarse foam, Oak, Fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.}}{25}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.}}{27}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: Granite tile, Steel wool, Coarse foam, Oak, Fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.}}{28}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.}}{30}
 \addvspace {10\p@ }
