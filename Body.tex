@@ -146,7 +146,7 @@ x_{RMS}=\sqrt{\frac{1}{n}({x_1}^2+{x_2}^2+...+{x_n}^2)}
 \end{equation}
 
 \begin{equation} \label{dft}
-DFT\{\vec{a}(l)\}=\vec{A_k}(l)=\sum_{l=0}^{L-1}\vec{a}(l)\cdot e^{-2\pi kN}   \quad k=0,1,...N-1.
+DFT\{\vec{a}(l)\}=\vec{A_k}(l)=\sum_{l=0}^{L-1}\vec{a}(l)\cdot e^{\frac{-j2\pi kl}{N}}   \quad k=0,1,...N-1.
 \end{equation}
 
 Using this equation, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula. However, a major change in error value can not be seen among the orders higher than 400 as in \cite{romano10}, which is confirmed in Figure \ref{fig:error2}. That is why in this thesis 400 is chosen as the optimal order for the best quality of results.
@@ -233,7 +233,7 @@ t=k\cdot T			\quad k=0,1...N-1
 X(f)=DFT\{x\}
 \end{equation}
 
-where N is the length of our input $x$. $X(f)$ is defined as the discrete Fourier transformed of the signal $x$ and contains therefore complex numbers in the form of ${\displaystyle z=r(\cos \varphi +i\sin \varphi )}$, where r is the amplitude and $\varphi$ describes the phase of the complex number. To be able to find the maximum amplitudes of $X(f)$, we determine all the amplitudes of X(f) with $abs(X(f))$ function and save also the phases for synthesizing new signals afterwards with $phase(X(f))$ function in Matlab. 
+where N is the length of our input $x$. $X(f)$ is defined as the discrete Fourier transformed of the signal $x$ and contains therefore complex numbers in the form of ${\displaystyle z=r(\cos \varphi +j\sin \varphi )}$, where r is the amplitude and $\varphi$ describes the phase of the complex number. To be able to find the maximum amplitudes of $X(f)$, we determine all the amplitudes of X(f) with $abs(X(f))$ function and save also the phases for synthesizing new signals afterwards with $phase(X(f))$ function in Matlab. 
 
 It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. The resulted wave is observed as a very low frequency of $\delta f$ and can be felt by the human tactile or auditory sense as if there is another stimulation \cite{beats}. To avoid this phenomenon, we remove frequencies among selected ones with a small difference.
 
@@ -346,59 +346,63 @@ X_S(\hat{f})=\hat{A} \cdot e^{\hat{P}\cdot j}
 \begin{figure} [htbp]
 	\begin{center}
 		
-		\subfigure[Another result of the interpolation. Combination of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.80\textwidth]{coak7}} 
-		\subfigure[The reproduced signal from recorded data at speed 400mm/s reproduced from given frequencies below.]{\includegraphics[width=0.80\textwidth]{coak10}} 
-		\caption{Signal interpolation through frequencies with highest amplitudes.} 
+		\subfigure[Another result of the interpolation. The interpolated amplitudes of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.80\textwidth]{coak7}} 
+		\subfigure[The reproduced signal from recorded data at speed 400 mm/s reproduced from given frequencies below.]{\includegraphics[width=0.80\textwidth]{coak10}} 
+		\caption{Signal interpolation through major frequencies.} 
 		\label{fig:major2}
 	\end{center}
 \end{figure} 
 
 
-where $\hat{A}$ represents the amplitude of selected frequencies $\hat{f}$ and $\hat{P}$ represents the phase of selected frequencies with k as the selected frequency order. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain (see Figure \ref{fig:co1_3}) via IFFT to get the estimated signal via the following equation: 
+where $\hat{A}$ represents the amplitude of selected frequencies $\hat{f}$ and $\hat{P}$ represents the phase of selected frequencies with k as the selected frequency order. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain (see Figure \ref{fig:co1_3}) via inverse discrete Fourier transform (in Matlab $ifft$ function) to get the estimated signal.
 
 Finally in both methods, we generate audio signals by $audiowrite$ function in Matlab, which are displayed during interactions with virtual surfaces.
 
 \chapter{Correlation of Friction and Scanning Speed }
 \label{friction}
 
-Surface stickiness compels the users to apply a lateral force during surface interactions. The friction coefficient is usually calculated as the ratio
-of the required dragging force of a sensor to the pressure, or
-normal force \cite{mouse18}. 
+Surface stickiness compels the users to apply a lateral force during surface interactions. The friction coefficient is usually calculated as the ratio of the required dragging force of a sensor to the pressure, or normal force \cite{mouse18}. In order to evaluate the speed dependency of vibrotactile signals generated with the models in this thesis, the friction dependency of speed should also be considered. It is possible to reduce the number of audio signals that are displayed during interaction with a texture at different speeds, by means of the correlation of scanning speed and friction coefficient of a texture.
 
 \section{Speed Test}
-In the following, we use Novint Falcon haptic device to feel a surface with different friction conditions, to be able to create a speed scala for some friction coefficients. Our aim is demonstrating how user speed varies depending on friction coefficients. We then use these results to evaluate speed intervals to be created in the following of this thesis, in which different audio data is displayed.
+In the following, we use a Novint Falcon haptic device to feel a surface with different friction conditions, to be able to create a speed scale for some friction coefficients. Our aim is to demonstrate how user speed varies depending on friction coefficients. We then use these results to evaluate speed intervals to be created in the following of this thesis, in which different audio data is displayed.
 
-The test is carried out with an object in a haptic virtual environment, which has no friction at the beginning. The object surface to be explored was a $20 \times 20$ $cm^2$ square. The scanning speed is detected and saved in every 0.2 seconds, while the user explores the surface. Approximately after one minute, system automatically changes the friction and brings it to one level higher. The friction coefficients and the results are shown in Figures \ref{fig:boxplot} and \ref{fig:friction}.
+The test is carried out with an object in a haptic virtual environment, which has no friction at the beginning. The object surface to be explored was $20 \times 20$ $cm^2$. The scanning speed is detected and saved in every 0.2 seconds, while the user explores the surface. Approximately after one minute, system automatically changes the friction and brings it to one level higher. The friction coefficients and the results are shown in Figures \ref{fig:boxplot} and \ref{fig:friction}.
 
 \begin{figure} [htbp]
 	\begin{center}
 		\includegraphics[width=0.70\textwidth]{boxplot} 
 		
-		\caption{Boxplot between friction coefficients of a virtual surface and speed values detected in every 0.2 seconds.} 
+		\caption{Boxplot between friction coefficients of a virtual surface and speed values sampled every 0.2 seconds.} 
 		\label{fig:boxplot}
 	\end{center}
 \end{figure} 
 
 \begin{figure} [htbp]
 	\begin{center}
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist1}} 
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist2}} 
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist3}} 
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist4}} 
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist5}} 
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist6}} 
-		\subfigure[]{\includegraphics[width=0.40\textwidth]{hist7}} 
-		\caption{Histograms of each 7 friction coefficients with 240 speed samples saved in every 0.2 seconds during virtual surface interaction through a haptic device.The bin width is selected as 4 in each plot.}  
+		\subfigure[$\mu=0$]{\includegraphics[width=0.49\textwidth]{hist1}} 
+		\subfigure[$\mu=0.2$]{\includegraphics[width=0.49\textwidth]{hist2}} 
+		\subfigure[$\mu=0.4$]{\includegraphics[width=0.49\textwidth]{hist3}} \subfigure[$\mu=0.6$]{\includegraphics[width=0.49\textwidth]{hist4}} 		 
 		\label{fig:friction}
+	\end{center}
+\end{figure} 
+
+\begin{figure} [htbp]
+	\begin{center}
+			
+		\subfigure[$\mu=0.8$]{\includegraphics[width=0.49\textwidth]{hist5}} 
+		\subfigure[$\mu=1.0$]{\includegraphics[width=0.49\textwidth]{hist6}} 
+		\subfigure[$\mu=1.2$]{\includegraphics[width=0.49\textwidth]{hist7}} 
+		\caption{Histograms of each 7 friction coefficients with 240 speed samples saved every 0.2 seconds during virtual surface interaction through a haptic device. The bin width is selected as 4 in each plot.}  
+		\label{fig:friction1}
 	\end{center}
 \end{figure} 
 
 
 \section{Evaluation}
 
-Figure \ref{fig:boxplot} presents the mean speed value and the common speed interval for each coefficient order. As expected, both the speed interval and the mean value get smaller with increasing friction coefficient. Figure \ref{fig:friction} gives us hints to be able to analyze how many intervals there are to display different audio data to simulate real surfaces.
+Figure \ref{fig:boxplot} presents a boxplot that remarks the mean speed value and the speed scale of users for each coefficient order. As expected, both the speed interval and the mean value get smaller with increasing friction coefficient. Figure \ref{fig:friction} gives us hints to be able to analyze how many intervals there are to display different audio data to simulate real surfaces.
 
-In plot (a), nine bins are shown, where the last two can be ignored due to the small number. So in that case, we would choose seven intervals for changing audio as the user speed varies, on the other hand in real life, textures always have a friction above zero, so this example depicts an unnatural scenario. When we look at the most common coefficients like 0.2 and 0.4, which are also relevant for the experiments in following chapters, we recognize that, it is possible to work with less than seven intervals for vibrotactile response. In the case of 0.2, five bins are remarkable as peaks and the rest can be part of the last interval. For the friction 0.4, we can assign four intervals and for 0.6 three audio data are quite sufficient. The fine roughness of objects with 0.8 and 1.0 friction coefficient can be displayed with two signals and for the last and extreme case one audio is enough already according to the presented results, so that there is no need to interpolate the recorded data.
+In plot (a), nine bins are shown, where the last two can be ignored due to the small number. So in that case, we would choose seven intervals for changing audio as the user speed varies, on the other hand in real life, textures always have a friction above zero, so this example depicts an unnatural scenario. When we look at the most common coefficients like 0.2 and 0.4, which are also relevant for the experiments in following chapters, we recognize that, it is possible to work with less than seven intervals for vibrotactile response. In the case of 0.2, five bins are remarkable as peaks and the rest can be part of the last interval. For the friction 0.4, we can assign four intervals and for 0.6 three audio data are quite sufficient. The fine roughness of objects with 0.8 and 1.0 friction coefficient can be displayed with two signals and for the last and extreme case one audio signal is enough according to the presented results, so that there is no need to interpolate the recorded data.
 
 
 
@@ -447,7 +451,7 @@ We used the voice coil actuator model NCC01-04-001-1X by H2W Technologies in the
 
 \section{Procedure}
 
-The subject sat at a table in front of the voice coil actuator. In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response with the right index finger. The displayed reference signal was for each material a recorded acceleration data at the mean speed according to the results in Figure \ref{fig:friction} in chapter \ref{friction} and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
+In each experiment run, the subject compared a synthesized signal with the reference while perceiving the response displayed via a voice coil actuator with the right index finger. The displayed reference signal was for each material a recorded acceleration data at the mean speed according to the results in Figure \ref{fig:friction} in chapter \ref{friction} and the compared synthesized signal was reproduced from this data both via LPC and major frequency method. 
 
 In addition to LPC and major frequency methodologies, the signal obtained by converting the initial signal from time domain to frequency domain via DFT and then converting back from the frequency domain to the time domain via IFFT was also displayed to be compared with the reference by the participants. The intent here is to remove possible peculiarities that may have occurred at the beginning and end of the recording and so that providing a stable signal from the recording. 
 
@@ -491,17 +495,17 @@ Second part of the experiment reveals the optimum frequency number for major fre
 \chapter{Tactile Signal Speed Dependency Evaluation}
 \label{tactile}
 
-Interactions with a surface in a virtual environment cause tactile vibrations. These vibrations depend on the surface properties such as coarse and fine texture, friction etc. and eventually user speed. Past human-subject studies [e.g. \cite{Culbertson15-WHC-Vibrations}]proved that speed responsiveness has an integral role in simulating perceptually realistic surfaces. \cite{modeling14} indicates a human subject study that uses segmented signals for different speed levels generated by LPC method to create realistic virtual textures and presents its usability to respond speed changes. Experiment II in the following section aims to investigate whether the signals generated by the major frequencies are able to respond to user speed as good as the original signals obtained from records during real interactions with surfaces. 
+Interactions with a surface in a virtual environment cause tactile vibrations. These vibrations depend on the surface properties such as coarse and fine texture and user speed. Past human-subject studies (e.g. \cite{Culbertson15-WHC-Vibrations}) proved that speed responsiveness has an integral role in simulating perceptually realistic surfaces. \cite{modeling14} indicates a human subject study that uses segmented signals for different speed levels generated by LPC method to create realistic virtual textures and presents its usability to respond speed changes. Experiment II in the following section aims to investigate whether the signals generated by the major frequencies are able to respond to user speed as good as the original signals obtained from records during real interactions with surfaces. 
 
 \section*{Experiment II}
 
 \section{Subjects and Setup}
-The subjects who took part in Experiment I were also the participants of Experiment II (see Subsection \ref{subjects}). This experiment was performed by dragging Novint Falcon haptic device across textured surfaces in a virtual room using natural exploratory motions, varying scanning speed. There were 5 materials of equal size placed next to each other (Figure  \ref{fig:showroom}). Friction coefficients of the surfaces are shown in tabular \ref{tab:materials} in Experiment I.  Our target here is displaying vibrotactile signals to represent microscopic roughness of the texture, that is why the surfaces had no coarse texture to be able to achieve not manipulated results in the experiment. 
+The subjects who took part in Experiment I were also the participants of Experiment II (see Subsection \ref{subjects}). This experiment was performed by dragging the Novint Falcon haptic device across textured surfaces in a virtual room using natural exploratory motions, varying scanning speed. There were 5 materials of equal size placed next to each other (Figure  \ref{fig:showroom}). Friction coefficients of the surfaces are shown in tabular \ref{tab:materials} in Experiment I.  Our target here is displaying vibrotactile signals to represent microscopic roughness of the texture, that is why the surfaces had no coarse texture to be able to achieve not manipulated results in the experiment. 
 
 \begin{figure} [htbp]
 	\begin{center}
 		\includegraphics[width=0.70\textwidth]{showroom}
-		\caption{The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: Granite tile, Steel wool, Coarse foam, Oak, Fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.} 
+		\caption{The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: granite tile, steel wool, coarse foam, oak, fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.} 
 		\label{fig:showroom}
 	\end{center}
 \end{figure} 
@@ -517,22 +521,22 @@ For each material are the results shown in Figures \ref{fig:boxplot} and \ref{fi
 			\hline
 		Material & \multicolumn{5}{|c|}{Intervals in cm/s} \\ [1ex] 	
 			\hline\hline
-			Coarse foam &0-4 & 4-8 & $>$8 &- &-    \\ 
+			Coarse foam &0-4 & 4-8 & $>$ 8 &- &-    \\ 
 			\hline
-			Fine foam & 0-4 & 4-8 & $>$8&-&-  \\
+			Fine foam & 0-4 & 4-8 & $>$ 8&-&-  \\
 			\hline
-			Oak & 0-4 & 4-8 & 8-12 & 12-16 & $>$16  \\
+			Oak & 0-4 & 4-8 & 8-12 & 12-16 & $>$ 16  \\
 			\hline
-			Granite Tile & 0-4 & 4-8 & 8-12 & 12-16 & $>$16  \\
+			Granite Tile & 0-4 & 4-8 & 8-12 & 12-16 & $>$ 16  \\
 			\hline
-			Steel wool & 0-4 & 4-8 & 8-12 & $>$12 &- \\  
+			Steel wool & 0-4 & 4-8 & 8-12 & $>$ 12 &- \\  
 			\hline
 		\end{tabular}
 		\label{tab:intervals}
 	\end{center}
 \end{table}
 
-For each interval the audio signals from recorded data and generated from major frequencies were prepared and saved so that the program could display during interactions with objects.
+For each interval the audio signals from recorded acceleration data and corresponding artificially generated signal via major frequency method were prepared and saved so that the program could display during interactions with objects.
 
 \section{Procedure}
 

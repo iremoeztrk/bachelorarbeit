@@ -14,18 +14,18 @@
 \contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{10}
 \contentsline {chapter}{\numberline {4}Correlation of Friction and Scanning Speed }{19}
 \contentsline {section}{\numberline {4.1}Speed Test}{19}
-\contentsline {section}{\numberline {4.2}Evaluation}{19}
-\contentsline {chapter}{\numberline {5}Data-Driven and Frequency Reduction Methods for Tactile Signal Evaluation}{22}
-\contentsline {section}{\numberline {5.1}Subjects and Setup}{22}
-\contentsline {section}{\numberline {5.2}Procedure}{23}
-\contentsline {section}{\numberline {5.3}Results}{24}
-\contentsline {section}{\numberline {5.4}Discussion}{25}
-\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{27}
-\contentsline {section}{\numberline {6.1}Subjects and Setup}{27}
-\contentsline {section}{\numberline {6.2}Procedure}{29}
-\contentsline {section}{\numberline {6.3}Results}{29}
-\contentsline {section}{\numberline {6.4}Discussion}{29}
-\contentsline {chapter}{\numberline {7}Conclusion}{31}
-\contentsline {chapter}{List of Figures}{33}
-\contentsline {chapter}{List of Tables}{35}
-\contentsline {chapter}{Bibliography}{36}
+\contentsline {section}{\numberline {4.2}Evaluation}{20}
+\contentsline {chapter}{\numberline {5}Data-Driven and Frequency Reduction Methods for Tactile Signal Evaluation}{23}
+\contentsline {section}{\numberline {5.1}Subjects and Setup}{23}
+\contentsline {section}{\numberline {5.2}Procedure}{24}
+\contentsline {section}{\numberline {5.3}Results}{25}
+\contentsline {section}{\numberline {5.4}Discussion}{26}
+\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{28}
+\contentsline {section}{\numberline {6.1}Subjects and Setup}{28}
+\contentsline {section}{\numberline {6.2}Procedure}{30}
+\contentsline {section}{\numberline {6.3}Results}{30}
+\contentsline {section}{\numberline {6.4}Discussion}{30}
+\contentsline {chapter}{\numberline {7}Conclusion}{32}
+\contentsline {chapter}{List of Figures}{34}
+\contentsline {chapter}{List of Tables}{36}
+\contentsline {chapter}{Bibliography}{37}
