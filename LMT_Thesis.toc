@@ -4,7 +4,7 @@
 \babel@toc {american}{}
 \babel@toc {american}{}
 \babel@toc {american}{}
-\contentsline {chapter}{Contents}{ii}
+\contentsline {chapter}{Contents}{iii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Haptic texture rendering}{3}
 \contentsline {section}{\numberline {2.1}Macroscopic Roughness}{3}
@@ -20,12 +20,12 @@
 \contentsline {section}{\numberline {5.2}Procedure}{24}
 \contentsline {section}{\numberline {5.3}Results}{25}
 \contentsline {section}{\numberline {5.4}Discussion}{26}
-\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{28}
-\contentsline {section}{\numberline {6.1}Subjects and Setup}{28}
-\contentsline {section}{\numberline {6.2}Procedure}{30}
-\contentsline {section}{\numberline {6.3}Results}{30}
-\contentsline {section}{\numberline {6.4}Discussion}{30}
-\contentsline {chapter}{\numberline {7}Conclusion}{32}
-\contentsline {chapter}{List of Figures}{34}
-\contentsline {chapter}{List of Tables}{36}
-\contentsline {chapter}{Bibliography}{37}
+\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{29}
+\contentsline {section}{\numberline {6.1}Subjects and Setup}{29}
+\contentsline {section}{\numberline {6.2}Procedure}{31}
+\contentsline {section}{\numberline {6.3}Results}{31}
+\contentsline {section}{\numberline {6.4}Discussion}{31}
+\contentsline {chapter}{\numberline {7}Conclusion}{33}
+\contentsline {chapter}{List of Figures}{35}
+\contentsline {chapter}{List of Tables}{37}
+\contentsline {chapter}{Bibliography}{39}

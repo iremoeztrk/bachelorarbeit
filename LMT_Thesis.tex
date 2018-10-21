@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside]{report}
+\documentclass[12pt,a4paper,twoside,openright]{report}
 
 %------------------------------------------------------------------------
 % PACKAGES:
@@ -70,6 +70,8 @@
 % English abstract:
 \include{Abstract}
 % Table of contents:
+\newpage
+\thispagestyle{empty}
 \tableofcontents 
 
 % Introduction (Einleitung):
@@ -92,6 +94,8 @@
 \listoffigures
 % List of tables (Tabellenverzeichnis):
 \listoftables
+\newpage
+\thispagestyle{empty}
 % Glossary (Glossar):
 %\include{Glossary}
 % List of formulae (Liste der Formelzeichen):
@@ -103,6 +107,7 @@
 % a) Style (with numbers: use unsrt):
 \bibliographystyle{alpha}
 % b) The File:
+
 \bibliography{Bibliography}
 
 \end{document} %*****************************************************

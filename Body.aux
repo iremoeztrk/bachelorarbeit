@@ -30,8 +30,8 @@
 \newlabel{eq:errorfunctt}{{3.2}{6}}
 \newlabel{eq:transferfunction}{{3.3}{6}}
 \newlabel{eq:errorfunction}{{3.4}{6}}
-\newlabel{eq:transferfunct}{{3.5}{6}}
-\newlabel{eq:transferfunctt}{{3.6}{6}}
+\newlabel{eq:transferfunct2}{{3.5}{6}}
+\newlabel{eq:transferfunctt3}{{3.6}{6}}
 \newlabel{eq:residual}{{3.7}{6}}
 \citation{romano10}
 \citation{romano10}
@@ -45,7 +45,6 @@
 \newlabel{fig:error2}{{3.2}{8}}
 \newlabel{costfunction}{{3.11}{8}}
 \newlabel{rms}{{3.12}{8}}
-\newlabel{dft}{{3.13}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces The upper plot shows the acceleration data recorded during interaction with a granite tile and its spectrum. The LPC synthesized version of the signal with the coefficient order 400 is shown in the second plot. Both signals maintain the same spectral characteristics, whereas they differ from one another in the time domain.}}{9}}
 \newlabel{fig:lpc-original}{{3.3}{9}}
 \citation{haptography}
@@ -95,11 +94,11 @@
 \newlabel{tab:threshold}{{3.2}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The depicted signal is recorded during an interaction with oak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{14}}
 \newlabel{fig:co1_1}{{3.6}{14}}
+\newlabel{synthesize}{{3.16}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{15}}
 \newlabel{fig:co1_2}{{3.7}{15}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref  {fig:co1_2}.}}{15}}
 \newlabel{fig:co1_3}{{3.8}{15}}
-\newlabel{synthesize}{{3.17}{16}}
 \newlabel{fig:major}{{3.2}{17}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.}}}{17}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{17}}
@@ -138,29 +137,29 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Procedure}{24}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Results}{25}}
 \newlabel{results1}{{5.3}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with ifft transformed signals, where yellow bars are for lpc-synthesized signals.}}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with \emph  {ifft} transformed signals, where yellow bars are for lpc-synthesized signals.}}{25}}
 \newlabel{fig:deney1}{{5.1}{25}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam 9.4 and for granite tile 10.2 were the mean optimum value, where 10 was chosen by the half of the subjects in coarse foam experiment. For steel wool, oak and fine foam the mean optimum values by 14, 11.8 and 10.7 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 11.22 on average, which can be accepted as 12 in this study.}}{26}}
 \newlabel{fig:boxfreq}{{5.2}{26}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Discussion}{26}}
 \citation{Culbertson15-WHC-Vibrations}
 \citation{modeling14}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{28}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Tactile Signal Speed Dependency Evaluation}{29}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{tactile}{{6}{28}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Subjects and Setup}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: granite tile, steel wool, coarse foam, oak, fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to IFFT-transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the grey ball in the picture with the haptic device to explore and interact with objects.}}{29}}
-\newlabel{fig:showroom}{{6.1}{29}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Materials in the experiment given with the required intervals for audio signal change.}}{29}}
-\newlabel{tab:intervals}{{6.1}{29}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Procedure}{30}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Results}{30}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Discussion}{30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.}}{31}}
-\newlabel{fig:experiment2}{{6.2}{31}}
+\newlabel{tactile}{{6}{29}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Subjects and Setup}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: granite tile, steel wool, coarse foam, oak, fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to \emph  {ifft} transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the gray ball in the picture with the haptic device to explore and interact with objects.}}{30}}
+\newlabel{fig:showroom}{{6.1}{30}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Materials in the experiment given with the required intervals for audio signal change.}}{30}}
+\newlabel{tab:intervals}{{6.1}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Procedure}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Results}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Discussion}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.}}{32}}
+\newlabel{fig:experiment2}{{6.2}{32}}
 \@setckpt{Body}{
-\setcounter{page}{32}
+\setcounter{page}{33}
 \setcounter{equation}{0}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
