@@ -1,6 +1,6 @@
 \thispagestyle{empty}
 \cleardoublepage
-\chapter{Haptic texture rendering}
+\chapter{Haptic Texture Rendering}
 
 \label{haptic}
 \thispagestyle{empty}% no page number in chapter title page
@@ -14,7 +14,7 @@ Tactile perception is stimulated by cutaneous receptors. There are four kinds of
 
 Friction, hardness, macroscopic roughness, microscopic roughness and thermal conductivity are the main dimensions to build haptic texture models \cite{okamoto13}. All of these aspects should be well considered in order to increase immersion into a virtual environment. In the following of this thesis, microscopic roughness is our main focus as a vibrotactile feature.
 
-Roughness plays an important role in haptic signal perception.The roughness dimension may be divided into two dimensions: macro and fine (micro) roughness as in \cite{okamoto13}.
+Roughness plays an important role in haptic signal perception.The roughness dimension may be divided into two dimensions: macro- and  microroughness (fine roughness) as in \cite{okamoto13}.
 
 \section{Macroscopic Roughness}
 
@@ -35,10 +35,10 @@ In the mechanism of fine roughness perception, FAI and FAII units contribute and
 The recorded acceleration signals depend on the scan speed and force, nonetheless we ignore the force dependencies as mentioned in the introduction part. Thereby, our approach in this thesis is generating vibrotactile signals based on the recorded acceleration data for different absolute scan speed. They are then displayed e.g. via a voice coil actuator. 
 
 
-\chapter{Interpolation of vibrotactile signals}
+\chapter{Interpolation of Vibrotactile Signals}
 \label{interpolation}
 \thispagestyle{empty}
-Prior model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response according to the human-subject studies during the past years (e.g. \cite{Culbertson15-WHC-Vibrations}) . Therefore, user speed should be incorporated into the feedback signal.
+Prior model designs have recently been evolved into data-driven haptic textures. The apparent concept is simply displaying recorded texture acceleration signals, where the exploratory speed dependency is disregarded. However, this is not a sufficient way of representing acceleration response according to the human-subject studies during the past years (e.g. \cite{Culbertson15-WHC-Vibrations}). Therefore, user speed should be incorporated into the feedback signal.
 
 As in \cite{refined12} is described, there are some methods of relating speed variable to tactile signals such as switching between recordings according to speed, which may however be perceptually detectable. Another way is building a function depending on speed that gives a weighted average of recorded acceleration signals as output. The problem that may occur here is that the frequency content is not preserved due to the probable constructive and destructive interference between signals. These aspects create the idea of data-driven texture models.
 
@@ -46,7 +46,7 @@ In the following, we analyze two methods for synthesizing vibrotactile signals w
 
 In the following, we go deep into both of the principles and how to apply them to produce interpolated signals.
 
-\section{Linear predictive coding}
+\section{Linear Predictive Coding}
 \label{lpcmethode}
 The basic idea of Linear Predictive Coding (LPC) is to develop a transfer function that can predict each sample of a signal as a linear combination of the previous samples. It has applications in filter design and speech coding. 
 
@@ -163,13 +163,13 @@ Using this equation, it is possible to obtain the optimal order of the filter. A
 
 Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that signal data for audio signals at different force and velocities are created. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}. Figure \ref{fig:lpc-original} shows an example signal and its LPC synthesized version both in time and spectral domain. 
 
-The general feel of haptic textures is governed by their spectral signature \cite{haptography}. As in the figure \ref{fig:lpc-original}, the recorded and synthesized data differ on time-domain, but their spectrum are quite similar. So it is expected that they will feel the same to a user. Experiment I in chapter \ref{data} is going to deal with whether these correlations are strong enough to fool the human sense of touch.
+The general feel of haptic textures is governed by their spectral signature \cite{haptography}. As in the figure \ref{fig:lpc-original}, the recorded and synthesized data differ on time-domain, but their spectrum are quite similar. So it is expected that they will feel the same to a user. Experiment I in chapter \ref{data} deals with whether these correlations are strong enough to fool the human sense of touch.
 
 \section{Signal Generation from Major Frequencies}
 \label{majorfrequency}
 The other method for signal generation is using rich and valuable information of signals' dominant frequencies, which has the highest amplitudes. The frequency of the vibration must change as the users change their force and so that their speed. This is one of the realistic methods for interpolation between signals recorded under different velocities.
 
-At first we should determine the number of the frequencies we are going to deal with for synthesizing new signals. This is done as a part of Experiment I in chapter \ref{data} according to the participants' feedback. For our case we set 30 as the maximum number of selected frequencies and 2 as the minimum. The optimum will be evaluated with the aid of the first experiment.
+At first we should determine the number of the frequencies we deal with for synthesizing new signals. This is done as a part of Experiment I in chapter \ref{data} according to the participants' feedback. For our case we set 30 as the maximum number of selected frequencies and 2 as the minimum. The optimum will be evaluated with the aid of the first experiment.
 
 
 \begin{figure} [htbp]
@@ -235,7 +235,7 @@ X(f)=DFT\{x\}
 
 where N is the length of our input $x$. $X(f)$ is defined as the discrete Fourier transformed of the signal $x$ and contains therefore complex numbers in the form of ${\displaystyle z=r(\cos \varphi +j\sin \varphi )}$, where r is the amplitude and $\varphi$ describes the phase of the complex number. To be able to find the maximum amplitudes of $X(f)$, we determine all the amplitudes of X(f) with $abs(X(f))$ function and save also the phases for synthesizing new signals afterwards with $phase(X(f))$ function in Matlab. 
 
-It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. The resulted wave is observed as a very low frequency of $\delta f$ and can be felt by the human tactile or auditory sense as if there is another stimulation \cite{beats}. To avoid this phenomenon, we remove frequencies among selected ones with a small difference.
+It is important here to ensure that selected frequencies should have a certain distance to each other, because the superposition of two pure tones with slightly different frequencies can lead to beats. The resulted wave is observed as a very low frequency of $\Delta f$ and can be felt by the human tactile or auditory sense as if there is another stimulation \cite{beats}. To avoid this phenomenon, we remove frequencies among selected ones with a small difference.
 
 The threshold difference that the frequencies should have among each other is not the same in low and high frequency range as described in \cite{rahul15}. In this thesis the intervals and their threshold differences are determined according to an artificial signal generated by two frequencies, which are selected closer step by step (see Figures  \ref{fig:schwebung} and \ref{fig:schwebung2}) and the experiment results in \cite{beats}, which allow us to find appropriate frequency intervals and their threshold frequency. However, due to the fact that there is not a fix value in literature for how close should these frequencies be selected and it is hard to , an evaluation was carried out with 5 people (3 female and 2 male between 22-28 years old, all right-handed), in order to achieve the optimal threshold for the model described in this thesis. 
 
@@ -301,7 +301,7 @@ In Figures \ref{fig:co1_1} and \ref{fig:co1_2}, an example of oak material is sh
 
 \begin{figure} [htbp]
 	\begin{center}
-	\includegraphics[width=0.70\textwidth]{co1_1} 
+	\includegraphics[width=0.80\textwidth]{co1_1} 
 	 
 	\caption{The depicted signal is recorded during an interaction with oak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.} 
 	\label{fig:co1_1}
@@ -313,7 +313,7 @@ In Figures \ref{fig:co1_1} and \ref{fig:co1_2}, an example of oak material is sh
 		
 	\includegraphics[width=0.70\textwidth]{co1_2} 
 
-\caption{As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.} 
+\caption{As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overview.} 
 \label{fig:co1_2}
 \end{center}
 \end{figure} 
@@ -326,7 +326,23 @@ In Figures \ref{fig:co1_1} and \ref{fig:co1_2}, an example of oak material is sh
 	\label{fig:co1_3}
 	\end{center}
 \end{figure} 
-
+\begin{figure} [htbp]
+	\begin{center}
+		\subfigure[Generated signal from recorded data during interaction with a piece of oak at speed 40 mm/s reproduced from given frequencies below.]{\includegraphics[width=0.49\textwidth]{coak-1}} 
+		\subfigure[An interpolation result between signals in (a) and (d).]{\includegraphics[width=0.49\textwidth]{coak-5}} 
+		
+		\label{fig:major}
+	\end{center}
+\end{figure} 
+\begin{figure} [htbp]
+	\begin{center}
+		
+		\subfigure[An interpolation result between signals (a) and (d). The interpolated amplitudes of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.49\textwidth]{coak-7}} 
+		\subfigure[The reproduced signal from recorded data at speed 200 mm/s reproduced from given frequencies below.]{\includegraphics[width=0.49\textwidth]{coak-10}} 
+		\caption{Signal interpolation through major frequencies.} 
+		\label{fig:major2}
+	\end{center}
+\end{figure} 
 
 The selected frequencies of the recorded signals are utilized for generating new signals. We determine the angle and the amplitude of each selected frequency before the generation process. We synthesize new signals by applying linear interpolation to the selected frequencies' amplitudes (see Figure \ref{fig:major}) and new signals are generated according to the following equation:
 
@@ -335,23 +351,6 @@ The selected frequencies of the recorded signals are utilized for generating new
 X_S(\hat{f})=\hat{A} \cdot e^{\hat{P}\cdot j}
 \end{equation}
 
-\begin{figure} [htbp]
-	\begin{center}
-		\subfigure[First generated signal from recorded data during interaction with oak at speed 40 mm/s reproduced from given frequencies below.]{\includegraphics[width=0.80\textwidth]{coak1}} 
-		\subfigure[An interpolation result between signals in (a) and (d).]{\includegraphics[width=0.80\textwidth]{coak5}} 
-		
-		\label{fig:major}
-	\end{center}
-\end{figure} 
-\begin{figure} [htbp]
-	\begin{center}
-		
-		\subfigure[Another result of the interpolation. The interpolated amplitudes of the frequencies can be seen in the spectral domain plot below.]{\includegraphics[width=0.80\textwidth]{coak7}} 
-		\subfigure[The reproduced signal from recorded data at speed 400 mm/s reproduced from given frequencies below.]{\includegraphics[width=0.80\textwidth]{coak10}} 
-		\caption{Signal interpolation through major frequencies.} 
-		\label{fig:major2}
-	\end{center}
-\end{figure} 
 
 
 where $\hat{A}$ represents the amplitude of selected frequencies $\hat{f}$ and $\hat{P}$ represents the phase of selected frequencies with k as the selected frequency order. Signal $X_S$ is the generated spectrum, which needs to be transformed into the time domain (see Figure \ref{fig:co1_3}) via inverse discrete Fourier transform (in Matlab \emph{ifft} function) to get the estimated signal.
@@ -380,20 +379,14 @@ The test is carried out with an object in a haptic virtual environment, which ha
 
 \begin{figure} [htbp]
 	\begin{center}
-		\subfigure[$\mu=0$]{\includegraphics[width=0.49\textwidth]{hist1}} 
-		\subfigure[$\mu=0.2$]{\includegraphics[width=0.49\textwidth]{hist2}} 
-		\subfigure[$\mu=0.4$]{\includegraphics[width=0.49\textwidth]{hist3}} \subfigure[$\mu=0.6$]{\includegraphics[width=0.49\textwidth]{hist4}} 		 
-		\label{fig:friction}
-	\end{center}
-\end{figure} 
-
-\begin{figure} [htbp]
-	\begin{center}
+		\subfigure[$\mu=0$]{\includegraphics[width=0.35\textwidth]{hist1}} 
+		\subfigure[$\mu=0.2$]{\includegraphics[width=0.35\textwidth]{hist2}} 
+		\subfigure[$\mu=0.4$]{\includegraphics[width=0.35\textwidth]{hist3}} \subfigure[$\mu=0.6$]{\includegraphics[width=0.35\textwidth]{hist4}} 		 
 			
-		\subfigure[$\mu=0.8$]{\includegraphics[width=0.49\textwidth]{hist5}} 
-		\subfigure[$\mu=1.0$]{\includegraphics[width=0.49\textwidth]{hist6}} 
-		\subfigure[$\mu=1.2$]{\includegraphics[width=0.49\textwidth]{hist7}} 
-		\caption{Histograms of each 7 friction coefficients with 240 speed samples saved every 0.2 seconds during virtual surface interaction through a haptic device. The bin width is selected as 4 in each plot.}  
+		\subfigure[$\mu=0.8$]{\includegraphics[width=0.35\textwidth]{hist5}} 
+		\subfigure[$\mu=1.0$]{\includegraphics[width=0.35\textwidth]{hist6}} 
+		\subfigure[$\mu=1.2$]{\includegraphics[width=0.35\textwidth]{hist7}} 
+		\caption{Histograms of each 7 friction coefficients with 240 speed samples saved every 0.2 seconds during virtual surface interaction through a haptic device. The bar width is selected as 4 in each plot.}  
 		\label{fig:friction1}
 	\end{center}
 \end{figure} 
@@ -413,7 +406,7 @@ In plot (a), nine bins are shown, where the last two can be ignored due to the s
 
 
 The perception of displayed haptic
-information typically varies across different human subjects \cite{leder09}. Therefore,experiments with human participants and their feedbacks constitute a fundamental component of the development in haptics.
+information typically varies across different subjects \cite{leder09}. Therefore,experiments with subjects and their feedbacks constitute a fundamental component of the development in haptics.
 
 As mentioned in chapter \ref{interpolation}, we analyze two methodologies of synthesizing vibrotactile signals for rendering fine roughness feedback: LPC and utilizing major frequencies of records. This chapter describes a human-subject experiment to evaluate how perceptually close our synthesized vibrotactile signals to the recorded acceleration signals in a haptic environment.  
 
@@ -422,7 +415,7 @@ As mentioned in chapter \ref{interpolation}, we analyze two methodologies of syn
 \section{Subjects and Setup}
 \label{subjects}
 
-To accomplish a stable evaluation, ten volunteer human subjects, 3 female and 7 male, participated in the experiment at separate times. Their
+To accomplish a stable evaluation, ten volunteers, 3 female and 7 male, participated in the experiment at separate times. Their
 ages ranged from 19 to 29, with an average of 23 years. The subjects were all right-handed with limited experience with haptic devices. None
 of them reported having any ailments that would affect the experiment.
 
@@ -435,15 +428,15 @@ We used the voice coil actuator model NCC01-04-001-1X by H2W Technologies in the
 		\hline
 		Material & Friction \\ [1ex] 	
 		\hline\hline
-		Coarse foam & 0.6   \\ 
+		coarse foam & 0.6   \\ 
 		\hline
-		Fine foam & 0.6  \\
+		fine foam & 0.6  \\
 		\hline
-		Oak & 0.2  \\
+		oak & 0.2  \\
 		\hline
-		Granite Tile & 0.2  \\
+		granite tile & 0.2  \\
 		\hline
-		Steel wool & 0.4 \\  
+		steel wool & 0.4 \\  
 		\hline
 	\end{tabular}
 	\label{tab:materials}
@@ -460,30 +453,30 @@ In addition to LPC and major frequency methodologies, the signal obtained by con
 
 The subject was supposed to compare each pair of signals respectively and evaluate whether they cause the same or different perception. Before each synthesized signal, the recorded signal is displayed for 10 seconds. Afterwards the artificially generated audio is displayed again for 10 seconds and the participant was asked to evaluate directly. Hereby, all methods were judged regarding to the reference.
 
-Another important aspect of this experiment is to find the optimum number of frequencies to be selected experimentally as mentioned in section \ref{majorfrequency}. To do this, the synthesized data via 2 to 30 selected frequencies for all materials were prepared to display. We always started with the signal created with 30 frequencies and if the user can not detect any difference between the reference and comparison vibration, the 2-frequency signal was displayed. Gradually from top and bottom the audio signals are displayed via the voice coil actuator, we tried to find the minimum number of frequencies that generate perceptually similar signal to the reference. According to the user's feedback, the optimal number of frequency was evaluated and this result was used for the Experiment II. 
+Another important aspect of this experiment is to find the optimum number of frequencies to be selected experimentally as mentioned in section \ref{majorfrequency}. To do this, the synthesized data via 2 to 30 selected frequencies for all materials were prepared to display. We always started with the signal created with 30 frequencies and if the user can not detect any difference between the reference and comparison vibration, the signal composed by 2 frequencies was displayed. Gradually from top and bottom the audio signals are displayed via the voice coil actuator, we tried to find the minimum number of frequencies that generate perceptually similar signal to the reference. According to the user's feedback, the optimal number of frequency was evaluated and this result was used for the Experiment II. 
 
 This setting was repeated for each 5 materials and an experiment run was terminated after the subject judged the signal pairs to feel the ``same'' or ``different'' for each material and for major frequency method after determining the optimal number of frequencies to be selected.
 
 \section{Results}
 \label{results1}
 
-Our first comparison pair was original signal with \emph{ifft} transformed version from its spectrum. As a result, 96 \% similarity is detected among 50 comparisons. Two subjects could distinguish between the original and synthesized signals of granite tile. All other objects had 100 \% similarity between their signals. Second comparison was between original and LPC synthesized signals. A similarity rate of 96 \% is also achieved in this comparison, whereas granite tile and  steel wool had 90 \% rate of similarity caused by different subjects. Again all other materials had 100 \% similarity rate. Figure \ref{fig:deney1} shows the results of both comparison pairs.
+Our first comparison pair was original signal with \emph{ifft} transformed version from its spectrum. As a result, 96\% similarity is detected among 50 comparisons. Two subjects could distinguish between the original and synthesized signals of granite tile. All other objects had 100\% similarity between their signals. Second comparison was between original and LPC synthesized signals. A similarity rate of 96\% is also achieved in this comparison, whereas granite tile and  steel wool had 90\% rate of similarity caused by different subjects. Again all other materials had 100\% similarity rate. Figure \ref{fig:deney1} shows the results of both comparison pairs.
 
 \begin{figure} [htbp]
 	\begin{center}
 		\includegraphics[width=0.70\textwidth]{deney2}
-		\caption{The number of subjects who gave the answer ``same'' about two compared acceleration signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison with \emph{ifft} transformed signals, where yellow bars are for lpc-synthesized signals.} 
+		\caption{The percentage of the answer "same" by the 10 subjects in comparison between two signals at the mean speed of the materials displayed via voice coil actuator is given above. Blue bars represent the comparison of the reference signal with \emph{ifft} transformed signals, where yellow bars are for LPC synthesized signals.} 
 		\label{fig:deney1}
 	\end{center}
 \end{figure} 
 
 In the other part of the experiment, we tried to find the optimum number of frequencies to be selected, from which the signal is reproduced. The result is shown for every material in Figure \ref{fig:boxfreq}.   
 
-In Figure \ref{fig:boxfreq} can be seen that 30 frequencies are not necessary to reproduce a signal, which can be reduced to 10 for example for material coarse foam and for granite tile to 11. Our experiment shows that fine foam needs 11, oak 12 and steel wool 14 frequencies at least according to the mean value of the user answers rounded up to the nearest integer. Also it was noted that, in the case of steel wool 7 participants found that overall signals have some peculiarities in comparison to the reference signals. Therefore, they picked the optimum in comparison to 30-frequency signal. These optimum numbers of frequencies were used in the Experiment II by displaying the signals generated via the chosen amount of frequencies by that subject.
+In Figure \ref{fig:boxfreq} can be seen that 30 frequencies are not necessary to reproduce a signal, which can be reduced to 10 for example for material coarse foam and for granite tile to 11. Our experiment shows that fine foam needs 11, oak 12 and steel wool 14 frequencies at least according to the mean value of the user answers rounded up to the nearest integer. Also it was noted that, in the case of steel wool 7 participants found that overall signals have some peculiarities in comparison to the reference signals. Therefore, they picked the optimum in comparison to signal composed by 30 frequencies. These optimum numbers of frequencies were used in the Experiment II by displaying the signals generated via the chosen amount of frequencies by that subject.
 \begin{figure} [htbp]
 	\begin{center}
 		\includegraphics[width=0.70\textwidth]{boxfreq}
-		\caption{The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam  9.4 and for granite tile 10.2 were the mean optimum value, where 10 was chosen by the half of the subjects in coarse foam experiment. For steel wool, oak and fine foam the mean optimum values by 14, 11.8 and 10.7 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the optimum number of 11.22 on average, which can be accepted as 12 in this study.} 
+		\caption{The above boxplot shows the answers of the subjects for the optimal number of frequencies. For coarse foam  9.4 and for granite tile 10.2 were the mean optimum value, where 10 was chosen by the half of the subjects in coarse foam experiment. For steel wool, oak and fine foam the mean optimum values by 14, 11.8 and 10.7 were chosen respectively. All 50 choices, 10 subjects per each 5 material, result in the mean number of 11.22 on average and the maximum number of frequencies is 20, which can be interpreted as the optimal number is between 12 and 20 according to this study.} 
 		\label{fig:boxfreq}
 	\end{center}
 \end{figure} 
@@ -491,9 +484,9 @@ In Figure \ref{fig:boxfreq} can be seen that 30 frequencies are not necessary to
 
 \section{Discussion}
 
-By evaluating how humans perceive both real and virtual vibrotactile signals, the study provided many important insights into the strengths and weaknesses of our modeling and rendering techniques. The first comparison results with 96 \% similarity show that the \emph{ifft} transformed version of the signals can be used as the reference signal as well. The 4 \% negative judgment can be explained by the peculiarities in the recorded signal at the beginning and end of the record, which can be remarkable at the binding points emerged by the constitution of the 10-second audio data. The LPC synthesized signal may also have the same issue with the 96 \% of similarity, which is able to create more stable and consistent version of the original signal. Consequently, it can be deduced that humans find the signals generated via both methodologies hard to ``distinguish'' in general and therefore both can be used in place of the recorded signal.   
+By evaluating how humans perceive both real and virtual vibrotactile signals, the study provided many important insights into the strengths and weaknesses of our modeling and rendering techniques. The first comparison results with 96\% similarity show that the \emph{ifft} transformed version of the signals can be used as the reference signal as well. The 4\% negative judgment can be explained by the peculiarities in the recorded signal at the beginning and end of the record, which can be remarkable at the binding points emerged by the constitution of the 10 second audio data. The LPC synthesized signal may also have the same issue with the 96\% of similarity, which is able to create more stable and consistent version of the original signal. Consequently, it can be deduced that humans find the signals generated via both methodologies hard to ``distinguish'' in general and therefore both can be used in place of the recorded signal.   
 
-Second part of the experiment reveals the optimum frequency number for major frequency method. From the presented results can be concluded that 12-14 frequencies would be the optimum for such a method in general. The challenge in this methodology was to find the threshold difference between the selected frequencies in order to avoid the beats and determine the right intervals for these thresholds. This can be hard and may cause problems or loss in valuable data when not reasonable values are selected. These thresholds can vary among different signals and thus can not be easily determined. In this experiment, we tried to find a generalized solution but for example in the case of steel wool, the results were not as we expected. Our prediction was to achieve better results with ascending number of selected frequencies. However, some subjects found signals between 20-30 frequencies not as similar as signals in 10-20-frequency interval to the reference signal. This may have been caused by several factors. Firstly, it can be due to the peculiarities occurred in the record as mentioned in the section \ref{results1}. As a solution, the \emph{ifft} transformed signal can be used as a reference signal. Secondly, the selected frequency combination might not be the dominant ones, and can not be perceived within the original signal but when selected, they have a huge impact in the perception. Another effect can be the fact that with ascending number of frequencies, the amplitude of the generated signal increases and despite scaling the amplitudes according to the reference signal during constitution of the time-domain signals, it can not be sufficient to have the exact same amplitude all over the signal. The other material results show that generally with 10-11 selected frequencies a perceptually similar signal can be generated. The variation in different materials depends on the different number of the dominant freqeuncies, which mainly constitutes the remarkable vibration during interaction.
+Second part of the experiment reveals the optimum frequency number for major frequency method. From the presented results can be concluded that 12-20 frequencies would be the optimum for such a method in general. To achieve a stable result, 20 can be accepted as the optimal number of frequencies in this thesis. The challenge in this methodology was to find the threshold difference between the selected frequencies in order to avoid the beats and determine the right intervals for these thresholds. This can be hard and may cause problems or loss in valuable data when not reasonable values are selected. These thresholds can vary among different signals and thus can not be easily determined. In this experiment, we tried to find a generalized solution but for example in the case of steel wool, the results were not as we expected. Our prediction was to achieve better results with ascending number of selected frequencies. However, some subjects found signals composed by between 20 and 30 frequencies not as similar as signals from 10-20 frequencies to the reference signal. This may have been caused by several factors. Firstly, it can be due to the peculiarities occurred in the record as mentioned in the section \ref{results1}. As a solution, the \emph{ifft} transformed signal can be used as a reference signal. Secondly, the selected frequency combination might not be the dominant ones, and can not be perceived within the original signal but when selected, they have a huge impact in the perception. Another effect can be the fact that with ascending number of frequencies, the amplitude of the generated signal increases and despite scaling the amplitudes according to the reference signal during constitution of the time-domain signals, it can not be sufficient to have the exact same amplitude all over the signal. The variation in different materials depends on the different number of the dominant frequencies, which mainly constitutes the remarkable vibration during interaction.
 
 \newpage
 
@@ -513,7 +506,7 @@ The subjects who took part in Experiment I were also the participants of Experim
 \begin{figure} [htbp]
 	\begin{center}
 		\includegraphics[width=0.70\textwidth]{showroom}
-		\caption{The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: granite tile, steel wool, coarse foam, oak, fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch with P-key to LPC synthesized signals, with K-key to \emph{ifft} transformed signals and with M-key to signals generated via the major frequencies. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the gray ball in the picture with the haptic device to explore and interact with objects.} 
+		\caption{The haptic showroom which contains the experiment materials can be seen above. The materials from left to right: granite tile, steel wool, coarse foam, oak, fine foam. Simulation starts at the center directly across the objects where interactions can easily be performed by the users. At the beginning, original signals are activated for all materials. Users can switch to LPC synthesized signals, to \emph{ifft} transformed signals and to signals generated via major frequencies in the simulation. The user speed is detected during interaction and the corresponding sound is displayed according to the speed interval. Users control the gray ball in the picture with the haptic device to explore and interact with objects.} 
 		\label{fig:showroom}
 	\end{center}
 \end{figure} 
@@ -529,15 +522,15 @@ For each material are the results shown in Figures \ref{fig:boxplot} and \ref{fi
 			\hline
 		Material & \multicolumn{5}{|c|}{Intervals in cm/s} \\ [1ex] 	
 			\hline\hline
-			Coarse foam &0-4 & 4-8 & $>$ 8 &- &-    \\ 
+			coarse foam &0-4 & 4-8 & $>$ 8 &- &-    \\ 
 			\hline
-			Fine foam & 0-4 & 4-8 & $>$ 8&-&-  \\
+			fine foam & 0-4 & 4-8 & $>$ 8&-&-  \\
 			\hline
-			Oak & 0-4 & 4-8 & 8-12 & 12-16 & $>$ 16  \\
+			oak & 0-4 & 4-8 & 8-12 & 12-16 & $>$ 16  \\
 			\hline
-			Granite Tile & 0-4 & 4-8 & 8-12 & 12-16 & $>$ 16  \\
+			granite tile & 0-4 & 4-8 & 8-12 & 12-16 & $>$ 16  \\
 			\hline
-			Steel wool & 0-4 & 4-8 & 8-12 & $>$ 12 &- \\  
+			steel wool & 0-4 & 4-8 & 8-12 & $>$ 12 &- \\  
 			\hline
 		\end{tabular}
 		\label{tab:intervals}
@@ -560,15 +553,15 @@ Not to alter the realism of haptic textures, we try to maintain the speed respon
 \begin{figure} [htbp]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{experiment2}
-		\caption{Bars represent the number of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50 \% similarity.} 
+		\caption{Bars represent the percentage of subjects who gave the answer ``same'' for the vibrotactile response with speed dependency in respect to the reference signal. All results show greater than or equal to 50\% similarity.} 
 		\label{fig:experiment2}
 	\end{center}
 \end{figure}
 
-As depicted in Figure \ref{fig:experiment2}, best result was achieved in the interaction with oak material with 100 \% similarity rate. Coarse foam and granite tile have 90 \% and 80 \%, where fine foam has 60 \% and steel wool 50 \% similarity rate. Eventually, overall percentage of similarity is 76 \% in 5 comparison pairs with 10 subjects.    
+As depicted in Figure \ref{fig:experiment2}, best result was achieved in the interaction with oak material with 100\% similarity rate. Coarse foam and granite tile have 90\% and 80\%, where fine foam has 60\% and steel wool 50\% similarity rate. Eventually, overall percentage of similarity is 76\% in 5 comparison pairs with 10 subjects.    
 
 \section{Discussion}
 
-We ran a study that evaluated the realism of the signals generated from major frequencies in respect to speed responsiveness. The result 76 \% similarity rate to the reference shows promise of this method's usability for vibrotactile response. 50 \% rate of steel wool can be explained by the fact that original signal may have some peculiarities occurred in the beginning and end of the recording, which could result in discontinuity in vibrotactile response during interaction. Another reason can be the different amplitudes of the generated and original signals. Furthermore, difference materials could need different conditions for frequency selection for example more than 30 frequencies, so that there may have been loss in valuable data.
+We ran a study that evaluated the realism of the signals generated from major frequencies in respect to speed responsiveness. The result 76\% similarity rate to the reference shows promise of this method's usability for vibrotactile response. 50\% rate of steel wool can be explained by the fact that original signal may have some peculiarities occurred in the beginning and end of the recording, which could result in discontinuity in vibrotactile response during interaction. Another reason can be the different amplitudes of the generated and original signals. Furthermore, difference materials could need different conditions for frequency selection for example more than 30 frequencies, so that there may have been loss in valuable data.
 
 

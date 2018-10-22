@@ -1,8 +1,7 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{KJKM11}
+\begin{thebibliography}{CRPCK12}
 
 \bibitem[BH05]{finetexture}
-S.~Bensmaïa and M.~Hollins.
+S.~Bensma{\"\i}a and M.~Hollins.
 \newblock Pacinian representations of fine surface texture.
 \newblock {\em Perception \& Psychophysics}, 67(5):842--854, 2005.
 
@@ -10,17 +9,17 @@ S.~Bensmaïa and M.~Hollins.
 Rahul~Gopal Chaudhari.
 \newblock {\em Data Compression and Quality Evaluation for Haptic
   Communications}.
-\newblock PhD thesis, Technische Universitat Munchen, 2015.
+\newblock PhD thesis, Technische Universit\"at M\"unchen, 2015.
 
 \bibitem[CK15]{Culbertson15-WHC-Vibrations}
-Heather Culbertson and Katherine~J. Kuchenbecker.
+H.~Culbertson and K.~J. Kuchenbecker.
 \newblock Should haptic texture vibrations respond to user force and speed?
 \newblock In {\em IEEE World Haptics Conference}, pages 106 -- 112, Evanston,
   Illinois, USA, June 2015.
 \newblock Oral presentation given by Culbertson.
 
-\bibitem[CRC{\etalchar{+}}12]{refined12}
-H.~Culbertson, J.~M. Romano, P.~Castillo, M.~Mintz, and K.~J. Kuchenbecker.
+\bibitem[CRPCK12]{refined12}
+H.~Culbertson, J.~M. Romano, M.~Mintz P.~Castillo, and K.~J. Kuchenbecker.
 \newblock Refined methods for creating realistic haptic virtual textures from
   tool-mediated contact acceleration data.
 \newblock In {\em 2012 IEEE Haptics Symposium (HAPTICS)}, pages 385--391, March
@@ -33,18 +32,18 @@ J.~Durbin.
   International Statistical Institute}, 28(3):233--244, 1960.
 
 \bibitem[HC14]{modeling14}
-Katherine J.~Kuchenbecker Heather~Culbertson, Juliette~Unwin.
+K.~J.~Kuchenbecker. H.~Culbertson, J.~Unwin.
 \newblock Modeling and rendering realistic textures from unconstrained
   tool-surface interactions.
 \newblock {\em IEEE Transactions on Haptics}, 7(3):381--393, 2014.
 
 \bibitem[JMR12]{romano12}
-K.~J.~Kuchenbecker J.~M.~Romano.
+K.~J.~Kuchenbecker. J.~M.~Romano.
 \newblock Creating realistic virtual textures from contact acceleration data.
 \newblock {\em IEEE Transactions on Haptics}, 5(2):109--119, 2012.
 
 \bibitem[JMRK10]{romano10}
-Takashi~Yoshioka Joseph M.~Romano and Katherine~J. Kuchenbecker.
+T.~Yoshioka J.~M.~Romano and K.~J. Kuchenbecker.
 \newblock Automatic filter design for synthesis of haptic textures from
   recorded acceleration data.
 \newblock {\em In Proceedings, IEEE International Conference on Robotics and
@@ -69,17 +68,17 @@ J.~M. Loomis.
 \newblock {\em Presence: Teleoperators and Virtual Environments},
   1(1):113--119, 1992.
 
+\bibitem[MSS18]{mouse18}
+A.~Noll M.~Strese, R.~Hassen and E.~Steinbach.
+\newblock A tactile computer mouse for the display of surface material
+  properties.
+\newblock PP(99):1--1, 08 2018.
+
 \bibitem[RS07]{levinsondurbin}
 L.~R. Rabiner and R.~W. Schafer.
 \newblock Introduction to digital speech processing.
 \newblock {\em Foundations and Trends in Signal Processing}, 1(1-2):1--194,
   2007.
-
-\bibitem[SHNS18]{mouse18}
-Matti Strese, Rania Hassen, Andreas Noll, and Eckehard Steinbach.
-\newblock A tactile computer mouse for the display of surface material
-  properties.
-\newblock PP(99):1--1, 08 2018.
 
 \bibitem[SLK12]{beats}
 K.~Kyung S.~Lim and D.~Kwon.

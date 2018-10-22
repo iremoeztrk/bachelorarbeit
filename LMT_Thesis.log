@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  22 OCT 2018 00:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  22 OCT 2018 18:30
 entering extended mode
 **./LMT_Thesis.tex
 (LMT_Thesis.tex
@@ -505,8 +505,8 @@ File: figures/gr_lpc.png Graphic file (type png)
 <use figures/gr_lpc.png>
 Package pdftex.def Info: figures/gr_lpc.png  used on input line 157.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
- [8 <./figures/error2.png (PNG copy)>] [9 <./figures/gr_doppelt.png> <./figures
-/gr_lpc.png>]
+ [8 <./figures/error2.png (PNG copy)>] [9 <./figures/gr_doppelt.png (PNG copy)>
+ <./figures/gr_lpc.png (PNG copy)>]
 <figures/schwebung1.png, id=76, 421.575pt x 316.18124pt>
 File: figures/schwebung1.png Graphic file (type png)
 <use figures/schwebung1.png>
@@ -683,107 +683,109 @@ gures/schwebung55.png (PNG copy)> <./figures/schwebung65.png (PNG copy)>]
 File: figures/co1_1.png Graphic file (type png)
 <use figures/co1_1.png>
 Package pdftex.def Info: figures/co1_1.png  used on input line 304.
-(pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
-
-[13]
-<figures/co1_2.png, id=120, 420.82219pt x 168.63pt>
+(pdftex.def)             Requested size: 368.57838pt x 276.4408pt.
+<figures/co1_2.png, id=116, 420.82219pt x 168.63pt>
 File: figures/co1_2.png Graphic file (type png)
 <use figures/co1_2.png>
 Package pdftex.def Info: figures/co1_2.png  used on input line 314.
 (pdftex.def)             Requested size: 322.50345pt x 129.2331pt.
-<figures/co1_time.png, id=121, 420.82219pt x 162.6075pt>
+<figures/co1_time.png, id=117, 420.82219pt x 159.59625pt>
 File: figures/co1_time.png Graphic file (type png)
 <use figures/co1_time.png>
 Package pdftex.def Info: figures/co1_time.png  used on input line 323.
-(pdftex.def)             Requested size: 322.50345pt x 124.61763pt.
-<figures/co1_spectrum.png, id=122, 420.82219pt x 155.07938pt>
+(pdftex.def)             Requested size: 322.50345pt x 122.30989pt.
+<figures/co1_spectrum.png, id=118, 420.82219pt x 155.07938pt>
 File: figures/co1_spectrum.png Graphic file (type png)
 <use figures/co1_spectrum.png>
 Package pdftex.def Info: figures/co1_spectrum.png  used on input line 324.
 (pdftex.def)             Requested size: 322.50345pt x 118.84828pt.
-<figures/coak1.png, id=123, 421.575pt x 316.18124pt>
-File: figures/coak1.png Graphic file (type png)
-<use figures/coak1.png>
-Package pdftex.def Info: figures/coak1.png  used on input line 340.
-(pdftex.def)             Requested size: 368.57838pt x 276.4408pt.
-<figures/coak5.png, id=124, 421.575pt x 316.18124pt>
-File: figures/coak5.png Graphic file (type png)
-<use figures/coak5.png>
-Package pdftex.def Info: figures/coak5.png  used on input line 341.
-(pdftex.def)             Requested size: 368.57838pt x 276.4408pt.
- [14 <./figures/co1_1.png>] [15 <./figures/co1_2.png> <./figures/co1_time.png> 
-<./figures/co1_spectrum.png>]
-<figures/coak7.png, id=131, 421.575pt x 316.18124pt>
-File: figures/coak7.png Graphic file (type png)
-<use figures/coak7.png>
-Package pdftex.def Info: figures/coak7.png  used on input line 349.
-(pdftex.def)             Requested size: 368.57838pt x 276.4408pt.
-<figures/coak10.png, id=132, 421.575pt x 316.18124pt>
-File: figures/coak10.png Graphic file (type png)
-<use figures/coak10.png>
-Package pdftex.def Info: figures/coak10.png  used on input line 350.
-(pdftex.def)             Requested size: 368.57838pt x 276.4408pt.
+<figures/coak-1.png, id=119, 421.575pt x 316.18124pt>
+File: figures/coak-1.png Graphic file (type png)
+<use figures/coak-1.png>
+Package pdftex.def Info: figures/coak-1.png  used on input line 331.
+(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+<figures/coak-5.png, id=120, 421.575pt x 316.18124pt>
+File: figures/coak-5.png Graphic file (type png)
+<use figures/coak-5.png>
+Package pdftex.def Info: figures/coak-5.png  used on input line 332.
+(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+<figures/coak-7.png, id=121, 421.575pt x 316.18124pt>
+File: figures/coak-7.png Graphic file (type png)
+<use figures/coak-7.png>
+Package pdftex.def Info: figures/coak-7.png  used on input line 340.
+(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+<figures/coak-10.png, id=122, 421.575pt x 316.18124pt>
+File: figures/coak-10.png Graphic file (type png)
+<use figures/coak-10.png>
+Package pdftex.def Info: figures/coak-10.png  used on input line 341.
+(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
 
+[13] [14 <./figures/co1_1.png (PNG copy)>] [15 <./figures/co1_2.png> <./figures
+/co1_time.png> <./figures/co1_spectrum.png>] [16 <./figures/coak-1.png (PNG cop
+y)> <./figures/coak-5.png (PNG copy)> <./figures/coak-7.png (PNG copy)> <./figu
+res/coak-10.png (PNG copy)>] [17] [18
 
-LaTeX Warning: Float too large for page by 21.4371pt on input line 354.
-
-[16] [17 <./figures/coak1.png (PNG copy)> <./figures/coak5.png (PNG copy)>]
-[18 <./figures/coak7.png (PNG copy)> <./figures/coak10.png (PNG copy)>]
+]
 Chapter 4.
 <figures/boxplot.png, id=142, 421.575pt x 316.18124pt>
 File: figures/boxplot.png Graphic file (type png)
 <use figures/boxplot.png>
-Package pdftex.def Info: figures/boxplot.png  used on input line 374.
+Package pdftex.def Info: figures/boxplot.png  used on input line 373.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
 <figures/hist1.png, id=143, 421.575pt x 316.18124pt>
 File: figures/hist1.png Graphic file (type png)
 <use figures/hist1.png>
-Package pdftex.def Info: figures/hist1.png  used on input line 383.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist1.png  used on input line 382.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
 <figures/hist2.png, id=144, 421.575pt x 316.18124pt>
 File: figures/hist2.png Graphic file (type png)
 <use figures/hist2.png>
-Package pdftex.def Info: figures/hist2.png  used on input line 384.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist2.png  used on input line 383.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
 <figures/hist3.png, id=145, 421.575pt x 316.18124pt>
 File: figures/hist3.png Graphic file (type png)
 <use figures/hist3.png>
-Package pdftex.def Info: figures/hist3.png  used on input line 385.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist3.png  used on input line 384.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
 <figures/hist4.png, id=146, 421.575pt x 316.18124pt>
 File: figures/hist4.png Graphic file (type png)
 <use figures/hist4.png>
-Package pdftex.def Info: figures/hist4.png  used on input line 385.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist4.png  used on input line 384.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
 <figures/hist5.png, id=147, 421.575pt x 316.18124pt>
 File: figures/hist5.png Graphic file (type png)
 <use figures/hist5.png>
-Package pdftex.def Info: figures/hist5.png  used on input line 393.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist5.png  used on input line 386.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
 <figures/hist6.png, id=148, 421.575pt x 316.18124pt>
 File: figures/hist6.png Graphic file (type png)
 <use figures/hist6.png>
-Package pdftex.def Info: figures/hist6.png  used on input line 394.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist6.png  used on input line 387.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
 <figures/hist7.png, id=149, 421.575pt x 316.18124pt>
 File: figures/hist7.png Graphic file (type png)
 <use figures/hist7.png>
-Package pdftex.def Info: figures/hist7.png  used on input line 395.
-(pdftex.def)             Requested size: 225.75594pt x 169.31691pt.
+Package pdftex.def Info: figures/hist7.png  used on input line 388.
+(pdftex.def)             Requested size: 161.25523pt x 120.94133pt.
+
+LaTeX Warning: Float too large for page by 9.43195pt on input line 392.
+
 
 Underfull \vbox (badness 4981) has occurred while \output is active []
 
- [19
-
-]
+ [19]
 [20 <./figures/boxplot.png>] [21 <./figures/hist1.png (PNG copy)> <./figures/hi
 st2.png (PNG copy)> <./figures/hist3.png (PNG copy)> <./figures/hist4.png (PNG 
-copy)>] [22 <./figures/hist5.png (PNG copy)> <./figures/hist6.png (PNG copy)> <
-./figures/hist7.png (PNG copy)>]
-Chapter 5.
-[23
+copy)> <./figures/hist5.png (PNG copy)> <./figures/hist6.png (PNG copy)> <./fig
+ures/hist7.png (PNG copy)>] [22
 
 ]
+Chapter 5.
+
+LaTeX Warning: Reference `fig:friction' on page 23 undefined on input line 450.
+
+
+[23]
 Overfull \hbox (173.24074pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/12 24 \OT1/cmr/m/sl/12 CHAPTER 5.  DATA-DRIVEN AND FREQUENCY REDUC
 TION METHODS FOR TACTILE SIGNAL EVALUATION
@@ -793,12 +795,12 @@ TION METHODS FOR TACTILE SIGNAL EVALUATION
 <figures/deney2.png, id=169, 421.575pt x 316.18124pt>
 File: figures/deney2.png Graphic file (type png)
 <use figures/deney2.png>
-Package pdftex.def Info: figures/deney2.png  used on input line 474.
+Package pdftex.def Info: figures/deney2.png  used on input line 467.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
 <figures/boxfreq.png, id=170, 421.575pt x 316.18124pt>
 File: figures/boxfreq.png Graphic file (type png)
 <use figures/boxfreq.png>
-Package pdftex.def Info: figures/boxfreq.png  used on input line 485.
+Package pdftex.def Info: figures/boxfreq.png  used on input line 478.
 (pdftex.def)             Requested size: 322.50345pt x 241.88268pt.
  [25 <./figures/deney2.png (PNG copy)>]
 Overfull \hbox (173.24074pt too wide) has occurred while \output is active
@@ -813,7 +815,7 @@ Chapter 6.
 <figures/showroom.png, id=184, 748.29562pt x 363.60844pt>
 File: figures/showroom.png Graphic file (type png)
 <use figures/showroom.png>
-Package pdftex.def Info: figures/showroom.png  used on input line 515.
+Package pdftex.def Info: figures/showroom.png  used on input line 508.
 (pdftex.def)             Requested size: 322.50345pt x 156.70921pt.
 [29
 
@@ -824,7 +826,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/experiment2.png, id=191, 421.575pt x 316.18124pt>
 File: figures/experiment2.png Graphic file (type png)
 <use figures/experiment2.png>
-Package pdftex.def Info: figures/experiment2.png  used on input line 562.
+Package pdftex.def Info: figures/experiment2.png  used on input line 555.
 (pdftex.def)             Requested size: 345.54092pt x 259.15933pt.
 ) [31] [32 <./figures/experiment2.png (PNG copy)>]
 \openout2 = `Conclusions.aux'.
@@ -862,31 +864,35 @@ Underfull \vbox (badness 2865) has occurred while \output is active []
 
 ] [39]) [40] (LMT_Thesis.aux
 (StatementsEN.aux) (Kurzfassung.aux) (Abstract.aux) (Introduction.aux)
-(Body.aux) (Conclusions.aux) (Appendix.aux)) ) 
+(Body.aux) (Conclusions.aux) (Appendix.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4562 strings out of 492973
- 69307 string characters out of 3135942
- 175994 words of memory out of 3000000
- 8211 multiletter control sequences out of 15000+200000
+ 4561 strings out of 492973
+ 69319 string characters out of 3135942
+ 177976 words of memory out of 3000000
+ 8210 multiletter control sequences out of 15000+200000
  12078 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,8n,46p,2069b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmss17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on LMT_Thesis.pdf (46 pages, 1983437 bytes).
+ 51i,8n,46p,2049b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti12.pfb>
+Output written on LMT_Thesis.pdf (46 pages, 1980512 bytes).
 PDF statistics:
  276 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
