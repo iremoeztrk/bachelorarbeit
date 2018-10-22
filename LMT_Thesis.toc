@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {2.2}Fine Roughness}{4}
 \contentsline {chapter}{\numberline {3}Interpolation of Vibrotactile Signals}{5}
 \contentsline {section}{\numberline {3.1}Linear Predictive Coding}{5}
-\contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{9}
+\contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{10}
 \contentsline {chapter}{\numberline {4}Correlation of Friction and Scanning Speed }{19}
 \contentsline {section}{\numberline {4.1}Speed Test}{19}
 \contentsline {section}{\numberline {4.2}Evaluation}{20}

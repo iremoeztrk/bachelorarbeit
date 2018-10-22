@@ -139,7 +139,6 @@ This is equivalent to signal variance $\sigma²$, because our signals are zero-me
 C\{\vec{a_g}(l)\}=\frac{(DFT\{\mid \vec{a}(l)\mid \}-DFT\{\mid \vec{\hat{{a_g}}}(l)\mid \})_{RMS}}{(DFT\{\mid \vec{a}(l)\mid \})_{RMS}}
 \end{equation}
 
-
 where DFT is described as the discrete Fourier transformation and computed as:
 
 \begin{equation} \label{dft}
@@ -156,9 +155,6 @@ x_{RMS}=\sqrt{\frac{1}{n}({x_1}^2+{x_2}^2+...+{x_n}^2)}
 %\begin{equation} \label{dft}
 %DFT\{\vec{a}(l)\}=\vec{A_k}(l)=\sum_{l=0}^{L-1}\vec{a}(l)\cdot e^{\frac{-j2\pi kl}{N}}   \quad k=0,1,...N-1.
 %\end{equation}
-
-Using this equation, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula. In \cite{romano10}, it is shown with a cost function that, optimal coefficient order is 400 for a LPC filter. However, a major change in error value can not be seen among the orders higher than 20 in our case, as in the following studies such as \cite{modeling14}, which is confirmed in Figure \ref{fig:error2}. That is why in this thesis 20 is chosen as the optimal order for the best quality of results.
-
 \begin{figure} [htbp]
 	\begin{center}
 		\subfigure{\includegraphics[width=0.70\textwidth]{gr_doppelt}} 
@@ -168,8 +164,12 @@ Using this equation, it is possible to obtain the optimal order of the filter. A
 	\end{center}
 \end{figure} 
 
+Using this equation, it is possible to obtain the optimal order of the filter. As shown in Figure \ref{fig:error2}, the higher a coefficient order is chosen, the smaller gets the RMS error calculated via given formula. In \cite{romano10}, it is shown with a cost function that, optimal coefficient order is 400 for a LPC filter. However, a major change in error value can not be seen among the orders higher than 20 in our case, as in the following studies such as \cite{modeling14}, which is confirmed in Figure \ref{fig:error2}. That is why in this thesis 20 is chosen as the optimal order for the best quality of results.
+
+
 
 Now that we have generated our prediction filter with two unique variables $\vec{h}$ vector and $e_g(l)$, it comes to interpolate between our synthesized signals to create new signals. Bilinear interpolation of both the vector $\vec{h}$ and $e_g(l)$ of two signals in different velocities and applying these new values to our prediction filter result in new synthesized signals, so that signal data for audio signals at different force and velocities are created. For the interpolation of filter coefficients, we first convert them to line spectral frequencies (LSFs) to ensure stability during rendering \cite{modeling14}. Figure \ref{fig:lpc-original} shows an example signal and its LPC synthesized version both in time and spectral domain. 
+
 
 The general feel of haptic textures is governed by their spectral signature \cite{haptography}. As in the figure \ref{fig:lpc-original}, the recorded and synthesized data differ on time-domain, but their spectrum are quite similar. So it is expected that they will feel the same to a user. Experiment I in chapter \ref{data} deals with whether these correlations are strong enough to fool the human sense of touch.
 
