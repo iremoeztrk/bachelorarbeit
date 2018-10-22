@@ -48,7 +48,7 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces The depicted signal is recorded during an interaction with oak at a speed of 40 mm/s. The first plot shows the reduced one-axis signal in time domain and second plot shows spectral properties of the signal.}}{14}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces As shown in this example, the red points show the 30 selected frequencies and the black ones demonstrate the frequencies, which have amplitudes higher than the half of the maximum amplitude of the signal. Thus, the upper side of the spectral domain is shown with selected frequencies for a better overwiev.}}{15}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces First plot is the time domain of the generated signal via the frequencies in the second plot, which were chosen in Figure \ref {fig:co1_2}.}}{15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {First generated signal from recorded data during interaction with oak at speed 40mm/s reproduced from given frequencies below.}}}{17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {First generated signal from recorded data during interaction with oak at speed 40 mm/s reproduced from given frequencies below.}}}{17}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {An interpolation result between signals in (a) and (d).}}}{17}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Signal interpolation through major frequencies.}}{18}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Another result of the interpolation. The interpolated amplitudes of the frequencies can be seen in the spectral domain plot below.}}}{18}
