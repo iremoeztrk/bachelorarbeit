@@ -14,8 +14,8 @@
 \contentsline {section}{\numberline {3.2}Signal Generation from Major Frequencies}{10}
 \contentsline {chapter}{\numberline {4}Correlation of Friction and Scanning Speed }{19}
 \contentsline {section}{\numberline {4.1}Speed Test}{19}
-\contentsline {section}{\numberline {4.2}Evaluation}{20}
-\contentsline {chapter}{\numberline {5}Data-Driven and Frequency Reduction Methods for Tactile Signal Evaluation}{23}
+\contentsline {section}{\numberline {4.2}Evaluation}{21}
+\contentsline {chapter}{\numberline {5}Frequency Reduction Methods Evaluation}{23}
 \contentsline {section}{\numberline {5.1}Subjects and Setup}{23}
 \contentsline {section}{\numberline {5.2}Procedure}{24}
 \contentsline {section}{\numberline {5.3}Results}{25}
@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {6.1}Subjects and Setup}{29}
 \contentsline {section}{\numberline {6.2}Procedure}{31}
 \contentsline {section}{\numberline {6.3}Results}{31}
-\contentsline {section}{\numberline {6.4}Discussion}{31}
+\contentsline {section}{\numberline {6.4}Discussion}{32}
 \contentsline {chapter}{\numberline {7}Conclusion}{33}
 \contentsline {chapter}{List of Figures}{35}
 \contentsline {chapter}{List of Tables}{37}
